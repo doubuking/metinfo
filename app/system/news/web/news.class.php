@@ -15,6 +15,7 @@ class news extends web {
 	public function showpage($module) {
 		global $_M;
 		$data = load::sys_class('label', 'new')->get($module)->get_one_list_contents($_M['form']['id']);
+        $data['aaa']='AAA';
 		$data['updatetime'] = date($_M['config']['met_contenttime'], strtotime($data['original_updatetime']));
 		$data['addtime'] = date($_M['config']['met_contenttime'], strtotime($data['original_addtime']));
 		$this->check($data['access']);

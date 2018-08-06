@@ -152,6 +152,10 @@ class news_admin extends base_admin {
 		// DB::query($query);
 		// return DB::insert_id();
 		$list['lang'] = $this->lang;
+		echo "<pre>";
+		var_dump($this->database);
+		var_dump($list);
+//		die();
 		return $this->database->insert($list);
 	}
 

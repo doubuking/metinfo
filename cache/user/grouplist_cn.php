@@ -15,5 +15,12 @@ $cache = array (
     'access' => '3',
     'lang' => 'cn',
   ),
+  10 => 
+  array (
+    'id' => '10',
+    'name' => '年费会员',
+    'access' => '4',
+    'lang' => 'cn',
+  ),
 );
 ?>

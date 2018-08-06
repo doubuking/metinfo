@@ -1,27 +1,5 @@
-<?php
-# MetInfo Enterprise Content Management System
-# Copyright (C) MetInfo Co.,Ltd (http://www.metinfo.cn). All rights reserved.
-defined('IN_MET') or exit('No permission');
-$data['page_title']=$_M['word']['memberReg'].$data['page_title'];
-?>
-<?php
-# MetInfo Enterprise Content Management System
-# Copyright (C) MetInfo Co.,Ltd (http://www.metinfo.cn). All rights reserved.
-defined('IN_MET') or exit('No permission');
-?>
-<?php
-global $metinfover;
-// 模板引擎
-$metinfover                  = "v2";
-$template_type                  = "ui";
-// 栏目可用字段
-$metadmin[categorynamemark]  = 1; // 栏目修饰名称
-$metadmin[categoryimage]     = 1; // 栏目图片
-$metadmin[categorymarkimage] = 0; // 栏目标识图片
-
-?>
-<?php $met_page=$template_type=='ui'?'index':''; ?>
-<?php $met_page = "$met_page";?>
+<?php defined('IN_MET') or exit('No permission'); ?>
+<?php $met_page = "shownews";?>
 <?php
 $metinfover_v2=$c["metinfover"]=="v2"?true:false;
 $met_file_version=str_replace(".","",$c["metcms_v"]).$c["met_patch"];
@@ -728,272 +706,411 @@ if($data['title']){
 <?php } ?>
 <?php } ?>
 
-<?php if(file_exists(PATH_OWN_FILE."templates/met/css/metinfo.css")){ ?>
-<link href="<?php echo $_M['url']['own_tem'];?>css/metinfo.css?<?php echo $met_file_version;?>" rel='stylesheet' type='text/css'>
-<?php } ?>
-<div class="register-index met-member page p-y-50 bg-pagebg1">
+
+        <?php
+            $id = 22;
+            $style = "met_16_1";
+            if(!isset($ui_compile)){
+                load::sys_class('view/ui_compile');
+                $ui_compile = new ui_compile();
+            }
+            $ui = $ui_compile->list_local_config($id);
+            $ui['has'] =$ui_compile->list_page_config($met_page);
+            ?>
+<?php $sidebar=strlen($ui[has][sidebar]);?>
+<main class="news_list_detail_met_16_1 met-shownews animsition">
 	<div class="container">
-		<form class="form-register met-form met-form-validation panel panel-body" method="post" action="<?php echo $_M['url']['register_save'];?>">
-			<h1 class='m-t-0 m-b-20 font-size-24 text-xs-center'><?php echo $_M['word']['memberReg'];?></h1>
-			<?php
-			switch ($_M['config']['met_member_vecan']) {
-				case 1:
-			?>
-			<?php
-# MetInfo Enterprise Content Management System
-# Copyright (C) MetInfo Co.,Ltd (http://www.metinfo.cn). All rights reserved.
-defined('IN_MET') or exit('No permission');
-?>
-<div class="form-group">
-	<div class="input-group">
-		<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-		<input type="email" name="username" required class="form-control" placeholder="<?php echo $_M['word']['memberemail'];?>"
-		data-fv-remote="true"
-		data-fv-remote-url="<?php echo $_M['url']['register_userok'];?>"
-		data-fv-remote-message="<?php echo $_M['word']['emailhave'];?>"
+		<div class="row">
+		    <?php if($_M['form']['pageset']){ ?>
+                <?php if($sidebar){ ?>
+            <div class="col-md-9 met-shownews-body" m-id='<?php echo $ui['mid'];?>'>
+                <div class="row">
+            <?php }else{ ?>
+                <div class="met-shownews-body col-md-10 offset-md-1" m-id='<?php echo $ui['mid'];?>'>
+                    <div class="row">
+            <?php } ?>
+            <?php }else{ ?>
+                <?php if($ui[has][sidebar]){ ?>
+            <div class="col-md-9 met-shownews-body" m-id='<?php echo $ui['mid'];?>'>
+                <div class="row">
+            <?php }else{ ?>
+                <div class="met-shownews-body col-md-10 offset-md-1" m-id='<?php echo $ui['mid'];?>'>
+                    <div class="row">
+            <?php } ?>
+        <?php } ?>
+					<section class="details-title border-bottom1">
+                        <h1><?php echo $data['starttime'];?></h1>
+                        <h1><?php echo $data['aaa'];?></h1>
+						<h1 class='m-t-10 m-b-5'><?php echo $data['title'];?></h1>
+						<div class="info font-weight-300">
+							<span><?php echo $data['updatetime'];?></span>
+							<span><?php echo $data['issue'];?></span>
+							<span>
+								<i class="icon wb-eye m-r-5" aria-hidden="true"></i>
+								<?php echo $data['hits'];?>
+							</span>
+						</div>
+					</section>
+					<section class="met-editor clearfix">
+						<?php echo $data['content'];?>
+					</section>
+					<div class="tag">
+						<span><?php echo $data['tagname'];?></span>
+						        <?php
+            $sub = count($data[taglist]);
+            $num = $ui[tag_num];
+            if(!is_array($data[taglist])){
+                $data[taglist] = explode('|',$data[taglist]);
+            }
+            foreach ($data[taglist] as $index => $val) {
+                if($index >= $num){
+                    break;
+                }
+                if($sub <=0){
+                    continue;
+                }
+                if(is_array($val)){
+                    $val['_index'] = $index;
+                    $val['_first'] = $index == 0 ? true : false;
+                    $val['_last']  = $index == (count($data[taglist])-1) ? true : false;
+                    $val['sub']    = $sub;
+                }
 
-		data-fv-notempty-message="<?php echo $_M['word']['noempty'];?>"
-
-		data-fv-stringlength="true"
-		data-fv-stringlength-min="2"
-		data-fv-stringlength-max="30"
-		data-fv-stringlength-message="<?php echo $_M['word']['usernamecheck'];?>"
-
-		data-fv-emailaddress="true"
-		data-fv-emailaddress-message="<?php echo $_M['word']['emailcheck'];?>"
-		/>
-	</div>
+                $tag = $val;
+            ?>
+							<a href="<?php echo $tag['url'];?>" title="<?php echo $tag['name'];?>"><?php echo $tag['name'];?></a>
+						<?php }?>
+					</div>
+					        <div class='met-page p-y-30 border-top1'>
+    <div class="container p-t-30 ">
+    <ul class="pagination block blocks-2"'>
+        <li class='page-item m-b-0 <?php echo $data['preinfo']['disable'];?>'>
+            <a href='<?php if($data['preinfo']['url']){?><?php echo $data['preinfo']['url'];?><?php }else{?>javascript:;<?php }?>' title="<?php echo $data['preinfo']['title'];?>" class='page-link text-truncate'>
+                <?php echo $word['PagePre'];?>
+                <span aria-hidden="true" class='hidden-xs-down'>: <?php if($data['preinfo']['title']){?><?php echo $data['preinfo']['title'];?><?php }else{?><?php echo $word['Noinfo'];?><?php }?></span>
+            </a>
+        </li>
+        <li class='page-item m-b-0 <?php echo $data['nextinfo']['disable'];?>'>
+            <a href='<?php if($data['nextinfo']['url']){?><?php echo $data['nextinfo']['url'];?><?php }else{?>javascript:;<?php }?>' title="<?php echo $data['nextinfo']['title'];?>" class='page-link pull-xs-right text-truncate'>
+                <?php echo $word['PageNext'];?>
+                <span aria-hidden="true" class='hidden-xs-down'>: <?php if($data['nextinfo']['title']){?><?php echo $data['nextinfo']['title'];?><?php }else{?><?php echo $word['Noinfo'];?><?php }?></span>
+            </a>
+        </li>
+    </ul>
 </div>
-<div class="form-group">
-	<div class="input-group">
-		<span class="input-group-addon"><i class="fa fa-unlock-alt"></i></span>
-		<input type="password" name="password" required class="form-control" placeholder="<?php echo $_M['word']['password'];?>"
-		data-fv-notempty-message="<?php echo $_M['word']['noempty'];?>"
-
-		data-fv-identical="true"
-		data-fv-identical-field="confirmpassword"
-		data-fv-identical-message="<?php echo $_M['word']['passwordsame'];?>"
-
-		data-fv-stringlength="true"
-		data-fv-stringlength-min="3"
-		data-fv-stringlength-max="30"
-		data-fv-stringlength-message="<?php echo $_M['word']['passwordcheck'];?>"
-		>
-	</div>
 </div>
-<div class="form-group">
-	<div class="input-group">
-		<span class="input-group-addon"><i class="fa fa-unlock-alt"></i></span>
-		<input type="password" name="confirmpassword" required data-password="password" class="form-control" placeholder="<?php echo $_M['word']['renewpassword'];?>"
-		data-fv-identical="true"
-		data-fv-identical-field="password"
-		data-fv-identical-message="<?php echo $_M['word']['passwordsame'];?>"
-		>
-	</div>
-</div>
-<?php
- if($_M['config']['met_memberlogin_code']){ ?>
-<div class="form-group">
-    <div class="input-group input-group-icon">
-        <span class="input-group-addon"><i class="fa fa-shield"></i></span>
-        <input type="text" name="code" required class="form-control" placeholder="<?php echo $_M['word']['memberImgCode'];?>" data-fv-notempty-message="<?php echo $_M['word']['noempty'];?>">
-        <div class="input-group-addon p-5 login-code-img">
-            <img src="<?php echo $_M[url][entrance];?>?m=include&c=ajax_pin&a=dogetpin" title="<?php echo $_M['word']['memberTip1'];?>" id='getcode' align="absmiddle" role="button">
+				
+    <?php if($_M['form']['pageset']){ ?>
+        <?php if($sidebar){ ?>
+        </div>
+        </div>
+            <?php }else{ ?>
+                </div>
+            </div>
+        </main>
+    <?php } ?>
+<?php }else{ ?>
+        <?php if($ui[has][sidebar]){ ?>
+        </div>
+        </div>
+        <?php }else{ ?>
         </div>
     </div>
-</div>
-
+</main>
+    <?php } ?>
 <?php } ?>
-			<?php
-					break;
-				case 3:
-			?>
-			<?php
-# MetInfo Enterprise Content Management System
-# Copyright (C) MetInfo Co.,Ltd (http://www.metinfo.cn). All rights reserved.
-defined('IN_MET') or exit('No permission');
-?>
-<div class="form-group">
-	<div class="input-group">
-		<span class="input-group-addon"><i class="fa fa-mobile"></i></span>
-		<input type="text" name="phone" required class="form-control" placeholder="<?php echo $_M['word']['memberbasicCell'];?>"
-		data-fv-phone="true"
-		data-fv-phone-message="<?php echo $_M['word']['telok'];?>"
 
-		data-fv-notempty-message="<?php echo $_M['word']['noempty'];?>"
-
-		data-fv-stringlength="true"
-		data-fv-stringlength-min="2"
-		data-fv-stringlength-max="30"
-		data-fv-stringlength-message="<?php echo $_M['word']['usernamecheck'];?>"
-		/>
-	</div>
-</div>
-<div class="form-group">
-	<div class="input-group">
-		<span class="input-group-addon"><i class="fa fa-unlock-alt"></i></span>
-		<input type="password" name="password" required class="form-control" placeholder="<?php echo $_M['word']['password'];?>"
-		data-fv-notempty-message="<?php echo $_M['word']['noempty'];?>"
-
-		data-fv-identical="true"
-		data-fv-identical-field="confirmpassword"
-		data-fv-identical-message="<?php echo $_M['word']['passwordsame'];?>"
-
-		data-fv-stringlength="true"
-		data-fv-stringlength-min="3"
-		data-fv-stringlength-max="30"
-		data-fv-stringlength-message="<?php echo $_M['word']['passwordcheck'];?>"
-		>
-	</div>
-</div>
-<div class="form-group">
-	<div class="input-group">
-		<span class="input-group-addon"><i class="fa fa-unlock-alt"></i></span>
-		<input type="password" name="confirmpassword" required data-password="password" class="form-control" placeholder="<?php echo $_M['word']['renewpassword'];?>"
-		data-fv-identical="true"
-		data-fv-identical-field="password"
-		data-fv-identical-message="<?php echo $_M['word']['passwordsame'];?>"
-		>
-	</div>
-</div>
-<div class="form-group">
-    <div class="input-group input-group-icon">
-        <span class="input-group-addon"><i class="fa fa-shield"></i></span>
-        <input type="text" name="code" required class="form-control" placeholder="<?php echo $_M['word']['memberImgCode'];?>" data-fv-notempty-message="<?php echo $_M['word']['noempty'];?>">
-        <div class="input-group-addon p-5 login-code-img">
-            <img src="<?php echo $_M[url][entrance];?>?m=include&c=ajax_pin&a=dogetpin" title="<?php echo $_M['word']['memberTip1'];?>" id='getcode' align="absmiddle" role="button">
-        </div>
-    </div>
-</div>
-<div class="form-group">
-    <div class="input-group input-group-icon">
-        <input type="text" name="phonecode" required class="form-control" placeholder="<?php echo $_M['word']['memberImgCode'];?>" data-fv-notempty-message="<?php echo $_M['word']['noempty'];?>">
-        <div class="input-group-addon p-0">
-            <button type="button" data-url="<?php echo $_M['url']['valid_phone'];?>" class="btn btn-success btn-squared w-full phone-code" data-retxt="<?php echo $_M['word']['resend'];?>">
-                <?php echo $_M['word']['phonecode'];?>
-                <span class="badge"></span>
-            </button>
-        </div>
-    </div>
-</div>
-			<?php
-					break;
-				default:
-			?>
-			<?php
-# MetInfo Enterprise Content Management System
-# Copyright (C) MetInfo Co.,Ltd (http://www.metinfo.cn). All rights reserved.
-defined('IN_MET') or exit('No permission');
-?>
-<div class="form-group">
-	<div class="input-group">
-		<span class="input-group-addon"><i class="fa fa-user"></i></span>
-		<input type="text" name="username" required class="form-control" placeholder="<?php echo $_M['word']['memberName'];?>"
-		data-fv-remote="true"
-		data-fv-remote-url="<?php echo $_M['url']['register_userok'];?>"
-		data-fv-remote-message="<?php echo $_M['word']['userhave'];?>"
-
-		data-fv-notempty-message="<?php echo $_M['word']['noempty'];?>"
-
-		data-fv-stringlength="true"
-		data-fv-stringlength-min="2"
-		data-fv-stringlength-max="30"
-		data-fv-stringlength-message="<?php echo $_M['word']['usernamecheck'];?>"
-		/>
-	</div>
-</div>
-<div class="form-group">
-	<div class="input-group">
-		<span class="input-group-addon"><i class="fa fa-unlock-alt"></i></span>
-		<input type="password" name="password" required class="form-control" placeholder="<?php echo $_M['word']['password'];?>"
-		data-fv-notempty-message="<?php echo $_M['word']['noempty'];?>"
-
-		data-fv-identical="true"
-		data-fv-identical-field="confirmpassword"
-		data-fv-identical-message="<?php echo $_M['word']['passwordsame'];?>"
-
-		data-fv-stringlength="true"
-		data-fv-stringlength-min="6"
-		data-fv-stringlength-max="30"
-		data-fv-stringlength-message="<?php echo $_M['word']['passwordcheck'];?>"
-		>
-	</div>
-</div>
-<div class="form-group">
-	<div class="input-group">
-		<span class="input-group-addon"><i class="fa fa-unlock-alt"></i></span>
-		<input type="password" name="confirmpassword" required data-password="password" class="form-control" placeholder="<?php echo $_M['word']['renewpassword'];?>"
-		data-fv-identical="true"
-		data-fv-identical-field="password"
-		data-fv-identical-message="<?php echo $_M['word']['passwordsame'];?>"
-		data-fv-notempty-message="<?php echo $_M['word']['noempty'];?>"
-		>
-
-	</div>
-</div>
-<?php if($_M['config']['met_memberlogin_code']){ ?>
-<div class="form-group">
-    <div class="input-group input-group-icon">
-        <span class="input-group-addon"><i class="fa fa-shield"></i></span>
-        <input type="text" name="code" required class="form-control" placeholder="<?php echo $_M['word']['memberImgCode'];?>" data-fv-notempty-message="<?php echo $_M['word']['noempty'];?>">
-        <div class="input-group-addon p-5 login-code-img">
-            <img src="<?php echo $_M[url][entrance];?>?m=include&c=ajax_pin&a=dogetpin" title="<?php echo $_M['word']['memberTip1'];?>" id='getcode' align="absmiddle" role="button">
-        </div>
-    </div>
-</div>
-<?php } ?>
-			<?php
-					break;
-			}
-			if(count($_M['paralist'])){
-			?>
-			<div class="form-group m-y-30 text-muted met-more">
-				<hr />
-				<span><?php echo $_M['word']['memberMoreInfo'];?></span>
+        <?php
+            $id = 23;
+            $style = "met_16_1";
+            if(!isset($ui_compile)){
+                load::sys_class('view/ui_compile');
+                $ui_compile = new ui_compile();
+            }
+            $ui = $ui_compile->list_local_config($id);
+            $ui['has'] =$ui_compile->list_page_config($met_page);
+            ?>
+    <?php if($data[index_num]<>7){ ?>
+<div class="col-md-3">
+	<div class="row">
+<aside class="sidebar_met_16_1 met-sidebar panel panel-body m-b-0" boxmh-h m-id='<?php echo $ui['mid'];?>' m-type='nocontent'>
+	<form class='sidebar-search' method='get' action="<?php echo $c['met_weburl'];?>search/search.php">
+		<input type='hidden' name='lang' value='<?php echo $data['lang'];?>' />
+		<input type='hidden' name='class1' value='<?php echo $data['class1'];?>' />
+		<div class="form-group">
+			<div class="input-search">
+				<button type="submit" class="input-search-btn">
+					<i class="icon wb-search" aria-hidden="true"></i>
+				</button>
+				<input type="text" class="form-control" name="searchword" placeholder="<?php echo $ui['sidebar_search_placeholder'];?>">
 			</div>
+		</div>
+	</form>
+	    <?php if($ui['sidebar_column_ok']){ ?>
+	<ul class="sidebar-column list-icons">
+		<?php
+    $type=strtolower(trim('current'));
+    $cid=$data['class1'];
+    $column = load::sys_class('label', 'new')->get('column');
+
+    unset($result);
+    switch ($type) {
+            case 'son':
+                $result = $column->get_column_son($cid);
+                break;
+            case 'current':
+                $result[0] = $column->get_column_id($cid);
+                break;
+            case 'head':
+                $result = $column->get_column_head();
+                break;
+            case 'foot':
+                $result = $column->get_column_foot();
+                break;
+            default:
+                $result[0] = $column->get_column_id($cid);
+                break;
+        }
+    $sub = count($result);
+    foreach($result as $index=>$m):
+        $hides = 1;
+        $hide = explode("|",$hides);
+        $m['_index']= $index;
+        if($data['classnow']==$m['id'] || $data['class1']==$m['id'] || $data['class2']==$m['id']){
+            $m['class']="";
+        }else{
+            $m['class'] = '';
+        }
+        if(in_array($m['name'],$hide)){
+            unset($m['id']);
+            unset($m['class']);
+            $m['hide'] = $hide;
+            $m['sub'] = 0;
+        }
+
+
+        if(substr(trim($m['icon']),0,1) == 'm' || substr(trim($m['icon']),0,1) == ''){
+            $m['icon'] = 'icon fa-pencil-square-o '.$m['icon'];
+        }
+        $m['urlnew'] = $m['new_windows'] ? "target='_blank'" :"target='_self'";
+        $m['urlnew'] = $m['nofollow'] ? $m['urlnew']." rel='nofollow'" :$m['urlnew'];
+        $m['_first']=$index==0 ? true:false;
+        $m['_last']=$index==(count($result)-1)?true:false;
+        $$m = $m;
+?>
+		<li>
+			<a href="<?php echo $m['url'];?>" title="<?php echo $m['name'];?>" class="    <?php if($data[classnow]==$m[id]){ ?>
+					active
+					<?php } ?>" <?php echo $m['urlnew'];?>><?php echo $m['name'];?></a>
+		</li>
+		<?php
+    $type=strtolower(trim('son'));
+    $cid=$m['id'];
+    $column = load::sys_class('label', 'new')->get('column');
+
+    unset($result);
+    switch ($type) {
+            case 'son':
+                $result = $column->get_column_son($cid);
+                break;
+            case 'current':
+                $result[0] = $column->get_column_id($cid);
+                break;
+            case 'head':
+                $result = $column->get_column_head();
+                break;
+            case 'foot':
+                $result = $column->get_column_foot();
+                break;
+            default:
+                $result[0] = $column->get_column_id($cid);
+                break;
+        }
+    $sub = count($result);
+    foreach($result as $index=>$m):
+        $hides = 1;
+        $hide = explode("|",$hides);
+        $m['_index']= $index;
+        if($data['classnow']==$m['id'] || $data['class1']==$m['id'] || $data['class2']==$m['id']){
+            $m['class']="active";
+        }else{
+            $m['class'] = '';
+        }
+        if(in_array($m['name'],$hide)){
+            unset($m['id']);
+            unset($m['class']);
+            $m['hide'] = $hide;
+            $m['sub'] = 0;
+        }
+
+
+        if(substr(trim($m['icon']),0,1) == 'm' || substr(trim($m['icon']),0,1) == ''){
+            $m['icon'] = 'icon fa-pencil-square-o '.$m['icon'];
+        }
+        $m['urlnew'] = $m['new_windows'] ? "target='_blank'" :"target='_self'";
+        $m['urlnew'] = $m['nofollow'] ? $m['urlnew']." rel='nofollow'" :$m['urlnew'];
+        $m['_first']=$index==0 ? true:false;
+        $m['_last']=$index==(count($result)-1)?true:false;
+        $$m = $m;
+?>
+		<li>
+			    <?php if($m['sub'] && $ui['sidebar_column3_ok']){ ?>
+			<a href="javascript:;" title="<?php echo $m['name'];?>" class='<?php echo $m['class'];?>' <?php echo $m['urlnew'];?> data-toggle="collapse" data-target=".sidebar-column3-<?php echo $m['_index'];?>"><?php echo $m['name'];?><i class="wb-chevron-right-mini"></i></a>
+	        <div class="sidebar-column3-<?php echo $m['_index'];?> collapse" aria-expanded="false">
+	            <ul class="m-t-5 p-l-20">
+	                <li><a href="<?php echo $m['url'];?>" <?php echo $m['urlnew'];?> title="<?php echo $ui['all'];?>" class="<?php echo $m['class'];?>"><?php echo $ui['all'];?></a></li>
+					<?php
+    $type=strtolower(trim('son'));
+    $cid=$m['id'];
+    $column = load::sys_class('label', 'new')->get('column');
+
+    unset($result);
+    switch ($type) {
+            case 'son':
+                $result = $column->get_column_son($cid);
+                break;
+            case 'current':
+                $result[0] = $column->get_column_id($cid);
+                break;
+            case 'head':
+                $result = $column->get_column_head();
+                break;
+            case 'foot':
+                $result = $column->get_column_foot();
+                break;
+            default:
+                $result[0] = $column->get_column_id($cid);
+                break;
+        }
+    $sub = count($result);
+    foreach($result as $index=>$m):
+        $hides = 1;
+        $hide = explode("|",$hides);
+        $m['_index']= $index;
+        if($data['classnow']==$m['id'] || $data['class1']==$m['id'] || $data['class2']==$m['id']){
+            $m['class']="active";
+        }else{
+            $m['class'] = '';
+        }
+        if(in_array($m['name'],$hide)){
+            unset($m['id']);
+            unset($m['class']);
+            $m['hide'] = $hide;
+            $m['sub'] = 0;
+        }
+
+
+        if(substr(trim($m['icon']),0,1) == 'm' || substr(trim($m['icon']),0,1) == ''){
+            $m['icon'] = 'icon fa-pencil-square-o '.$m['icon'];
+        }
+        $m['urlnew'] = $m['new_windows'] ? "target='_blank'" :"target='_self'";
+        $m['urlnew'] = $m['nofollow'] ? $m['urlnew']." rel='nofollow'" :$m['urlnew'];
+        $m['_first']=$index==0 ? true:false;
+        $m['_last']=$index==(count($result)-1)?true:false;
+        $$m = $m;
+?>
+	                <li><a href="<?php echo $m['url'];?>" <?php echo $m['urlnew'];?> title="<?php echo $m['name'];?>" class='<?php echo $m['class'];?>'><?php echo $m['name'];?></a></li>
+					<?php endforeach;?>
+	            </ul>
+	        </div>
+			<?php }else{ ?>
+			<a href="<?php echo $m['url'];?>" title="<?php echo $m['name'];?>" class='<?php echo $m['class'];?>'><?php echo $m['name'];?></a>
+	        <?php } ?>
+		</li>
+		<?php endforeach;?>
+		<?php endforeach;?>
+	</ul>
+	<?php } ?>
+	    <?php if($ui['sidebar_newslist_ok']){ ?>
+	<div class="sidebar-news-list recommend">
+		<h3 class='font-size-16 m-0'><?php echo $ui['sidebar_newslist_title'];?></h3>
+		<ul class="list-group list-group-bordered m-t-10 m-b-0">
 			<?php
-			}
-			$_M['paraclass']->parawebtem($_M['user']['id'],10,1);
-			?>
-			<button class="btn btn-lg btn-primary btn-squared btn-block" type="submit"><?php echo $_M['word']['memberRegister'];?></button>
-			<div class="login_link m-t-10 text-xs-right"><a href="<?php echo $_M['url']['login'];?>"><?php echo $_M['word']['acchave'];?></a></div>
-		</form>
+    $cid=$data['class1'];
+
+    $num = $ui['sidebar_newslist_num'];
+    $module = "";
+    $type = all;
+    $order = 'no_order asc';
+    $para = "";
+    if(!$module){
+        if(!$cid){
+            $value = $m['classnow'];
+        }else{
+            $value = $cid;
+        }
+    }else{
+        $value = $module;
+    }
+
+    $result = load::sys_class('label', 'new')->get('tag')->get_list($value, $num, $type, $order, $para);
+    $sub = count($result);
+    foreach($result as $index=>$v):
+        $id = $v['id'];
+        $v['sub'] = $sub;
+        $v['_index']= $index;
+        $v['_first']= $index==0 ? true:false;
+        $v['_last']=$index==(count($result)-1)?true:false;
+        $$v = $v;
+?>
+			<li class="list-group-item">
+				<a href="<?php echo $v['url'];?>" title="<?php echo $v['title'];?>" <?php echo $g['urlnew'];?>><?php echo $v['title'];?></a>
+			</li>
+			<?php endforeach;?>
+		</ul>
 	</div>
+	<?php } ?>
+	    <?php if($ui['sidebar_piclist_ok']){ ?>
+	<div class='sidebar-piclist'>
+		<h3 class='m-0 font-size-16 font-weight-300'><?php echo $ui['sidebar_piclist_title'];?></h3>
+		<ul class='blocks-2 blocks-md-3 blocks-lg-100 m-t-20 text-xs-center imagesize sidebar-piclist-ul' data-scale='0.75117370892019'>
+			<?php
+    $cid=$ui['sidebar_piclist_id'];
+
+    $num = $ui['sidebar_piclist_num'];
+    $module = "";
+    $type = all;
+    $order = 'no_order asc';
+    $para = "";
+    if(!$module){
+        if(!$cid){
+            $value = $m['classnow'];
+        }else{
+            $value = $cid;
+        }
+    }else{
+        $value = $module;
+    }
+
+    $result = load::sys_class('label', 'new')->get('tag')->get_list($value, $num, $type, $order, $para);
+    $sub = count($result);
+    foreach($result as $index=>$v):
+        $id = $v['id'];
+        $v['sub'] = $sub;
+        $v['_index']= $index;
+        $v['_first']= $index==0 ? true:false;
+        $v['_last']=$index==(count($result)-1)?true:false;
+        $$v = $v;
+?>
+			<li class='masonry-child'>
+				<a href='<?php echo $v['url'];?>' title='<?php echo $v['title'];?>' class='block m-b-0' target='_blank'>
+					<img data-original="<?php echo thumb($v['imgurl'],$v['img_x'],$v['img_y']);?>" class='cover-image' alt='<?php echo $v['title'];?>' height='100'></a>
+				<h4 class='m-t-10 m-b-0 font-size-14'>
+					<a href='<?php echo $v['url'];?>' title='<?php echo $v['title'];?>' target='_blank'><?php echo $v['title'];?></a>
+				</h4>
+				<p class='m-b-0 red-600'>价格-没有数据</p>
+			</li>
+			<?php endforeach;?>
+		</ul>
+	</div>
+	<?php } ?>
+</aside>
 </div>
-<?php
-# MetInfo Enterprise Content Management System
-# Copyright (C) MetInfo Co.,Ltd (http://www.metinfo.cn). All rights reserved.
-defined('IN_MET') or exit('No permission');
- ?>
-<script>
-var MET=[];
-MET['url']=[];
-MET['langtxt'] = {
-	"jsx15":"<?php echo $_M['word']['jsx15'];?>",
-	"js35":"<?php echo $_M['word']['js35'];?>",
-	"jsx17":"<?php echo $_M['word']['jsx17'];?>",
-	"formerror1":"<?php echo $_M['word']['formerror1'];?>",
-	"formerror2":"<?php echo $_M['word']['formerror2'];?>",
-	"formerror3":"<?php echo $_M['word']['formerror3'];?>",
-	"formerror4":"<?php echo $_M['word']['formerror4'];?>",
-	"formerror5":"<?php echo $_M['word']['formerror5'];?>",
-	"formerror6":"<?php echo $_M['word']['formerror6'];?>",
-	"formerror7":"<?php echo $_M['word']['formerror7'];?>",
-	"formerror8":"<?php echo $_M['word']['formerror8'];?>",
-	"js46":"<?php echo $_M['word']['js46'];?>",
-	"js23":"<?php echo $_M['word']['js23'];?>",
-	"checkupdatetips":"<?php echo $_M['word']['checkupdatetips'];?>",
-	"detection":"<?php echo $_M['word']['detection'];?>",
-	"try_again":"<?php echo $_M['word']['try_again'];?>",
-	"fileOK":"<?php echo $_M['word']['fileOK'];?>",
-};
-MET['met_editor']="<?php echo $_M['config']['met_editor'];?>";
-MET['met_keywords']="<?php echo $_M['config']['met_keywords'];?>";
-MET['url']['ui']="<?php echo $_M['url']['ui'];?>";
-MET['url']['own']="<?php echo $_M['url']['own'];?>";
-MET['url']['own_tem']="<?php echo $_M['url']['own_tem'];?>";
-MET['url']['api']="<?php echo $_M['url']['api'];?>";
-</script>
+</div>
+<?php } ?>
+		</div>
+    </div>
+</main>
 
         <?php
             $id = 3;
@@ -1325,6 +1442,3 @@ if($lang_json_file_ok){
 ?>
 </body>
 </html>
-<script src="<?php echo $_M['url']['site'];?>public/ui/v2/static/js/app.js?<?php echo $met_file_version;?>"></script>
-<?php if(file_exists(PATH_OWN_FILE."templates/met/js/own.js") && !((M_NAME=='product' || M_NAME=='shop') && $_M['config']['shopv2_open'])){ ?>
-<script src="<?php echo $_M['url']['own_tem'];?>js/own.js?<?php echo $met_file_version;?>"></script><?php } ?>

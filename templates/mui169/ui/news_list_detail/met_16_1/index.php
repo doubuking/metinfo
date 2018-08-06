@@ -21,6 +21,8 @@
             </if>
         </if>
 					<section class="details-title border-bottom1">
+                        <h1>{$data.starttime}</h1>
+                        <h1>{$data.aaa}</h1>
 						<h1 class='m-t-10 m-b-5'>{$data.title}</h1>
 						<div class="info font-weight-300">
 							<span>{$data.updatetime}</span>

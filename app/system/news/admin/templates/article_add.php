@@ -5,10 +5,11 @@
 defined('IN_MET') or exit('No permission');
 
 require $this->template('ui/head');
+$list['is_activity']?$open='checked':$close='checked';
 echo <<<EOT
 -->
 
-<link rel="stylesheet" href="{$_M[url][own_tem]}css/metinfo.css?{$jsrand}" />
+<link rel="stylesheet" href="{$_M[url][own_tem]}css/metinfo.css?{$jsrand}" xmlns="http://www.w3.org/1999/html"/>
 <form method="POST" class="ui-from article_add" name="myform" action="{$_M[url][own_form]}a={$a}" target="_self">
 	<input type="hidden" name='id' value="{$_M['form']['id']}" />
 	<input type="hidden" name="addtime_l" value="{$list['addtime']}">
@@ -148,6 +149,32 @@ echo <<<EOT
 			<dd class="ftype_day">
 				<div class="fbox">
 					<input type="input" name="updatetime" data-day-type = "2" value="{$list[updatetime]}">
+				</div>
+			</dd>
+		</dl>
+		
+		<dl>
+            <dt>活动开关</dt>
+            <dd class="ftype_radio ftype_transverse">
+                <div class="fbox">
+                    <label><input name="is_activity" type="radio" value="0" {$close} >关</label>
+                    <label><input name="is_activity" type="radio" value="1" {$open} >开</label>
+                </div>
+                <span class="tips"></span>
+            </dd>
+        </dl>
+		
+		<dl>
+			<dt>活动开始时间</dt>
+			<dd class="ftype_day">
+				<div class="fbox">
+					<input type="input" name="starttime" data-day-type = "2" value="{$list[starttime]}">
+				</div>
+			</dd>
+			<dt>活动结束时间</dt>
+			<dd class="ftype_day">
+				<div class="fbox">
+					<input type="input" name="endtime" data-day-type = "2" value="{$list[endtime]}">
 				</div>
 			</dd>
 		</dl>

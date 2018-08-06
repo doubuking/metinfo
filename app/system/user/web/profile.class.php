@@ -55,6 +55,9 @@ class profile extends userweb {
 		}
 	}
 
+    /**
+     * 保存 7代表用户中心
+     */
 	public function doinfosave() {
 		global $_M;
 		$infos = $this->paraclass->form_para($_M['form'],10,7);

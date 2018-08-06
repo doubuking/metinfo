@@ -1,0 +1,18 @@
+$uicss { line-height: 1.8; background-color: $bgcolor$; }
+$uicss p { margin-bottom: 0px; color: $firstcolor$; color: $titlecolor$; }
+$uicss p img { max-width: 100%; height: auto !important; }
+$uicss .powered_by_metinfo { color: $secondcolor$; color: $desccolor$; }
+$uicss .met-langlist .btn-lang { background: transparent; color: $firstcolor$; color: $titlecolor$; border-color: $firstcolor$; border-color: $titlecolor$; }
+$uicss .met-langlist .btn-lang:hover, $uicss .met-langlist .btn-lang:focus, $uicss .met-langlist .btn-lang:active { color: #fff; border-color: $thirdcolor$; border-color: $hovercolor$; background-color: $thirdcolor$; background-color: $hovercolor$; }
+$uicss .met-langlist .dropdown-menu .dropdown-item { color: $firstcolor$; color: $titlecolor$; }
+$uicss .met-langlist { margin-top: 10px; }
+$uicss .met-langlist .btn-lang .flag-icon { margin-right: 3px; }
+$uicss .met-langlist .dropdown-menu { min-width: 0; }
+$uicss .met-langlist .dropdown-menu .dropdown-item { white-space: nowrap; }
+$uicss .met-langlist .dropdown-menu { min-width: 100%; }
+@media (max-width:479px) {
+	.met-langlist .btn-lang { padding-left: 5px; padding-right: 5px; }
+}
+$uicss #met-langlist-modal .modal-body .close { position: absolute; right: 10px; top: 0px; }
+$uicss #met-langlist-modal a.btn { border: none; font-size: 16px; height: 50px; line-height: 50px; }
+$uicss #met-langlist-modal .flag-icon { margin-right: 8px; top: 7px; font-size: 30px; }

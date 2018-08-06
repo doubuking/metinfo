@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://gateway.test.95516.com/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.1.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="02" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://met6.1.com/pay/return.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://met6.1.com/pay/notify.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="777290058110048" />
+    <input type="hidden" name="orderId" id="orderId" value="2018052514174338968" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20180525142735" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="200" />
+    <input type="hidden" name="payTimeout" id="payTimeout" value="20180525144235" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="haGJCNL+/wP1VRRjL5Ag8WHOWszJqSUncCWdY2CMHN4FvyT1Im9SuNE/jduBdeB1CdIshx9LJjrLW62MNaAc6+PTCKZQXVdzVTuZDCIxzNJx8kFurU1PBxHSAw7wiOK9WK8qbI0Vr6CveP2rIYHUy1V42uDqknORoQCi6rJUkEJG2DoWJ7tPj5YGJUUWbAEE+NYNsmstYkgefxLEY5/Ldan9SD3zahOpJy1xh2St2k7ytWBdcMSR/S7CGMhzB+RmZrhP2nCP6P0Ew43Vice4VT5V8p4sq714nTQZ1C3oBmGaQ7XQUyiO+msvJoQDC6P6peEaeZFJF4fjQ6msYzc5gg==" />
+    <!--<input type="submit" type="hidden">-->
+    </form>
+</body>
+</html>

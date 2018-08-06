@@ -1,0 +1,16 @@
+$uicss {background-color: $bodybgcolor$;  background-color: $bgcolor$; }
+$uicss .breadcrumb-item { float: none; display: inline-block; padding: 0 5px;}
+$uicss .breadcrumb-item.split{padding: 0;}
+$uicss .breadcrumb-item a { color: $secondcolor$; color: $desccolor$; transition: color 0.2s ease-out;}
+$uicss .breadcrumb-item a:hover { color: $thirdcolor$; color: $hovercolor$; }
+$uicss .breadcrumb-item+.breadcrumb-item::before { color: $secondcolor$; color: $desccolor$; }
+$uicss .breadcrumb-item:nth-child(1) { color: $firstcolor$; color: $titlecolor$; font-size: 16px;}
+$uicss .container {
+	border-bottom: 1px solid #eee; border-top: 1px solid #eee;
+	border-bottom: 1px solid $solidcolor$; border-top: 1px solid $solidcolor$;
+}
+$uicss .breadcrumb-item+.breadcrumb-item::before{display: none;}
+$uicss .breadcrumb-item+.breadcrumb-item.split::before{display: inline-block;}
+@media (max-width:767px) {
+	$uicss .container { text-align: left; }
+}

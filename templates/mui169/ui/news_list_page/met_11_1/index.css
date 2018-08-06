@@ -1,0 +1,127 @@
+@charset "utf-8";
+$uicss{ padding: 30px 0; }
+$uicss .met-news-list{
+    background:$bgconcolor$;
+    padding:30px;
+}
+/* 新闻列表 */
+$uicss{background:$bgcolor$;}
+$uicss .met-news-list li { padding: 30px 0; border-bottom: 1px solid $bor_bottom$; -webkit-transition: all .66s cubic-bezier(.17, .84, .44, 1); transition: all .66s cubic-bezier(.17, .84, .44, 1); position: relative; }
+$uicss .met-news-list li:first-child{padding-top:0;}
+$uicss .met-news-list li h4 { margin: 0 0 20px; font-size: 22px; }
+$uicss .met-news-list li h4 a { color: $firstcolor$;color: $titlecolor$; text-shadow: none; position: relative; }
+$uicss .met-news-list li h4 a:hover{color: $thirdcolor$;color: $hovercolor$; }
+$uicss .met-news-list li:after { content: ''; width: 160px; height: 1px; background: $firstcolor$;background: $titlecolor$;color: $firstcolor$;color: $titlecolor$; position: absolute; bottom: 0; left: 0; -webkit-transition: all .66s cubic-bezier(.17, .84, .44, 1); transition: all .66s cubic-bezier(.17, .84, .44, 1); }
+$uicss .met-news-list li:hover::after { width: 100%; }
+$uicss .met-news-list li:hover a { text-decoration: none; }
+$uicss .met-news-list li p { font-size: 16px; }
+$uicss .met-news-list li p.des { color: $secondcolor$;color: $desccolor$; margin-bottom: 10px; font-size: 13px; }
+$uicss .met-news-list li p.info { margin-bottom: 0px; font-size: 16px; color: $secondcolor$;color: $timecolor$; }
+$uicss .met-news-list li .media-body p.info{margin: 0;}
+$uicss .met-news-list li p.info span { margin-left: 10px; }
+$uicss .met-news-list li p.info span:first-child { margin: 0; }
+$uicss .met-news-list li p.info i { color: $secondcolor$;color: $timecolor$; }
+$uicss .sidebar-column li a { display: block; font-size: 16px; color: $secondcolor$;color: $desccolor$; }
+$uicss .sidebar-column li a:hover { color: $firstcolor$; }
+$uicss .sidebar-column li i { float: right; margin-top: 2px; font-size: 14px; }
+$uicss .sidebar-column li ul a { font-size: 14px; color: $secondcolor$;color: $desccolor$; }
+$uicss .sidebar-news-list ul li a { color: $secondcolor$;color: $desccolor$; }
+$uicss .sidebar-news-list ul li a:hover { color: $firstcolor$; }
+$uicss .met-sidebar { box-shadow: none; }
+$uicss .slick-slide { width: 100%; position: relative; display: block; }
+$uicss .media-chief img { width: 100%; margin-bottom: 20px; }
+$uicss .headlines-text { width: 100%; position: absolute; left: 0; bottom: 0px; text-align: center; background: rgba(0, 0, 0, .38); padding: 15px; }
+$uicss .headlines-text h3 { color: #fff; margin: 0; }
+$uicss .slick-next { right: 0px; z-index: 2; height:100%;width:40px;}
+$uicss .slick-prev { left: 0px; z-index: 2;height:100%; width:40px}
+$uicss .met-news-body .slick-dots { display: none !important; }
+@media (max-width:991px) {
+    $uicss .met-news-list  li h4 { font-size: 18px; margin-bottom: 10px; }
+}
+@media (max-width:767px) {
+    $uicss{
+        padding: 0;
+    }
+    $uicss .met-news-list li { padding: 20px 0; }
+    $uicss .met-news-list li .media-left { padding-right: 10px; }
+    $uicss .met-news-list li .media-left .media-object { width: 100px; }
+    $uicss .met-news-list li h4 { font-size: 16px; margin-bottom: 5px; }
+    $uicss .met-news-list li p { font-size: 14px; }
+    $uicss .headlines-text { bottom: 0px; }
+    $uicss .headlines-text h3 { font-size: 16px; }
+    $uicss .met-news-list li p.des { margin-bottom: 5px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+    $uicss .media-left .media-object { height: 62.5px; }
+    $uicss .met-news-list li:after { width: 100px; }
+    $uicss .met-news-list li p.info { margin-left: 0px; }
+}
+@media (max-width:479px) {
+    $uicss .met-news-list li .media-left { display: table-cell; }
+}
+@media (max-width:349px) {
+    $uicss .met-news-list li .media-left, $uicss li .media-body { width: 100%; }
+    $uicss .met-news-list li .media-left { padding: 0;width: 30%; display: table-cell; padding-right:10px; }
+    $uicss .met-news-list li .media-left .media-object { width: auto; max-width: 100%; }
+    $uicss .met-news-list li .media-body { margin-top: 15px; }
+}
+$uicss .input-search .form-control { border-radius: 0; }
+$uicss .input-search .form-control:focus { border-color: $firstcolor$;border-color: $titlecolor$; }
+$uicss .card{background:#fff;}
+$uicss .card-body{padding:20px;}
+$uicss .card-body .card-title a{ color: $firstcolor$;color: $titlecolor$;}
+$uicss .card-body .card-title a:hover{color: $thirdcolor$;color: $hovercolor$;}
+$uicss .card-body p{color: $secondcolor$;color: $desccolor$;}
+/* 侧栏 */
+$uicss .service-list .item { padding: 50px; }
+@media (max-width:767px) {
+    $uicss .service-list .item { padding: 15px 30px; }
+}
+$uicss .service-list .item a { width: 100%; display: block; position: relative; }
+$uicss .service-list .item a img { width: 100%; margin: 0 auto; }
+$uicss .service-list .item h4 { font-size: 16px; height: 46px; line-height: 46px; color: $firstcolor$;color: $titlecolor$; -webkit-transition: all ease-out 0.2s; transition: all ease-out 0.2s; border-bottom: 1px solid #eee; text-align: left; width: 100%; }
+$uicss .service-list .item h4:before { position: absolute; content: ""; width: 10px; height: 1px; background-color: $firstcolor$;background-color: $titlecolor$; margin-top: 46px; -webkit-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1); transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1); }
+$uicss .service-list .item p { color: $secondcolor$;color: $desccolor$; font-size: 13px; line-height: 24px; height: 50px; overflow: hidden; width: 100%; margin-top: 10px; }
+$uicss .service-list .item:hover h4:before { width: 100%; }
+$uicss .service-list .item:hover a { text-decoration: none; }
+/*分页*/
+.met_pager { margin-top: 20px; text-align: center; }
+.met_pager * { display: inline-block; }
+.met_pager a { 
+    padding: 9px 15px;
+    border: 1px solid ;
+    border-color:$para_color$;
+    border-right: none;
+    background: $para_color$;
+    text-align: center;
+    color:$secondcolor$;
+}
+.met_pager a:hover { background:$hovercolor$; text-decoration: none; }
+.met_pager a.NextA { 
+    border-right: 1px solid ;
+    border-color:$thirdcolor$;
+    border-color:$para_color$;
+}
+.met_pager .PreSpan,
+.met_pager .NextSpan { 
+    padding: 9px 15px; 
+    border: 1px solid;
+    border-color:$thirdcolor$;
+    border-color:$para_color$;
+    background:$thirdcolor$;
+    background: $para_color$;
+    color:$secondcolor$;
+    cursor: default; }
+.met_pager .firstPage,
+.met_pager .lastPage { min-width: 40px; height: 28px; line-height: 28px; }
+.met_pager a.Ahover { border-color: $thirdcolor$;border-color: $hovercolor$;color: $hovercolor$; background: $thirdcolor$;background: $hovercolor$; color: #fff; cursor: default; }
+.met_pager a.Ahover:hover { border-color: $thirdcolor$;border-color: $hovercolor$;color: $hovercolor$; background: $thirdcolor$;background: $hovercolor$; color: #fff; }
+.met_pager a { text-decoration: none; }
+.met_pager a:active,
+.met_pager a:focus,
+.met_pager a:hover { text-decoration: none; }
+.met_pager .PageText { display: none; margin-left: 10px; color: #aaa; }
+.met_pager input { display: none; }
+.met_pager .firstPage,
+.met_pager .lastPage { height: auto; line-height: inherit; }
+.pager li { width: 49%; display: inline-block; }
+.pager li a { max-width: 100%; }
+$uicss #met-pager-btn{border-color: $thirdcolor$;background-color: $thirdcolor$;border-color: $hovercolor$;background-color: $hovercolor$;}

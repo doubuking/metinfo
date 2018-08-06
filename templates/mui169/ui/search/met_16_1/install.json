@@ -1,0 +1,73 @@
+{
+    "ui": {
+        "parent_name": "search",
+        "ui_name": "met_16_1",
+        "ui_page": "|search|",
+        "ui_title": "全局搜索模块",
+        "ui_description": "全局搜索模块",
+        "ui_issue": "1",
+        "ui_order": "1",
+        "ui_version": "1.2",
+        "ui_creater": "metinfo",
+        "ui_company": "metinfo",
+        "ui_edittime": "1517384363"
+    },
+    "config": [
+        {
+            "parent_name": "search",
+            "ui_name": "met_16_1",
+            "uip_type": "4",
+            "uip_style": "0",
+            "uip_select": "$M$开启$T$1$M$关闭$T$0",
+            "uip_name": "ui_show",
+            "uip_key": "ui_show",
+            "uip_value": "",
+            "uip_default": "1",
+            "uip_title": "区块显示开关",
+            "uip_description": "当前UI区块的开启关闭设置，关闭后可以在可视化编辑中开启",
+            "uip_order": "0"
+        },
+        {
+            "parent_name": "search",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "bgcolor",
+            "uip_key": "bgcolor-1",
+            "uip_value": "",
+            "uip_default": "",
+            "uip_title": "区块背景色",
+            "uip_description": "",
+            "uip_order": "1"
+        },
+        {
+            "parent_name": "search",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "hovercolor",
+            "uip_key": "hovercolor-1",
+            "uip_value": "",
+            "uip_default": "",
+            "uip_title": "鼠标经过颜色",
+            "uip_description": "默认为模板配色调",
+            "uip_order": "2"
+        },
+        {
+            "parent_name": "search",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "titlecolor",
+            "uip_key": "titlecolor-1",
+            "uip_value": "",
+            "uip_default": "",
+            "uip_title": "标题颜色",
+            "uip_description": "默认为模板主色调",
+            "uip_order": "3"
+        }
+    ]
+}

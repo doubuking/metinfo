@@ -1,0 +1,38 @@
+/* 产品列表页 */
+$uicss{
+  background: $bgcolor$;
+  padding:$padding$px;
+}
+@media (max-width: 992px){
+  $uicss{
+    padding:$padding_p$px;
+  }
+}
+@media (max-width: 767px){
+  $uicss{
+    padding:$padding_m$px;
+  }
+}
+$uicss .btn-outline.btn-primary{
+    color: $thirdcolor$;
+    border-color: $thirdcolor$;
+    color: $hovercolor$;
+    border-color: $hovercolor$;
+}
+$uicss .btn-outline.btn-primary.active, .btn-outline.btn-primary:active, .btn-outline.btn-primary:focus, .btn-outline.btn-primary:hover, .open>.btn-outline.btn-primary.dropdown-toggle{
+  background-color: $thirdcolor$;color:#fff !important;background-color: $hovercolor$;
+}
+$uicss .order a{color:$firstcolor$;color:$sort_textcolor$;font-size:14px;background:#fff;background:$sort_bgcolor$;border-radius:2px;}
+$uicss .order a:hover{color:$thirdcolor$;color:$sort_hovercolor$;}
+
+/*搜索*/ 
+$uicss .type-order{border-top:1px solid #e4e4e4;border-right: 1px solid #e4e4e4;border-left: 1px solid #e4e4e4;}
+$uicss .type-order{border-color:$border_color$;}
+$uicss .type-order>div{background:#e5e5e5;border-bottom:1px solid #ededed;}
+$uicss .type-order>div{background:$attr_namebgcolor$;border-color:$border_color$;color:$attr_nametextcolor$;}
+$uicss .type-order ul{background: #fafafa;}
+$uicss .type-order ul{padding:0;margin:0;background: $attr_vbgcolor$;}
+$uicss .type-order ul li{height:40px;line-height:40px;}
+$uicss .type-order .attr-name{height:40px;line-height:40px;white-space: nowrap;position:relative;overflow: hidden;}
+$uicss .type-order .attr-value a{color:$secondcolor$;color:$attr_vtextcolor$;}
+$uicss .type-order .attr-value a:hover,$uicss .type-order ul li.para_select_option a{color:$thirdcolor$;color:$hovercolor$;}

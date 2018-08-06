@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* 留言表单 */
+.message-list-no .leftsidebar{margin-right:0;}
+$uicss { display: block; padding: 30px;background:$bodybgcolor$; }
+$uicss{background:$bgcolor$;}
+$uicss select { border-radius: 0; }
+$uicss input { border-radius: 0; }
+.btn-primary { border-radius: 0; background: $firstcolor$; border-color: $firstcolor$;background: $btncolor$; border-color: $btncolor$; color: $txtcolor$; }
+.btn-primary:hover { background: $thirdcolor$;background: $hovercolor$; border-color: $thirdcolor$;border-color: $hovercolor$; color: $hovertxtcolor$;}
+$uicss .form-control.focus, .form-control:focus { border-color: $thirdcolor$;border-color: $hovercolor$; }
+$uicss .checkbox-primary input[type=radio]:checked+label::before, .checkbox-primary input[type=checkbox]:checked+label::before { background: $thirdcolor$;background: $hovercolor$; border-color: $thirdcolor$;border-color: $hovercolor$; }
+$uicss .checkbox-custom input[type=radio]:focus+label::before, .checkbox-custom input[type=checkbox]:focus+label::before { outline: 5px auto $thirdcolor$; }
+// $uicss .btn-primary.disabled, .btn-primary.disabled.active, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled], .btn-primary[disabled].active, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary.active, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover { background: #e4eaec; border-color: #e4eaec; }
+$uicss .panel { box-shadow: none; }
+$uicss .media-body{
+    width:100%;
+}
+$uicss .message-title{
+    color: $firstcolor$;
+}
+
+#getcode{height:24px;}
+@media (max-width: 767px){
+    $uicss {
+        padding: 0px;
+    }
+    .message_form .row{margin: 0;}
+    .message_form{padding:0 !important;}
+}

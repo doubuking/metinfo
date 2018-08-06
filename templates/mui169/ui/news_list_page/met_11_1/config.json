@@ -1,0 +1,22 @@
+{
+    "css":[
+    	"{$metui_url3}fonts/iconfont/iconfont.css",
+        "{$metui_url3}plugin/slick/slick.min.css",
+        "{$metui_url3}plugin/slick/slick-theme.min.css",
+        "{$metui_url2}fonts/web-icons/web-icons.min.css",
+        "{$metui_url2}vendor/ladda/ladda.min.css",
+        "{$metui_url3}fonts/font-awesome/font-awesome.min.css",
+        "ui/css/index.css"
+    ],
+    "js":[
+        "{$metui_url2}vendor/jquery-appear/jquery.appear.min.js",
+        "{$metui_url2}js/Plugin/jquery-appear.min.js",
+        "{$metui_url3}plugin/slick/slick.min.js",
+        "{$metui_url2}vendor/ladda/spin.min.js",
+        "{$metui_url2}vendor/ladda/ladda.min.js",
+        "{$metui_url2}js/Plugin/ladda.min.js",
+        "{$metui_url3}plugin/jquery.lazyload.min.js",
+        "{$metui_url3}js/pager.js",
+        "{$metui_url3}js/news.js"
+    ]
+}

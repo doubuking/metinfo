@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* 返回顶部 */
+$uicss.met-scroll-top{position:fixed;right:10px;bottom:10px;z-index:10;}
+$uicss.met-scroll-top{border-color: $bodybgcolor$;
+    background-color: $bodybgcolor$;border-color: $bgcolor$;
+    background-color: $bgcolor$;color: $iconcolor$;}
+$uicss.met-scroll-top:hover,$uicss.met-scroll-top:focus{
+    border-color: $thirdcolor$;
+    background-color: $thirdcolor$;border-color: $hovercolor$;
+    background-color: $hovercolor$;color: $iconhovercolor$;
+}

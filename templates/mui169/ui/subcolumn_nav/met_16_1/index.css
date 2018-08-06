@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* 内页子栏目导航 */
+$uicss{background-color:$bodybgcolor$;border-color:$bordercolor$;}
+$uicss{background-color:$bgcolor$;}
+$uicss .product-search .form-group{max-width:500px;margin:0 auto 10px;}
+$uicss $uicss-ul > li a:hover, $uicss $uicss-ul > li a.active {
+    color: $thirdcolor$;color:$hovercolor$;
+}
+$uicss.container{border-radius: 5px; box-shadow: 0 1px 3px rgba(0, 37, 55, 0.05); margin: 10px auto;}
+$uicss-ul{font-size:0;}
+@media (max-width:767px){
+    $uicss-ul{white-space:nowrap;}
+	$uicss .subcolumn-nav{height:54px;}
+	$uicss.container{margin: 10px .9375rem;}
+}
+$uicss-ul li{display:inline-block;vertical-align:top;}
+$uicss-ul li > a{display:block;padding:5px 10px;font-size:16px;}
+$uicss-ul li a{color:$firstcolor$;}
+$uicss-ul li a{color:$titlecolor$;}
+$uicss-ul li .dropdown-menu{top:40px;}
+$uicss .product-search .form-control:focus{border-color: $thirdcolor$;color:$hovercolor$;}
+$uicss .swiper-container{z-index: 990;}

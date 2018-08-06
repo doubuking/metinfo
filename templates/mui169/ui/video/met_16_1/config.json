@@ -1,0 +1,13 @@
+{
+    "css":[
+        "{$metui_url2}fonts/7-stroke/7-stroke.min.css",
+    	"ui/css/index.css"
+    ],
+    "js":[
+        "{$metui_url2}vendor/jquery-appear/jquery.appear.min.js",
+        "{$metui_url2}js/Plugin/jquery-appear.min.js",
+        "{$metui_url2}/vendor/tweenmax/TweenMax.min.js",
+        "{$metui_url2}/vendor/scrollmagic/ScrollMagic.min.js",
+        "ui/js/index.js"
+    ]
+}

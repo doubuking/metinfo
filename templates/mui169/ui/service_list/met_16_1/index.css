@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* 首页服务区块 */
+$uicss.met-index-body.bgcolor{background:$bodybgcolor$;background:$bgcolor$;}
+$uicss.met-index-body.bgpic{background:url($bgpic$) no-repeat;background-size: cover;background-position: center;}
+$uicss.met-index-body{padding:$padding$px 0px;}
+$uicss.met-index-body h2{font-size:36px;color:$firstcolor$;color:$titlecolor$;}
+$uicss.met-index-body p.desc{padding:0 10%;font-size:16px;color:$secondcolor$;color:$desccolor$;}
+$uicss .index-service-list li h3{color:$firstcolor$;color:$titlecolor$;}
+$uicss .index-service-list li p{color:$secondcolor$;color:$desccolor$;}
+$uicss .index-service-list li i{color:$secondcolor$;color: $desccolor$;}
+@media (max-width:991px){
+	$uicss.met-index-body{padding:$padding_p$px 0px;}
+}
+@media (max-width:767px){
+	$uicss.met-index-body{padding:$padding_m$px 0px;}
+	$uicss.met-index-body h2{font-size:28px;}
+	$uicss.met-index-body p.desc{font-size:14px;}
+}
+$uicss .index-service-list li{margin:50px 0 0;}
+$uicss .index-service-list li i{width:120px;background:$icon_bg$;height:120px;line-height:120px;font-size:50px;color:$icon_color$;}
+$uicss .index-service-list li:hover i{background:$thirdcolor$;background:$icon_hoverbg$; color:$icon_hovercolor$;}
+$uicss .index-service-list li img{max-width:100%;}
+$uicss .index-service-list li h3{font-size:20px;}
+@media (max-width:991px){
+	$uicss .index-service-list li{margin-top:40px;}
+}
+@media (max-width:767px){
+	$uicss .index-service-list li{margin-top:30px;}
+	$uicss .index-service-list li i{width:90px;height:90px;line-height:90px;font-size:40px;}
+}
+@media (min-width:480px){
+	$uicss .index-service-list li p{padding:0 10%;}
+}
+$uicss .index-service-list li:hover h3{
+    color:$thirdcolor$;
+    color:$icon_hoverbg$;
+    color:$hovertitlecolor$;
+}
+$uicss .index-service-list li:hover p{
+    color:$thirdcolor$;
+    color:$icon_hoverbg$;
+    color:$hoverdesccolor$;
+}
+$uicss .news-bg { margin-top: 20px; opacity: 1; }
+$uicss .news-bg .bg {height: 100%; no-repeat;background-size: cover;background-position: center; }
+$uicss .news-bg .bg img{width:100%;}
+$uicss .container-fluid{padding:0;}

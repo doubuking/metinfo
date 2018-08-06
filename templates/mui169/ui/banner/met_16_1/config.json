@@ -1,0 +1,12 @@
+{
+    "css":[
+        "{$metui_url3}fonts/iconfont/iconfont.css",
+        "{$metui_url3}plugin/slick/slick.min.css",
+        "{$metui_url3}plugin/slick/slick-theme.min.css",
+        "ui/css/index.css"
+    ],
+    "js":[
+        "{$metui_url3}plugin/slick/slick.min.js",
+        "ui/js/index.js"
+    ]
+}

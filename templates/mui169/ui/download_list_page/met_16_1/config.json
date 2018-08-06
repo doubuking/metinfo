@@ -1,0 +1,11 @@
+{
+    "css":[
+        "{$metui_url2}fonts/font-awesome/font-awesome.min.css",
+    	"ui/css/index.css"
+    ],
+    "js":[
+        "{$metui_url3}plugin/StackBlur.js",
+        "{$metui_url3}plugin/jquery.lazyload.min.js",
+        "{$metui_url3}js/pager.js"
+    ]
+}

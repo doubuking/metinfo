@@ -1,0 +1,141 @@
+$uicss.met-download {
+	padding: 30px 0px;
+	background: $bodybgcolor$;
+	border-top: 1px solid #f0f2f5;
+}
+
+$uicss.met-download {
+	background: $bgcolor$;
+}
+
+$uicss .met-download-body {
+	background: #fff;
+	border-radius: 8px;
+	border: 1px solid #dcdcdc;
+	border-color: rgba(0, 0, 0, 0.14);
+	box-shadow: 0 3px 8px -6px rgba(0, 0, 0, 0.1);
+	margin-bottom: 50px;
+}
+
+$uicss.met-download h1 {
+	margin: 0px;
+	font-size: 22px;
+	float: left;
+	line-height: 1.5;
+	color: $firstcolor$;
+	color: $titlecolor$;
+}
+
+$uicss.met-download .details-title {
+	padding-bottom: 0px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+$uicss.met-download $uicss.met-download-body {
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+	-o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+	-ms-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+$uicss.met-download .details-title, $uicss.met-download .download-paralist {
+	padding: 30px;
+	background: #ffffff;
+}
+
+$uicss.met-download .details-title {
+	padding-bottom: 0px;
+}
+
+$uicss .met-editor {
+	padding: 30px;
+	background: #ffffff;
+	width: 100%;
+	max-width: 100%;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 1.8;
+	color: #222;
+	word-wrap: break-word;
+}
+
+$uicss.met-download .info {
+	font-size: 12px;
+	margin: 10px 0 20px 0;
+	color: $secondcolor$;
+	color: $desccolor$;
+	float: right;
+}
+
+$uicss.met-download .info span {
+	padding-right: 10px;
+}
+
+.border-bottom1 {
+	border-bottom: 1px solid #f0f2f5;
+}
+
+$uicss.met-download .download-paralist .btn {
+	border-color: $thirdcolor$;
+	border-color: $hovercolor$;
+	color: #fff;
+	margin-top: 20px;
+	border-radius: 6px !important;
+	background: linear-gradient($thirdcolor$, $secondcolor$);
+	background: linear-gradient($hovercolor$, $linearcolor$);
+}
+
+$uicss.met-download .download-paralist .btn:hover {
+	color: #fff;
+	background: linear-gradient($secondcolor$, $secondcolor$);
+	background: linear-gradient($linearcolor$, $linearcolor$);
+	border-color: $thirdcolor$;
+	border-color: $hovercolor$;
+}
+
+.tag {
+	font-size: 14px;
+	color: #666;
+	padding: 0 30px 30px;
+	background: #fff;
+	display: block;
+	text-align: left;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+.tag a {
+	color: #666;
+	padding: 5px;
+}
+
+.tag a:hover {
+	color: $thirdcolor$;
+	color: $hovercolor$;
+}
+
+@media (max-width:767px) {
+	$uicss.met-download {
+		padding: 30px 10px;
+	}
+
+	$uicss  .details-title {
+		padding-bottom: 10px;
+	}
+
+	$uicss  .details-title h1 {
+		font-size: 20px;
+		min-width: 200px;
+	}
+
+	$uicss  .details-title .info {
+		font-size: 12px;
+		float: left;
+	}
+
+	$uicss .met-shownews-body .row {
+		padding: 15px;
+	}
+
+}

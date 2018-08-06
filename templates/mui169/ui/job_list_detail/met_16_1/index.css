@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* 招聘详情 */
+$uicss{background: $bodybgcolor$;background:$bgcolor$;padding:30px 0;}
+$uicss .card{padding: 30px;}
+$uicss .card-metas{font-size: 12px;color: $desccolor$;}
+$uicss .card-title{color:$firstcolor$;color:$titlecolor$;}
+$uicss .card-body-footer a{border-radius: 3px;background:transparent;color:$thirdcolor$;color:$hovercolor$;border-color:$thirdcolor$;border-color:$hovercolor$; }
+$uicss .card-body-footer a:hover{background:$thirdcolor$;background:$hovercolor$;color:#fff;}

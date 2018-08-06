@@ -1,0 +1,11 @@
+{
+    "css":[
+        "{$metui_url2}fonts/web-icons/web-icons.min.css",
+    	"ui/css/index.css"
+    ],
+    "js":[
+        "{$metui_url2}vendor/masonry/masonry.pkgd.min.js",
+        "{$metui_url3}plugin/jquery.lazyload.min.js",
+		"ui/js/index.js"
+    ]
+}

@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* 轮播图 */
+$uicss{width:100%;height:auto;display:table;}
+$uicss.fixedheight{display:-moz-deck;}
+$uicss.fixedheight .slick-slide{height:100%;}
+$uicss.fixedheight .slick-slide img{width:auto;height:100%;position:absolute;left:50%;top:0;transform:translateX(-50%);}
+@media screen\0{
+    $uicss.fixedheight .slick-slide img{left:0;width:100%;}
+}
+$uicss.banner-ny-h{height:150px;}
+$uicss.banner-ny-h .slick-slide img{min-height:100px;}
+@media (max-width:991px){
+    $uicss.banner-ny-h{height:100px;}
+}
+$uicss .slick-slide{display:block;width:100%;}
+$uicss.slick-slider{display:block;}
+$uicss:hover .slick-arrow{display:block!important;}
+$uicss .slick-list,
+$uicss .slick-track{height:100%;}
+$uicss .slick-prev:before,$uicss .slick-next:before{display:none;}
+$uicss .slick-slide{height:auto;position:relative;overflow:hidden;}
+$uicss .slick-slide a{width:100%;height:100%;display:block;position:absolute;left:0;top:0;z-index:13;}
+$uicss .slick-slide img{min-height:100px;object-fit: cover;}
+$uicss .slick-slide img[data-lazy]{max-height:150px;}
+$uicss .slick-slide img{display: none;}
+$uicss .slick-slide:nth-child(1) img{ display: block!important;height: auto; }
+$uicss .slick-arrow{width:15%;height:100%;display:none!important;z-index: 1;}
+$uicss .slick-arrow.slick-prev{background:rgba(0,0,0,0.24995);background:-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,.0001)));background:linear-gradient(left,rgba(0,0,0,.5) 0%,rgba(0,0,0,.0001) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorStr=#80000000,endColorStr=#00000000,GradientType=1);}
+@media screen\0{
+    $uicss .slick-arrow.slick-prev{background:rgba(0,0,0,.001);}
+}
+$uicss .slick-arrow.slick-next{background:rgba(0,0,0,-0.24995);background:-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.0001)),to(rgba(0,0,0,.5)));background:linear-gradient(left,rgba(0,0,0,.0001) 0%,rgba(0,0,0,.5) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorStr=#00000000,endColorStr=#80000000,GradientType=1);}
+@media screen\0{
+    $uicss .slick-arrow.slick-next{background:rgba(0,0,0,.001);}
+}
+$uicss .slick-arrow i{font-size:40px;color:#fff!important;}
+$uicss .slick-dots{margin:0;bottom:20px;}
+$uicss .slick-dots li{margin:0 2px;}
+
+@media (max-width:767px){
+    $uicss{min-height:auto;}
+    $uicss .slick-slide img{min-height:auto;}
+    $uicss .slick-dots{bottom:5px;}
+    $uicss .slick-dots li{width:15px;height:15px;margin:0;}
+}
+$uicss .banner-text{width:100%;height:100%;position:absolute;left:0;top:0;z-index:12;}
+$uicss .banner-text .container{height:100%;display:table;text-align:center;}
+$uicss .banner-text .container .banner-text-con{display:table-cell;vertical-align:middle;}
+$uicss .banner-text.p-0 .container{text-align:left;}
+$uicss .banner-text.p-0 .container .banner-text-con div{width:60%;float:left;}
+$uicss .banner-text.p-1 .container{text-align:right;}
+$uicss .banner-text.p-1 .container .banner-text-con div{width:60%;float:right;}
+$uicss .banner-text.p-2{top:10%;}
+$uicss .banner-text.p-2 .container .banner-text-con{vertical-align:top;}
+$uicss .banner-text.p-3{top:auto;bottom:10%;}
+$uicss .banner-text.p-3 .container .banner-text-con{vertical-align:bottom;}
+$uicss .banner-text.p-2 .container .banner-text-con div,
+$uicss .banner-text.p-3 .container .banner-text-con div,
+$uicss .banner-text.p-4 .container .banner-text-con div{width:60%;display:inline-block;}
+$uicss .banner-text h4,
+$uicss .banner-text p{color:#fff;}
+$uicss .banner-text h4{margin:0;font-size:30px;}
+$uicss .banner-text p{font-size:36px;margin:20px 0 0;text-shadow:none;}
+$uicss .banner-text .btn{margin-top:30px;font-size:20px;}
+@media (max-width:991px){
+    $uicss .banner-text h4{font-size:20px;}
+    $uicss .banner-text p{font-size:30px;}
+}
+@media (max-width:767px){
+    $uicss .banner-text .container{width:100%;}
+    $uicss .banner-text.p-4 .container .banner-text-con{width:100%;}
+    $uicss .banner-text h4{font-size:18px;}
+    $uicss .banner-text p{margin-top:15px;font-size:24px;}
+    $uicss .banner-text .btn{margin-top:20px;font-size:16px;}
+}
+@media (max-width:479px){
+    $uicss .banner-text h4{font-size:16px;}
+    $uicss .banner-text p{margin-top:10px;font-size:20px;}
+}
+/* 内页轮播图 */
+$uicss-ny{height:120px;background:$bodybgcolor$;background:$bgcolor$;}
+$uicss-ny h1,
+$uicss-ny h2{margin:0px;padding:10px 30px;font-size:35px;text-shadow:none;color:$titlecolor$;font-weight: 300;}

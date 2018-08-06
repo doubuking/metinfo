@@ -1,0 +1,201 @@
+/*反馈模块*/
+$uicss select{
+    border-radius:0;
+}
+$uicss input{
+    border-radius:0;
+}
+$uicss .form-group textarea,
+$uicss .form-group select,
+$uicss .form-group input
+{
+  border-color: $secondcolor$;
+   border-color: $border_color$;
+}
+$uicss .form-group textarea:focus,
+$uicss .form-group select:focus,
+$uicss .form-group input:focus
+{
+  border-color: $thirdcolor$;
+  border-color: $txt_color$;
+}
+
+$uicss .form-group label.control-label
+{
+  color: $title_color$;
+}
+$uicss .checkbox-custom label
+{
+    color: $center_color$;
+}
+$uicss .form-group label:hover
+{
+   color:$thirdcolor$;
+    color: $hovercolor$;
+}
+
+
+$uicss .btn-primary{
+    border-radius:0;
+    background:$secondcolor$;
+    border-color:$secondcolor$;
+   background:$btncolor$;
+    border-color:$inputborder_color$;
+    color:$btn_txt_color$;
+}
+$uicss .btn-primary:hover{
+    background:$thirdcolor$;background:$hovercolor$;
+    border-color: $thirdcolor$;border-color: $hovercolor$;
+}
+$uicss .form-control.focus, .form-control:focus{
+        border-color: $thirdcolor$;border-color: $hovercolor$;
+}
+
+$uicss .checkbox-primary input[type=radio]:checked+label::before, .checkbox-primary input[type=checkbox]:checked+label::before{
+    background:$thirdcolor$;background:$hovercolor$;
+    border-color: $thirdcolor$;border-color: $hovercolor$;
+}
+$uicss .checkbox-custom input[type=radio]:focus+label::before, .checkbox-custom input[type=checkbox]:focus+label::before{
+    outline: 5px auto $thirdcolor$;
+}
+$uicss .radio-primary input[type=radio]:checked+label::before{border-color: $thirdcolor$;border-color: $hovercolor$;}
+$uicss .btn-primary.disabled, .btn-primary.disabled.active, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled], .btn-primary[disabled].active, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary.active, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover{
+    background:#e4eaec;
+    border-color:#e4eaec;
+}
+$uicss .panel{
+    box-shadow: none;
+}
+$uicss {
+  padding: 30px 0px;
+}
+$uicss{
+  background:$bgcolor$;
+}
+$uicss .container {
+  max-width: 800px;
+}
+$uicss .form-group input,
+$uicss .form-group select,
+$uicss .form-group textarea,
+$uicss .checkbox-custom label::before{
+  background: $inputcolor$;
+}
+@media (max-width: 767px) {
+  $uicss {
+    padding: 10px;
+  }
+}
+$uicss $uicss-body {
+  background: $bgconcolor$;
+  padding: 30px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+@media (max-width: 767px) {
+  $uicss $uicss-body {
+    padding: 10px;
+  }
+}
+
+#getcode{height: 24px;}/*反馈模块*/
+$uicss select{
+    border-radius:0;
+}
+$uicss input{
+    border-radius:0;
+}
+$uicss .form-group textarea,
+$uicss .form-group select,
+$uicss .form-group input
+{
+  border-color: $secondcolor$;
+   border-color: $border_color$;
+}
+$uicss .form-group textarea:focus,
+$uicss .form-group select:focus,
+$uicss .form-group input:focus
+{
+  border-color: $thirdcolor$;
+  border-color: $txt_color$;
+}
+
+$uicss .form-group label.control-label
+{
+  color: $title_color$;
+}
+$uicss .checkbox-custom label
+{
+    color: $center_color$;
+}
+$uicss .form-group label:hover
+{
+   color:$thirdcolor$;
+    color: $hovercolor$;
+}
+
+
+$uicss .btn-primary{
+    border-radius:0;
+    background:$secondcolor$;
+    border-color:$secondcolor$;
+   background:$btncolor$;
+    border-color:$inputborder_color$;
+    color:$btn_txt_color$;
+}
+$uicss .btn-primary:hover{
+    background:$thirdcolor$;background:$hovercolor$;
+    border-color: $thirdcolor$;border-color: $hovercolor$;
+}
+$uicss .form-control.focus, .form-control:focus{
+        border-color: $thirdcolor$;border-color: $hovercolor$;
+}
+
+$uicss .checkbox-primary input[type=radio]:checked+label::before, .checkbox-primary input[type=checkbox]:checked+label::before{
+    background:$thirdcolor$;background:$hovercolor$;
+    border-color: $thirdcolor$;border-color: $hovercolor$;
+}
+$uicss .checkbox-custom input[type=radio]:focus+label::before, .checkbox-custom input[type=checkbox]:focus+label::before{
+    outline: 5px auto $thirdcolor$;
+}
+$uicss .radio-primary input[type=radio]:checked+label::before{border-color: $thirdcolor$;border-color: $hovercolor$;}
+$uicss .btn-primary.disabled, .btn-primary.disabled.active, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled], .btn-primary[disabled].active, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary.active, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover{
+    background:#e4eaec;
+    border-color:#e4eaec;
+}
+$uicss .panel{
+    box-shadow: none;
+}
+$uicss {
+  padding: 30px 0px;
+}
+$uicss{
+  background:$bgcolor$;
+}
+$uicss .container {
+  max-width: 800px;
+}
+$uicss .form-group input,
+$uicss .form-group select,
+$uicss .form-group textarea,
+$uicss .checkbox-custom label::before{
+  background: $inputcolor$;
+}
+@media (max-width: 767px) {
+  $uicss {
+    padding: 10px;
+  }
+}
+$uicss $uicss-body {
+  background: $bgconcolor$;
+  padding: 30px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+@media (max-width: 767px) {
+  $uicss $uicss-body {
+    padding: 10px;
+  }
+}
+
+#getcode{height: 24px;}

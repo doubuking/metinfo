@@ -1,0 +1,100 @@
+{
+    "ui": {
+        "parent_name": "job_list_page",
+        "ui_name": "met_16_1",
+        "ui_page": "|job|",
+        "ui_title": "默认招聘列表页",
+        "ui_description": "默认招聘列表页",
+        "ui_issue": "0",
+        "ui_order": "0",
+        "ui_version": "1.2",
+        "ui_creater": "曾姣艳",
+        "ui_company": "metinfo"
+    },
+    "config": [
+        {
+            "parent_name": "job_list_page",
+            "ui_name": "met_16_1",
+            "uip_type": "4",
+            "uip_style": "0",
+            "uip_select": "$M$开启$T$1$M$关闭$T$0",
+            "uip_name": "ui_show",
+            "uip_key": "ui_show",
+            "uip_value": "",
+            "uip_default": "1",
+            "uip_title": "区块显示开关",
+            "uip_description": "当前UI区块的开启关闭设置，关闭后可以在可视化编辑中开启",
+            "uip_order": "0"
+        },
+        {
+            "parent_name": "job_list_page",
+            "ui_name": "met_16_1",
+            "uip_type": "2",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "cvtitle",
+            "uip_key": "cvtitle",
+            "uip_value": "",
+            "uip_default": "在线应聘",
+            "uip_title": "按钮文字",
+            "uip_description": "",
+            "uip_order": "1"
+        },
+        {
+            "parent_name": "job_list_page",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "bgcolor",
+            "uip_key": "bgcolor-1",
+            "uip_value": "",
+            "uip_default": "",
+            "uip_title": "区块背景色",
+            "uip_description": "默认为#f2f2f2",
+            "uip_order": "2"
+        },
+        {
+            "parent_name": "job_list_page",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "titlecolor",
+            "uip_key": "titlecolor-1",
+            "uip_value": "",
+            "uip_default": "",
+            "uip_title": "标题颜色",
+            "uip_description": "默认为模板公共参数副色调",
+            "uip_order": "3"
+        },
+        {
+            "parent_name": "job_list_page",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "hovercolor",
+            "uip_key": "hovercolor-1",
+            "uip_value": "",
+            "uip_default": "",
+            "uip_title": "鼠标经过颜色和按钮颜色",
+            "uip_description": "默认为模板公共参数配色调",
+            "uip_order": "4"
+        },
+        {
+            "parent_name": "job_list_page",
+            "ui_name": "met_16_1",
+            "uip_type": "4",
+            "uip_style": "0",
+            "uip_select": "左$T$left$M$右$T$right",
+            "uip_name": "polr",
+            "uip_key": "polr-1",
+            "uip_value": "",
+            "uip_default": "left",
+            "uip_title": "列表位置",
+            "uip_description": "",
+            "uip_order": "5"
+        }
+    ]
+}

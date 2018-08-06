@@ -1,0 +1,9 @@
+{
+    "css":[
+    	"ui/css/index.css"
+    ],
+    "js":[
+        "{$metui_url3}js/pager.js",
+       "ui/js/index.js"
+    ]
+}

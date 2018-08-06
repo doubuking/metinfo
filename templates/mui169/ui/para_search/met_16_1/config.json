@@ -1,0 +1,15 @@
+ {
+    "css":[
+        "{$metui_url2}/fonts/web-icons/web-icons.min.css",
+    	"ui/css/index.css"
+    ],
+    "js":[
+        "{$metui_url2}vendor/masonry/masonry.pkgd.min.js",
+        "{$metui_url3}plugin/masonry-extend/imagesloaded.pkgd.min.js",
+        "{$metui_url3}plugin/masonry-extend/classie.min.js",
+        "{$metui_url3}plugin/masonry-extend/AnimOnScroll.min.js",
+        "{$metui_url3}plugin/jquery.lazyload.min.js",
+        "{$metui_url3}js/product.js",
+        "ui/js/index.js"
+    ]
+}

@@ -1,0 +1,76 @@
+body.met-navfixed { padding-top: 60px }
+.navbar-shadow { box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); }
+$uicss { min-height: 60px; margin-bottom: 0; box-shadow: none; background-color: $bgcolor$; }
+$uicss .met-head-user { margin-left: 15px; }
+$uicss.navbar-shadow { -webkit-box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.2); box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.2); -webkit-animation-duration: .7s; animation-duration: .7s }
+$uicss.navbar-fixed-top .navbar-right { margin-right: 0 }
+$uicss .met-logo { height: 60px; margin: 0; margin-left: 0; padding: 0; display: block }
+$uicss .met-logo img { max-height: 50px }
+$uicss .nav-item .nav-link { color: $firstcolor$; color: $titlecolor$; }
+$uicss .dropdown.open>a, $uicss .nav li a.active { color: $thirdcolor$ !important; color: $hovercolor$ !important; background-color: transparent !important; }
+$uicss .nav-item .nav-link:after { content: ''; width: 0; background-color: $thirdcolor$; background-color: $hovercolor$; left: 0; position: absolute; top: 0; height: 2px; -webkit-transition: all .66s cubic-bezier(.17, .84, .44, 1); transition: all .66s cubic-bezier(.17, .84, .44, 1); z-index: 1; border: none; margin: 0; }
+$uicss .nav-item .nav-link.active:after { width: 100%; }
+$uicss .nav-item .nav-link:hover:after { width: 100%; }
+$uicss .nav-item .nav-link i { -webkit-transition: all .3s ease-out; transition: all .3s ease-out; margin-left: 5px; }
+$uicss #met-head-user-collapse { line-height: 60px; }
+$uicss #met-head-user-collapse .btn-primary { color: $firstcolor$; color: $titlecolor$; background-color: transparent; border-color: $firstcolor$; border-color: $titlecolor$; padding: 4px 10px; -webkit-transition: all .66s cubic-bezier(.17, .84, .44, 1); transition: all .66s cubic-bezier(.17, .84, .44, 1); }
+$uicss #met-head-user-collapse .btn-primary:hover { color: #fff; background-color: $thirdcolor$; background-color: $hovercolor$; border-color: $thirdcolor$; border-color: $hovercolor$; }
+$uicss #met-head-user-collapse .btn-success { color: $firstcolor$; color: $titlecolor$; background-color: transparent; border-color: $firstcolor$; border-color: $titlecolor$; padding: 4px 10px; -webkit-transition: all .66s cubic-bezier(.17, .84, .44, 1); transition: all .66s cubic-bezier(.17, .84, .44, 1); }
+$uicss #met-head-user-collapse .btn-success:hover { color: #fff; background-color: $thirdcolor$; background-color: $hovercolor$; border-color: $thirdcolor$; border-color: $hovercolor$; }
+$uicss .dropdown-item { color: $firstcolor$; color: $titlecolor$; }
+$uicss .overflow-visible { overflow: visible !important; }
+$uicss .navlist-2 { opacity: 0; transform: translateY(-10%); }
+$uicss .navbar-toggle { height: 60px; float: right }
+$uicss .nav>li>a { color: $thirdcolor$; color: $hovercolor$; }
+$uicss .nav>li>a i { -webkit-transition: all .3s ease-out; transition: all .3s ease-out }
+$uicss .nav li .link.active:after { content: ''; width: 100%; background-color: $thirdcolor$; background-color: $hovercolor$; left: 0; position: absolute; top: 0; height: 2px; -webkit-transition: all .66s cubic-bezier(.17, .84, .44, 1); transition: all .66s cubic-bezier(.17, .84, .44, 1); z-index: -1 }
+$uicss .nav>li>.link:after { content: ''; width: 0; background-color: $thirdcolor$; background-color: $hovercolor$; left: 0; position: absolute; top: 0; height: 2px; -webkit-transition: all .66s cubic-bezier(.17, .84, .44, 1); transition: all .66s cubic-bezier(.17, .84, .44, 1); z-index: -1 }
+$uicss .nav>li>.link:hover:after { content: ''; width: 100%; background-color: $thirdcolor$; background-color: $hovercolor$; left: 0; position: absolute; top: 0; height: 2px; -webkit-transition: all .66s cubic-bezier(.17, .84, .44, 1); transition: all .66s cubic-bezier(.17, .84, .44, 1); z-index: -1 }
+$uicss .nav>li>a:hover, $uicss .dropdown.open>a { color: $thirdcolor$ !important; color: $hovercolor$ !important; background-color: transparent !important; }
+$uicss $uicss-login { padding-top: 15px; text-align: center }
+$uicss .dropdown-menu { background-color: $bodybgcolor$ !important; background-color: $sec_bgcolor$ !important; }
+$uicss .dropdown-item { color: $desccolor$ !important; color: $sec_titlecolor$ !important; }
+$uicss .nav li .dropdown-item:hover, $uicss .nav li .dropdown-item.active { background-color: $sec_hovercolor$ !important; color: $secondcolor$ !important; color: $sec_textcolor$ !important; }
+$uicss .dropdown-menu>li>a { overflow: hidden; -webkit-transition: all .3s ease-out; transition: all .3s ease-out }
+$uicss .dropdown-menu>li>a:hover { background: #f2f2f2 none repeat scroll 0 0; text-indent: 5px; -webkit-transition: all .66s cubic-bezier(.17, .84, .44, 1); transition: all .66s cubic-bezier(.17, .84, .44, 1); }
+$uicss .met-langlist { line-height: 60px; position: relative; }
+$uicss .met-langlist a { line-height: 21px; }
+$uicss .met-langlist .btn { color: $firstcolor$; color: $titlecolor$; border-color: $firstcolor$; border-color: $titlecolor$; }
+$uicss .met-langlist .dropdown-menu { min-width: 100%; }
+$uicss .met-langlist .btn:hover, $uicss .met-langlist .btn:focus, $uicss .met-langlist .btn:active { color: #fff; background-color: $thirdcolor$; background-color: $hovercolor$; border-color: $thirdcolor$; border-color: $hovercolor$; }
+$uicss .navhover-bg, .met-head-user .dropdown > a { background: transparent; color: $firstcolor$; color: $titlecolor$; }
+$uicss .met-head-user i { color: $firstcolor$; color: $titlecolor$; }
+$uicss .met-head-user .dropdown-item { line-height: 22px; }
+$uicss .met-head-user .dropdown-item i { color: $firstcolor$; color: $titlecolor$; }
+@media (min-width:768px) {
+    $uicss .nav>li>a { padding: 0; height: 60px; line-height: 60px }
+    $uicss .dropdown-menu { top: 48px; border-radius: 0; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); }
+    $uicss .dropdown-menu .dropdown-submenu>a:after { display: none }
+    $uicss .dropdown-menu .dropdown-submenu>a i { position: absolute; right: 10px }
+    $uicss .dropdown-menu.bullet { top: 60px }
+    $uicss $uicss-login { height: 60px; padding-top: 0; margin-left: 10px }
+    $uicss .nav-item .nav-link:hover i, $uicss .dropdown.open>a i { -webkit-transform: rotate(180deg); transform: rotate(180deg); color: $thirdcolor$; color: $hovercolor$; }
+}
+@media (max-width:991px) {
+    $uicss .dropdown-menu .dropdown-submenu>a:after { display: none }
+    $uicss .dropdown-menu .dropdown-submenu>a>i { float: right }
+    $uicss .met-logo img { max-width: 180px;}
+    $uicss .nav>li>a>i { float: right }
+}
+@media (max-width:767px) {
+    body.met-navfixed { padding-top: 66px; }
+    $uicss .met-langlist { padding: 0 15px; }
+    $uicss .nav>li { margin-left: 0 !important }
+    $uicss .dropdown-menu>li>.dropdown-menu>li>a { padding-left: 40px }
+    $uicss .dropdown-menu.bullet:before, $uicss .dropdown-menu.bullet:after { display: none }
+    $uicss .dropdown.open>a i { -webkit-transform: rotate(180deg); transform: rotate(180deg); color: $thirdcolor$; color: $hovercolor$; }
+    $uicss .navbar-collapse-toolbar.in { max-height: 480px; overflow-y: scroll; -webkit-box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2); box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2) }
+    $uicss .met-logo { float: none; max-width: 180px; margin-left: 15px; }
+    $uicss .navbar-collapse-toolbar { width: 100%; padding: 20px !important; }
+    $uicss .nav>li>a { padding: 10px 15px; line-height: 25px }
+    $uicss .nav li .link.active:after { height: 1px; bottom: 0; top: auto; left: 15px }
+    $uicss .nav>li>.link:after { height: 1px; bottom: 0; top: auto; left: 15px }
+    $uicss .nav>li>.link:hover:after { height: 1px; bottom: 0; top: auto; left: 15px }
+    $uicss .met-head-user { width: 100%; margin: 0; }
+    $uicss .navbar-toggler { color: $firstcolor$; color: $titlecolor$; }
+}

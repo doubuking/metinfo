@@ -1,0 +1,11 @@
+{
+    "css":[
+        "{$metui_url2}fonts/web-icons/web-icons.min.css",
+        "{$metui_url3}plugin/swiper/swiper-3.3.1.min.css",
+    	"ui/css/index.css"
+    ],
+    "js":[
+        "{$metui_url3}plugin/swiper/swiper-3.3.1.jquery.min.js",
+		"ui/js/index.js"
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "ui": {
+        "parent_name": "banner",
+        "ui_name": "met_16_1",
+        "ui_page": "|head|",
+        "ui_title": "bootstrap最常见banner",
+        "ui_description": "bootstrap最常见banner",
+        "ui_issue": "1",
+        "ui_order": "1",
+        "ui_version": "2.1",
+        "ui_creater": "metinfo",
+        "ui_company": "metinfo",
+        "ui_edittime": "1532493700"
+    },
+    "config": [
+        {
+            "parent_name": "banner",
+            "ui_name": "met_16_1",
+            "uip_type": "4",
+            "uip_style": "0",
+            "uip_select": "$M$开启$T$1$M$关闭$T$0",
+            "uip_name": "ui_show",
+            "uip_key": "ui_show",
+            "uip_value": "",
+            "uip_default": "1",
+            "uip_title": "区块显示开关",
+            "uip_description": "当前UI区块的开启关闭设置，关闭后可以在可视化编辑中开启",
+            "uip_order": "0"
+        },
+        {
+            "parent_name": "banner",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "bgcolor",
+            "uip_key": "bgcolor-1",
+            "uip_value": "",
+            "uip_default": "",
+            "uip_title": "区块背景色",
+            "uip_description": "默认为网站背景颜色,此设置针对于内页无banner时设置的",
+            "uip_order": "1"
+        },
+        {
+            "parent_name": "banner",
+            "ui_name": "met_16_1",
+            "uip_type": "2",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "listhide",
+            "uip_key": "listhide",
+            "uip_value": "",
+            "uip_default": "",
+            "uip_title": "隐藏列表页头部大图",
+            "uip_description": "隐藏指定栏目列表页的头部大图，请填写栏目名称，多个用竖线（|）隔开，如：下载中心|产品中心",
+            "uip_order": "2"
+        },
+        {
+            "parent_name": "banner",
+            "ui_name": "met_16_1",
+            "uip_type": "2",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "detailhide",
+            "uip_key": "detailhide",
+            "uip_value": "",
+            "uip_default": "",
+            "uip_title": "隐藏详情页头部大图",
+            "uip_description": "隐藏指定栏目详情页的头部大图，请填写栏目名称，多个用竖线（|）隔开，如：下载中心|产品中心",
+            "uip_order": "3"
+        },
+        {
+            "parent_name": "banner",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "titlecolor",
+            "uip_key": "titlecolor-1",
+            "uip_value": "",
+            "uip_default": "",
+            "uip_title": "banner文字颜色",
+            "uip_description": "默认为#ffffff,此设置针对于内页无banner时设置的",
+            "uip_order": "4"
+        }
+    ]
+}

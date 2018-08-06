@@ -1,0 +1,21 @@
+{
+    "css":[
+        "{$metui_url3}plugin/lightGallery/css/lightgallery.min.css",
+        "{$metui_url3}plugin/PhotoSwipe/photoswipe.min.css",
+        "{$metui_url3}plugin/PhotoSwipe/default-skin/default-skin.min.css",
+    	"ui/css/index.css"
+    ],
+    "js":[
+        "{$metui_url3}plugin/lightGallery/js/lightgallery.min.js",
+        "{$metui_url3}plugin/lightGallery/js/lg-fullscreen.min.js",
+        "{$metui_url3}plugin/lightGallery/js/lg-thumbnail.min.js",
+        "{$metui_url3}plugin/lightGallery/js/lg-zoom.min.js",
+        "{$metui_url3}plugin/PhotoSwipe/photoswipe.min.js",
+        "{$metui_url3}plugin/PhotoSwipe/photoswipe-ui-default.min.js",
+        "{$metui_url3}plugin/PhotoSwipe/photoswipe-plugin.js",
+        "{$metui_url3}plugin/StackBlur.js",
+        "{$metui_url3}plugin/jquery.lazyload.min.js",
+        "{$metui_url3}js/pager.js",
+		"{$metui_url3}js/img.js"
+    ]
+}

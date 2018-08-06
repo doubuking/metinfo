@@ -1,0 +1,28 @@
+$uicss{background:$bodybgcolor$;background:$bgcolor$;}
+$uicss .met-search-list li h4 a{color:$firstcolor$;color:$titlecolor$;display:block;}
+$uicss .met-search-list li h4 a:hover{color:$thirdcolor$;color:$hovercolor$;}
+$uicss .form-control.focus,$uicss .form-control:focus{border-color:$thirdcolor$ ;border-color:$hovercolor$ ;}
+/* 分页 */
+.met_pager { margin-top: 20px; text-align: center; }
+.met_pager * { display: inline-block; }
+.met_pager a { padding: 9px 15px; border: 1px solid #e4eaec; border-right: none; background: #fff; text-align: center; color: #76838f; }
+.met_pager a:hover { background: #f5f5f5; text-decoration: none; }
+.met_pager a.NextA { border-right: 1px solid #e4eaec; }
+.met_pager .PreSpan,
+.met_pager .NextSpan { padding: 9px 15px; border: 1px solid #e4eaec; background: #fff; color: #ccd5db; cursor: default; }
+.met_pager .firstPage,
+.met_pager .lastPage { min-width: 40px; height: 28px; line-height: 28px; }
+.met_pager a.Ahover { border-color: $thirdcolor$; background: $thirdcolor$;border-color: $hovercolor$; background: $hovercolor$; color: #fff; cursor: default; }
+.met_pager a.Ahover:hover { border-color: $thirdcolor$; background: $thirdcolor$; border-color: $hovercolor$; background: $hovercolor$;color: #fff; }
+.met_pager a { text-decoration: none; }
+.met_pager a:active,
+.met_pager a:focus,
+.met_pager a:hover { text-decoration: none; }
+.met_pager .PageText { display: none; margin-left: 10px; color: #aaa; }
+.met_pager input { display: none; }
+.met_pager .firstPage,
+.met_pager .lastPage { height: auto; line-height: inherit; }
+.pager li { width: 49%; display: inline-block; }
+.pager li a { max-width: 100%; }
+
+

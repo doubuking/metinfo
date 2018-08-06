@@ -1,0 +1,13 @@
+{
+    "css":[
+        "{$metui_url2}fonts/font-awesome/font-awesome.min.css",
+        "ui/css/index.css"
+    ],
+    "js":[
+        "{$metui_url2}vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js",
+        "{$metui_url2}/vendor/tweenmax/TweenMax.min.js",
+        "{$metui_url2}/vendor/s2t/jquery.s2t.js",
+        "{$metui_url2}/vendor/jquery-mousewheel/jquery.mousewheel.js",
+        "ui/js/index.js"
+    ]
+}

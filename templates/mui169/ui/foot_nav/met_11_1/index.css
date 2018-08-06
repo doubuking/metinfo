@@ -1,0 +1,23 @@
+$uicss { padding: 40px 0px; background: $bgcolor$; }
+@media (max-width:991px) {
+	$uicss { padding: 30px 0; }
+	$uicss .list { margin-bottom: 20px; }
+}
+@media (max-width:767px) {
+	$uicss { padding: 20px 0; }
+	$uicss .list { margin-bottom: 15px; }
+}
+$uicss .list h4 { text-shadow: none; }
+$uicss .list h4 a { color: $firstcolor$; color: $titlecolor$; }
+$uicss .list ul li { margin-bottom: 3px; list-style: none; padding: 0; }
+$uicss .info em { font-style: normal; }
+$uicss .info>a { display: inline-block; color: $firstcolor$ !important; color: $titlecolor$ !important; transition: all .66s cubic-bezier(.17, .84, .44, 1); width: 35px; height: 30px; margin: 0 10px; background: $secondcolor$; background: $desccolor$; }
+$uicss .info p {color: $secondcolor$; color: $desccolor$; }
+$uicss .info em a { display: inline-block; color: $firstcolor$; color: $titlecolor$; transition: all .66s cubic-bezier(.17, .84, .44, 1); padding: 5px; }
+$uicss .info em a:hover { background: $thirdcolor$; background: $hovercolor$; color: #fff; text-decoration: none; }
+$uicss .info i { font-size: 20px; cursor: pointer; width: 30px; color: #fff !important; height: 30px; }
+$uicss .info>a:hover { text-decoration: none; background: $thirdcolor$; background: $hovercolor$; color: #fff; }
+$uicss .info>a:hover i { color: #fff; }
+$uicss .list ul li a { color: $secondcolor$; color: $desccolor$;width: 100%;display: block;
+overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+$uicss .list ul { padding: 0; }

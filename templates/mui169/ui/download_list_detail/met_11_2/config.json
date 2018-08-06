@@ -1,0 +1,18 @@
+{
+    "css":[
+    	"{$metui_url2}vendor/filament-tablesaw/tablesaw.min.css",
+    	"{$metui_url3}plugin/PhotoSwipe/photoswipe.min.css",
+    	"{$metui_url3}plugin/PhotoSwipe/default-skin/default-skin.min.css",
+        "ui/css/index.css"
+    ],
+    "js":[
+    	"{$metui_url2}vendor/filament-tablesaw/tablesaw.min.js",
+    	"{$metui_url2}vendor/filament-tablesaw/tablesaw-init.js",
+    	"{$metui_url3}plugin/PhotoSwipe/photoswipe.min.js",
+    	"{$metui_url3}plugin/PhotoSwipe/photoswipe-ui-default.min.js",
+    	"{$metui_url3}plugin/PhotoSwipe/photoswipe-plugin.js",
+    	"{$metui_url3}plugin/StackBlur.js",
+    	"{$metui_url3}plugin/jquery.lazyload.min.js",
+    	"{$metui_url3}js/editor.js"
+    ]
+}

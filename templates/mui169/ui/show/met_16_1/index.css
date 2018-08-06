@@ -1,0 +1,13 @@
+$uicss.met-show-body{background:$bodybgcolor$ ;}
+$uicss.met-show-body.bgcolor{background:$bgcolor$ ;}
+$uicss.met-show-body.bgpic{background:url($bgpic$) no-repeat;background-size: cover;background-position: center;}
+$uicss .title{color:$firstcolor$;color:$titlecolor$;}
+
+$uicss .met-feedback .form-group input,.form-control{border-color:$secondcolor$;border-color:$bordercolor$;}
+textarea{border-color:$secondcolor$;border-color:$bordercolor$}
+$uicss .met-feedback .form-group input:focus,.form-control:focus{border-color:$thirdcolor$;border-color:$borderfocus$}
+$uicss .met-feedback .form-group .btn {background:$firstcolor$;background:$submit$;border:none;}
+$uicss .met-feedback .form-group .btn:hover{opacity: .8;transition:all 1s}
+$uicss .met-feedback .form-group input,.form-control{color:$thirdcolor$;color:$textcolor$}
+$uicss .met-feedback .form-group label{color:$firstcolor$;color:$radiocolor$}
+$uicss .met-editor *{max-width: 100%;}

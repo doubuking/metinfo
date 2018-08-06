@@ -1,0 +1,10 @@
+{
+    "css":[
+    	"{$metui_url1}vendor/flag-icon-css/flag-icon.min.css",
+    	"ui/css/index.css"
+    ],
+    "js":[
+    	"{$metui_url2}/vendor/s2t/jquery.s2t.js",
+       "ui/js/index.js"
+    ]
+}

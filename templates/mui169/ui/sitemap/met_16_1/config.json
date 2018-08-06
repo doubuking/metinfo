@@ -1,0 +1,8 @@
+{
+    "css":[
+    	"ui/css/index.css"
+    ],
+    "js":[
+       "ui/js/index.js"
+    ]
+}

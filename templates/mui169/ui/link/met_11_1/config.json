@@ -1,0 +1,9 @@
+{
+    "css":[
+    	"ui/css/index.css"
+    ],
+    "js":[
+       "{$metui_url3}plugin/jquery.lazyload.min.js",
+       "ui/js/index.js"
+    ]
+}

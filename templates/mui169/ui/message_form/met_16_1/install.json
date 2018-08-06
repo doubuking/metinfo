@@ -1,0 +1,101 @@
+{
+    "ui": {
+        "parent_name": "message_form",
+        "ui_name": "met_16_1",
+        "ui_page": "|message_index|",
+        "ui_title": "留言表单",
+        "ui_description": "留言表单",
+        "ui_issue": "1",
+        "ui_order": "1",
+        "ui_version": "1.2",
+        "ui_creater": "曾姣艳",
+        "ui_company": "metinfo",
+        "ui_edittime": "1531106679"
+    },
+    "config": [
+        {
+            "parent_name": "message_form",
+            "ui_name": "met_16_1",
+            "uip_type": "4",
+            "uip_style": "0",
+            "uip_select": "$M$开启$T$1$M$关闭$T$0",
+            "uip_name": "ui_show",
+            "uip_key": "ui_show",
+            "uip_value": "",
+            "uip_default": "1",
+            "uip_title": "区块显示开关",
+            "uip_description": "当前UI区块的开启关闭设置，关闭后可以在可视化编辑中开启",
+            "uip_order": "0"
+        },
+        {
+            "parent_name": "message_form",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "bgcolor",
+            "uip_key": "bgcolor-1",
+            "uip_value": "",
+            "uip_default": "",
+            "uip_title": "区块背景色",
+            "uip_description": "默认为网站背景色",
+            "uip_order": "1"
+        },
+        {
+            "parent_name": "message_form",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "hovercolor",
+            "uip_key": "hovercolor-1",
+            "uip_value": "",
+            "uip_default": "",
+            "uip_title": "鼠标经过颜色",
+            "uip_description": "默认为模板配色调",
+            "uip_order": "3"
+        },
+        {
+            "parent_name": "message_form",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "btncolor",
+            "uip_key": "btncolor-1",
+            "uip_value": "",
+            "uip_default": "",
+            "uip_title": "提交按钮颜色",
+            "uip_description": "默认为模板主色调",
+            "uip_order": "4"
+        },
+        {
+            "parent_name": "message_form",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "txtcolor",
+            "uip_key": "txtcolor",
+            "uip_value": "",
+            "uip_default": "#ffffff",
+            "uip_title": "提交按钮文字颜色",
+            "uip_description": "默认为 #ffffff",
+            "uip_order": "5"
+        },
+        {
+            "parent_name": "message_form",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "hovertxtcolor",
+            "uip_key": "hovertxtcolor",
+            "uip_value": "",
+            "uip_default": "#ffffff",
+            "uip_title": "鼠标经过提交按钮文字颜色",
+            "uip_description": "默认为 #ffffff",
+            "uip_order": "6"
+        }
+    ]
+}

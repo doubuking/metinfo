@@ -14,8 +14,8 @@ class news extends web {
 
 	public function showpage($module) {
 		global $_M;
+		$_M['activity_id'] = $_M['form']['id'];
 		$data = load::sys_class('label', 'new')->get($module)->get_one_list_contents($_M['form']['id']);
-        $data['aaa']='AAA';
 		$data['updatetime'] = date($_M['config']['met_contenttime'], strtotime($data['original_updatetime']));
 		$data['addtime'] = date($_M['config']['met_contenttime'], strtotime($data['original_addtime']));
 		$this->check($data['access']);
@@ -24,6 +24,32 @@ class news extends web {
 		$this->input_class($classnow);
 		$this->seo($data['title'], $data['keywords'], $data['description']);
 		$this->seo_title($data['ctitle']);
+	}
+
+    public function dosaveActivity ($module)
+    {
+        global $_M;
+
+        $info = $_M['form'];
+        //验证验证码
+        if(!load::sys_class('pin', 'new')->check_pin($_M['form']['code'])){
+            okinfo(-1, $_M['word']['membercode']);
+        }
+        $form = '';
+        $datetime = date('Y-m-d H:i:s',time());
+		foreach ($info['name'] as $key=>$val){
+            $form .= "('{$_M['user']['id']}','{$val}','{$info['phone'][$key]}','{$info['email'][$key]}','{$info['activity_id']}','{$datetime}'),";
+
+		}
+		$sql = "INSERT INTO met_participants (`user_id`,`name`,`phone`,`email`,`act_id`,`addtime`) VALUES ".rtrim($form,',');
+
+        $row = DB::query($sql);
+
+        if(!$row){
+            okinfo(-1, $_M['lang']['opfailed']);
+        }
+        okinfo(HTTP_REFERER, $_M['word']['success']);
+
 	}
 
 	public function listpage($module) {

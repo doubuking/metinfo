@@ -152,10 +152,6 @@ class news_admin extends base_admin {
 		// DB::query($query);
 		// return DB::insert_id();
 		$list['lang'] = $this->lang;
-		echo "<pre>";
-		var_dump($this->database);
-		var_dump($list);
-//		die();
 		return $this->database->insert($list);
 	}
 
@@ -322,6 +318,48 @@ class news_admin extends base_admin {
 		require $this->template('own/article_index');
 	}
 
+    /**
+     * 报名名单
+     */
+    function doactivity() {
+        global $_M;
+//        $column = $this->column(3,$this->module);
+//        $list['class1'] = $_M['form']['class1'] ? $_M['form']['class1'] : '' ;
+//        $list['class2'] = $_M['form']['class2'] ? $_M['form']['class2'] : '' ;
+//        $list['class3'] = $_M['form']['class3'] ? $_M['form']['class3'] : '' ;
+//        $_M['url']['help_tutorials_helpid']='99';
+//		echo "<pre>";
+//		var_dump($_M['form']);
+//		die();
+        require $this->template('own/article_activity');
+	}
+
+
+	function dojson_activity_list(){
+
+        $sql = "SELECT pa.id,us.username,pa.`name`,pa.phone,pa.email,pa.description,pa.`status`,pa.addtime FROM met_participants AS pa LEFT JOIN met_user AS us ON pa.user_id = us.id ";
+
+        $row = DB::get_all($sql);
+        foreach ($row as $key=>$val){
+            $list = array();
+            $list[] = "<input name=\"id\" type=\"checkbox\" value=\"{$val['id']}\">";
+            $list[] = "<div class=\"ui-table-a\">{$val['name']}</div>";
+            $list[] = $val['phone'];
+            $list[] = $val['email'];
+            $list[] = $val['status']=='0'?'未付款':'已付款';
+            $list[] = $val['addtime'];
+            $list[] = "";
+            $rarray[] = $list;
+		}
+		$data_array = array(
+			'draw'=>"1",
+			'recordsTotal'=>"10",
+			'recordsFiltered'=>"10",
+			'data'=>$rarray
+		);
+        echo json_encode($data_array);
+	}
+
 	/**
 	 * 栏目json
 	 */
@@ -329,6 +367,7 @@ class news_admin extends base_admin {
 		global $_M;
 		$this->column_json($this->module,$_M['form']['type']);
 	}
+
 
 	/**
 	 * 分页数据
@@ -382,7 +421,6 @@ class news_admin extends base_admin {
 		if($orderby_updatetime)$order = "updatetime {$orderby_updatetime}";
 
 		$userlist = $this->json_list($where, $order);
-
 		foreach($userlist as $key=>$val){
 
 			$val['url']   = $this->url($val,$this->module);
@@ -398,8 +436,8 @@ class news_admin extends base_admin {
 			$list[] = $val['state'];
 			$list[] = "<input name=\"no_order-{$val['id']}\" type=\"text\" class=\"ui-input text-center\" value=\"{$val[no_order]}\">";
 			$list[] = "<a href=\"{$_M[url][own_form]}a=doeditor&id={$val['id']}&class1_select={$class1}&class2_select={$class2}&class3_select={$class3}\" class=\"edit\">{$_M[word][editor]}</a><span class=\"line\">-</span><a href=\"{$_M[url][own_form]}a=dolistsave&submit_type=del&allid={$val['id']}\" data-toggle=\"popover\" class=\"delet\">{$_M[word][delete]}</a>
-			";
-			$rarray[] = $list;
+			<span class=\"line\">-</span><a href='{$_M[url][own_form]}a=doactivity&id={$val['id']}&class1_select={$class1}&class2_select={$class2}&class3_select={$class3}'  class='cat'>查看报名人数</a>";
+            $rarray[] = $list;
 		}
 
 		$this->json_return($rarray);

@@ -1,5 +1,27 @@
-<?php defined('IN_MET') or exit('No permission'); ?>
-<?php $met_page = "shownews";?>
+<?php
+# MetInfo Enterprise Content Management System
+# Copyright (C) MetInfo Co.,Ltd (http://www.metinfo.cn). All rights reserved.
+defined('IN_MET') or exit('No permission');
+$data['page_title']=$_M['word']['memberIndex9'].$data['page_title'];
+?>
+<?php
+# MetInfo Enterprise Content Management System
+# Copyright (C) MetInfo Co.,Ltd (http://www.metinfo.cn). All rights reserved.
+defined('IN_MET') or exit('No permission');
+?>
+<?php
+global $metinfover;
+// 模板引擎
+$metinfover                  = "v2";
+$template_type                  = "ui";
+// 栏目可用字段
+$metadmin[categorynamemark]  = 1; // 栏目修饰名称
+$metadmin[categoryimage]     = 1; // 栏目图片
+$metadmin[categorymarkimage] = 0; // 栏目标识图片
+
+?>
+<?php $met_page=$template_type=='ui'?'index':''; ?>
+<?php $met_page = "$met_page";?>
 <?php
 $metinfover_v2=$c["metinfover"]=="v2"?true:false;
 $met_file_version=str_replace(".","",$c["metcms_v"]).$c["met_patch"];
@@ -706,63 +728,80 @@ if($data['title']){
 <?php } ?>
 <?php } ?>
 
-
-        <?php
-            $id = 22;
-            $style = "met_16_1";
-            if(!isset($ui_compile)){
-                load::sys_class('view/ui_compile');
-                $ui_compile = new ui_compile();
-            }
-            $ui = $ui_compile->list_local_config($id);
-            $ui['has'] =$ui_compile->list_page_config($met_page);
-            ?>
-<?php $sidebar=strlen($ui[has][sidebar]);?>
-<main class="news_list_detail_met_16_1 met-shownews animsition">
+<?php if(file_exists(PATH_OWN_FILE."templates/met/css/metinfo.css")){ ?>
+<link href="<?php echo $_M['url']['own_tem'];?>css/metinfo.css?<?php echo $met_file_version;?>" rel='stylesheet' type='text/css'>
+<?php } ?>
+<div class="page bg-pagebg1 met-member member-profile">
 	<div class="container">
-		<div class="row">
-		    <?php if($_M['form']['pageset']){ ?>
-                <?php if($sidebar){ ?>
-            <div class="col-md-9 met-shownews-body" m-id='<?php echo $ui['mid'];?>'>
-                <div class="row">
-            <?php }else{ ?>
-                <div class="met-shownews-body col-md-10 offset-md-1" m-id='<?php echo $ui['mid'];?>'>
-                    <div class="row">
+		<div class="page-content row">
+			<?php
+# MetInfo Enterprise Content Management System
+# Copyright (C) MetInfo Co.,Ltd (http://www.metinfo.cn). All rights reserved.
+defined('IN_MET') or exit('No permission');
+if(!$_M['config']['own_active']) $_M['config']['own_active']=array($_M['config']['app_no'].'_'.$_M['config']['own_order']=>'active');
+?>
+<div class="col-lg-3">
+    <div class='dropdown m-b-15 hidden-lg-up met-sidebar-nav-mobile'>
+        <button type="button" class="btn btn-primary btn-block dropdown-toggle met-sidebar-nav-active-name" data-toggle="dropdown"></button>
+        <div class="dropdown-menu animate animate-reverse w-full" role="menu">
+            <a class="dropdown-item <?php echo $_M['config']['own_active']['0_1'];?>" href="<?php echo $_M['url']['profile'];?>" title="<?php echo $_M['word']['memberIndex9'];?>"><?php echo $_M['word']['memberIndex9'];?></a>
+            <a class="dropdown-item <?php echo $_M['config']['own_active']['0_2'];?>" href="<?php echo $_M['url']['profile_safety'];?>" title="<?php echo $_M['word']['accsafe'];?>"><?php echo $_M['word']['accsafe'];?></a>
+            <?php
+            foreach($_M['html']['app_sidebar'] as $key=>$val){
+                $val['active']=$_M['config']['own_active'][$val['no'].'_'.$val['own_order']];
+                $val['target']=$val['target']?' target="_blank"':'';
+            ?>
+            <a class="dropdown-item <?php echo $val['active'];?>" href="<?php echo $val['url'];?>" title="<?php echo $val['title'];?>"<?php echo $val['target'];?>><?php echo $val['title'];?></a>
             <?php } ?>
-            <?php }else{ ?>
-                <?php if($ui[has][sidebar]){ ?>
-            <div class="col-md-9 met-shownews-body" m-id='<?php echo $ui['mid'];?>'>
-                <div class="row">
-            <?php }else{ ?>
-                <div class="met-shownews-body col-md-10 offset-md-1" m-id='<?php echo $ui['mid'];?>'>
-                    <div class="row">
-            <?php } ?>
-        <?php } ?>
-					<section class="details-title border-bottom1">
-                        <h1><?php echo $data['starttime'];?></h1>
-                        <h1><?php echo $data['aaa'];?></h1>
-						<h1 class='m-t-10 m-b-5'><?php echo $data['title'];?></h1>
-						<div class="info font-weight-300">
-							<span><?php echo $data['updatetime'];?></span>
-							<span><?php echo $data['issue'];?></span>
-							<span>
-								<i class="icon wb-eye m-r-5" aria-hidden="true"></i>
-								<?php echo $data['hits'];?>
-							</span>
-						</div>
-					</section>
-					<section class="met-editor clearfix">
-						<?php echo $data['content'];?>
-					</section>
-					<div class="tag">
-						<span><?php echo $data['tagname'];?></span>
-						        <?php
-            $sub = count($data[taglist]);
-            $num = $ui[tag_num];
-            if(!is_array($data[taglist])){
-                $data[taglist] = explode('|',$data[taglist]);
+        </div>
+    </div>
+	<div class="panel row m-r-0 m-b-0 hidden-md-down" boxmh-h>
+        <div class="panel-body">
+            <h2 class="m-l-30 font-size-18 font-weight-unset"><?php echo $_M['word']['memberIndex3'];?></h2>
+    		<ul class="list-group m-l-15 met-sidebar-nav">
+    			<li class="list-group-item <?php echo $_M['config']['own_active']['0_1'];?>"><a href="<?php echo $_M['url']['profile'];?>" title="<?php echo $_M['word']['memberIndex9'];?>"><?php echo $_M['word']['memberIndex9'];?></a></li>
+    			<li class="list-group-item <?php echo $_M['config']['own_active']['0_2'];?>"><a href="<?php echo $_M['url']['profile_safety'];?>" title="<?php echo $_M['word']['accsafe'];?>"><?php echo $_M['word']['accsafe'];?></a></li>
+                <a class="dropdown-item <?php echo $_M['config']['own_active']['0_3'];?>" href="<?php echo $_M['url']['profile_safety_activity'];?>" title="报名的活动">报名的活动</a>
+                <?php
+                foreach($_M['html']['app_sidebar'] as $key=>$val){
+                    $val['active']=$_M['config']['own_active'][$val['no'].'_'.$val['own_order']];
+                    $val['target']=$val['target']?' target="_blank"':'';
+                ?>
+                <li class="list-group-item <?php echo $val['active'];?>"><a href="<?php echo $val['url'];?>" title="<?php echo $val['title'];?>"<?php echo $val['target'];?>><?php echo $val['title'];?></a></li>
+                <?php } ?>
+            </ul>
+        </div>
+	</div>
+</div>
+			<div class="col-lg-9">
+				<div class="panel panel-default m-b-0">
+					<div class='panel-body met-member-index met-member-profile'>
+					  	<div class="panel-heading p-y-10 p-x-15">已报名的活动</div>
+					  	<div class="basic">
+                            <div class="row">
+                                <div class="col-xs-2 col-sm-2">
+                                    活动名
+                                </div>
+                                <div class="col-xs-3 col-sm-3">
+                                    活动开始时间
+                                </div>
+                                <div class="col-xs-3 col-sm-3">
+                                    活动结束时间
+                                </div>
+                                <div class="col-xs-2 col-sm-2">
+                                    状态
+                                </div>
+                                <div class="col-xs-2 col-sm-2">
+                                    查看
+                                </div>
+                            </div>
+                                    <?php
+            $sub = count($data['result']);
+            $num = 30;
+            if(!is_array($data['result'])){
+                $data['result'] = explode('|',$data['result']);
             }
-            foreach ($data[taglist] as $index => $val) {
+            foreach ($data['result'] as $index => $val) {
                 if($index >= $num){
                     break;
                 }
@@ -772,345 +811,75 @@ if($data['title']){
                 if(is_array($val)){
                     $val['_index'] = $index;
                     $val['_first'] = $index == 0 ? true : false;
-                    $val['_last']  = $index == (count($data[taglist])-1) ? true : false;
+                    $val['_last']  = $index == (count($data['result'])-1) ? true : false;
                     $val['sub']    = $sub;
                 }
 
-                $tag = $val;
+                $val = $val;
             ?>
-							<a href="<?php echo $tag['url'];?>" title="<?php echo $tag['name'];?>"><?php echo $tag['name'];?></a>
-						<?php }?>
+							<div class="row">
+								<div class="col-xs-2 col-sm-2">
+									<?php echo $val['title'];?>
+								</div>
+								<div class="col-xs-3 col-sm-3">
+									<?php echo $val['starttime'];?>
+								</div>
+                                <div class="col-xs-3 col-sm-3">
+                                    <?php echo $val['endtime'];?>
+                                </div>
+                                <div class="col-xs-2 col-sm-2">
+                                        <?php if($val['status']==1){ ?>
+                                        已付款
+                                    <?php }else{ ?>
+                                        未付款
+                                    <?php } ?>
+                                </div>
+                                <div class="col-xs-2 col-sm-2">
+                                    查看
+                                </div>
+							</div>
+                            <?php }?>
+					  	</div>
 					</div>
-					        <div class='met-page p-y-30 border-top1'>
-    <div class="container p-t-30 ">
-    <ul class="pagination block blocks-2"'>
-        <li class='page-item m-b-0 <?php echo $data['preinfo']['disable'];?>'>
-            <a href='<?php if($data['preinfo']['url']){?><?php echo $data['preinfo']['url'];?><?php }else{?>javascript:;<?php }?>' title="<?php echo $data['preinfo']['title'];?>" class='page-link text-truncate'>
-                <?php echo $word['PagePre'];?>
-                <span aria-hidden="true" class='hidden-xs-down'>: <?php if($data['preinfo']['title']){?><?php echo $data['preinfo']['title'];?><?php }else{?><?php echo $word['Noinfo'];?><?php }?></span>
-            </a>
-        </li>
-        <li class='page-item m-b-0 <?php echo $data['nextinfo']['disable'];?>'>
-            <a href='<?php if($data['nextinfo']['url']){?><?php echo $data['nextinfo']['url'];?><?php }else{?>javascript:;<?php }?>' title="<?php echo $data['nextinfo']['title'];?>" class='page-link pull-xs-right text-truncate'>
-                <?php echo $word['PageNext'];?>
-                <span aria-hidden="true" class='hidden-xs-down'>: <?php if($data['nextinfo']['title']){?><?php echo $data['nextinfo']['title'];?><?php }else{?><?php echo $word['Noinfo'];?><?php }?></span>
-            </a>
-        </li>
-    </ul>
-</div>
-</div>
-				
-    <?php if($_M['form']['pageset']){ ?>
-        <?php if($sidebar){ ?>
-        </div>
-        </div>
-            <?php }else{ ?>
-                </div>
-            </div>
-        </main>
-    <?php } ?>
-<?php }else{ ?>
-        <?php if($ui[has][sidebar]){ ?>
-        </div>
-        </div>
-        <?php }else{ ?>
-        </div>
-    </div>
-</main>
-    <?php } ?>
-<?php } ?>
-
-        <?php
-            $id = 23;
-            $style = "met_16_1";
-            if(!isset($ui_compile)){
-                load::sys_class('view/ui_compile');
-                $ui_compile = new ui_compile();
-            }
-            $ui = $ui_compile->list_local_config($id);
-            $ui['has'] =$ui_compile->list_page_config($met_page);
-            ?>
-    <?php if($data[index_num]<>7){ ?>
-<div class="col-md-3">
-	<div class="row">
-<aside class="sidebar_met_16_1 met-sidebar panel panel-body m-b-0" boxmh-h m-id='<?php echo $ui['mid'];?>' m-type='nocontent'>
-	<form class='sidebar-search' method='get' action="<?php echo $c['met_weburl'];?>search/search.php">
-		<input type='hidden' name='lang' value='<?php echo $data['lang'];?>' />
-		<input type='hidden' name='class1' value='<?php echo $data['class1'];?>' />
-		<div class="form-group">
-			<div class="input-search">
-				<button type="submit" class="input-search-btn">
-					<i class="icon wb-search" aria-hidden="true"></i>
-				</button>
-				<input type="text" class="form-control" name="searchword" placeholder="<?php echo $ui['sidebar_search_placeholder'];?>">
+				</div>
 			</div>
 		</div>
-	</form>
-	    <?php if($ui['sidebar_column_ok']){ ?>
-	<ul class="sidebar-column list-icons">
-		<?php
-    $type=strtolower(trim('current'));
-    $cid=$data['class1'];
-    $column = load::sys_class('label', 'new')->get('column');
-
-    unset($result);
-    switch ($type) {
-            case 'son':
-                $result = $column->get_column_son($cid);
-                break;
-            case 'current':
-                $result[0] = $column->get_column_id($cid);
-                break;
-            case 'head':
-                $result = $column->get_column_head();
-                break;
-            case 'foot':
-                $result = $column->get_column_foot();
-                break;
-            default:
-                $result[0] = $column->get_column_id($cid);
-                break;
-        }
-    $sub = count($result);
-    foreach($result as $index=>$m):
-        $hides = 1;
-        $hide = explode("|",$hides);
-        $m['_index']= $index;
-        if($data['classnow']==$m['id'] || $data['class1']==$m['id'] || $data['class2']==$m['id']){
-            $m['class']="";
-        }else{
-            $m['class'] = '';
-        }
-        if(in_array($m['name'],$hide)){
-            unset($m['id']);
-            unset($m['class']);
-            $m['hide'] = $hide;
-            $m['sub'] = 0;
-        }
-
-
-        if(substr(trim($m['icon']),0,1) == 'm' || substr(trim($m['icon']),0,1) == ''){
-            $m['icon'] = 'icon fa-pencil-square-o '.$m['icon'];
-        }
-        $m['urlnew'] = $m['new_windows'] ? "target='_blank'" :"target='_self'";
-        $m['urlnew'] = $m['nofollow'] ? $m['urlnew']." rel='nofollow'" :$m['urlnew'];
-        $m['_first']=$index==0 ? true:false;
-        $m['_last']=$index==(count($result)-1)?true:false;
-        $$m = $m;
-?>
-		<li>
-			<a href="<?php echo $m['url'];?>" title="<?php echo $m['name'];?>" class="    <?php if($data[classnow]==$m[id]){ ?>
-					active
-					<?php } ?>" <?php echo $m['urlnew'];?>><?php echo $m['name'];?></a>
-		</li>
-		<?php
-    $type=strtolower(trim('son'));
-    $cid=$m['id'];
-    $column = load::sys_class('label', 'new')->get('column');
-
-    unset($result);
-    switch ($type) {
-            case 'son':
-                $result = $column->get_column_son($cid);
-                break;
-            case 'current':
-                $result[0] = $column->get_column_id($cid);
-                break;
-            case 'head':
-                $result = $column->get_column_head();
-                break;
-            case 'foot':
-                $result = $column->get_column_foot();
-                break;
-            default:
-                $result[0] = $column->get_column_id($cid);
-                break;
-        }
-    $sub = count($result);
-    foreach($result as $index=>$m):
-        $hides = 1;
-        $hide = explode("|",$hides);
-        $m['_index']= $index;
-        if($data['classnow']==$m['id'] || $data['class1']==$m['id'] || $data['class2']==$m['id']){
-            $m['class']="active";
-        }else{
-            $m['class'] = '';
-        }
-        if(in_array($m['name'],$hide)){
-            unset($m['id']);
-            unset($m['class']);
-            $m['hide'] = $hide;
-            $m['sub'] = 0;
-        }
-
-
-        if(substr(trim($m['icon']),0,1) == 'm' || substr(trim($m['icon']),0,1) == ''){
-            $m['icon'] = 'icon fa-pencil-square-o '.$m['icon'];
-        }
-        $m['urlnew'] = $m['new_windows'] ? "target='_blank'" :"target='_self'";
-        $m['urlnew'] = $m['nofollow'] ? $m['urlnew']." rel='nofollow'" :$m['urlnew'];
-        $m['_first']=$index==0 ? true:false;
-        $m['_last']=$index==(count($result)-1)?true:false;
-        $$m = $m;
-?>
-		<li>
-			    <?php if($m['sub'] && $ui['sidebar_column3_ok']){ ?>
-			<a href="javascript:;" title="<?php echo $m['name'];?>" class='<?php echo $m['class'];?>' <?php echo $m['urlnew'];?> data-toggle="collapse" data-target=".sidebar-column3-<?php echo $m['_index'];?>"><?php echo $m['name'];?><i class="wb-chevron-right-mini"></i></a>
-	        <div class="sidebar-column3-<?php echo $m['_index'];?> collapse" aria-expanded="false">
-	            <ul class="m-t-5 p-l-20">
-	                <li><a href="<?php echo $m['url'];?>" <?php echo $m['urlnew'];?> title="<?php echo $ui['all'];?>" class="<?php echo $m['class'];?>"><?php echo $ui['all'];?></a></li>
-					<?php
-    $type=strtolower(trim('son'));
-    $cid=$m['id'];
-    $column = load::sys_class('label', 'new')->get('column');
-
-    unset($result);
-    switch ($type) {
-            case 'son':
-                $result = $column->get_column_son($cid);
-                break;
-            case 'current':
-                $result[0] = $column->get_column_id($cid);
-                break;
-            case 'head':
-                $result = $column->get_column_head();
-                break;
-            case 'foot':
-                $result = $column->get_column_foot();
-                break;
-            default:
-                $result[0] = $column->get_column_id($cid);
-                break;
-        }
-    $sub = count($result);
-    foreach($result as $index=>$m):
-        $hides = 1;
-        $hide = explode("|",$hides);
-        $m['_index']= $index;
-        if($data['classnow']==$m['id'] || $data['class1']==$m['id'] || $data['class2']==$m['id']){
-            $m['class']="active";
-        }else{
-            $m['class'] = '';
-        }
-        if(in_array($m['name'],$hide)){
-            unset($m['id']);
-            unset($m['class']);
-            $m['hide'] = $hide;
-            $m['sub'] = 0;
-        }
-
-
-        if(substr(trim($m['icon']),0,1) == 'm' || substr(trim($m['icon']),0,1) == ''){
-            $m['icon'] = 'icon fa-pencil-square-o '.$m['icon'];
-        }
-        $m['urlnew'] = $m['new_windows'] ? "target='_blank'" :"target='_self'";
-        $m['urlnew'] = $m['nofollow'] ? $m['urlnew']." rel='nofollow'" :$m['urlnew'];
-        $m['_first']=$index==0 ? true:false;
-        $m['_last']=$index==(count($result)-1)?true:false;
-        $$m = $m;
-?>
-	                <li><a href="<?php echo $m['url'];?>" <?php echo $m['urlnew'];?> title="<?php echo $m['name'];?>" class='<?php echo $m['class'];?>'><?php echo $m['name'];?></a></li>
-					<?php endforeach;?>
-	            </ul>
-	        </div>
-			<?php }else{ ?>
-			<a href="<?php echo $m['url'];?>" title="<?php echo $m['name'];?>" class='<?php echo $m['class'];?>'><?php echo $m['name'];?></a>
-	        <?php } ?>
-		</li>
-		<?php endforeach;?>
-		<?php endforeach;?>
-	</ul>
-	<?php } ?>
-	    <?php if($ui['sidebar_newslist_ok']){ ?>
-	<div class="sidebar-news-list recommend">
-		<h3 class='font-size-16 m-0'><?php echo $ui['sidebar_newslist_title'];?></h3>
-		<ul class="list-group list-group-bordered m-t-10 m-b-0">
-			<?php
-    $cid=$data['class1'];
-
-    $num = $ui['sidebar_newslist_num'];
-    $module = "";
-    $type = all;
-    $order = 'no_order asc';
-    $para = "";
-    if(!$module){
-        if(!$cid){
-            $value = $m['classnow'];
-        }else{
-            $value = $cid;
-        }
-    }else{
-        $value = $module;
-    }
-
-    $result = load::sys_class('label', 'new')->get('tag')->get_list($value, $num, $type, $order, $para);
-    $sub = count($result);
-    foreach($result as $index=>$v):
-        $id = $v['id'];
-        $v['sub'] = $sub;
-        $v['_index']= $index;
-        $v['_first']= $index==0 ? true:false;
-        $v['_last']=$index==(count($result)-1)?true:false;
-        $$v = $v;
-?>
-			<li class="list-group-item">
-				<a href="<?php echo $v['url'];?>" title="<?php echo $v['title'];?>" <?php echo $g['urlnew'];?>><?php echo $v['title'];?></a>
-			</li>
-			<?php endforeach;?>
-		</ul>
 	</div>
-	<?php } ?>
-	    <?php if($ui['sidebar_piclist_ok']){ ?>
-	<div class='sidebar-piclist'>
-		<h3 class='m-0 font-size-16 font-weight-300'><?php echo $ui['sidebar_piclist_title'];?></h3>
-		<ul class='blocks-2 blocks-md-3 blocks-lg-100 m-t-20 text-xs-center imagesize sidebar-piclist-ul' data-scale='0.75117370892019'>
-			<?php
-    $cid=$ui['sidebar_piclist_id'];
-
-    $num = $ui['sidebar_piclist_num'];
-    $module = "";
-    $type = all;
-    $order = 'no_order asc';
-    $para = "";
-    if(!$module){
-        if(!$cid){
-            $value = $m['classnow'];
-        }else{
-            $value = $cid;
-        }
-    }else{
-        $value = $module;
-    }
-
-    $result = load::sys_class('label', 'new')->get('tag')->get_list($value, $num, $type, $order, $para);
-    $sub = count($result);
-    foreach($result as $index=>$v):
-        $id = $v['id'];
-        $v['sub'] = $sub;
-        $v['_index']= $index;
-        $v['_first']= $index==0 ? true:false;
-        $v['_last']=$index==(count($result)-1)?true:false;
-        $$v = $v;
-?>
-			<li class='masonry-child'>
-				<a href='<?php echo $v['url'];?>' title='<?php echo $v['title'];?>' class='block m-b-0' target='_blank'>
-					<img data-original="<?php echo thumb($v['imgurl'],$v['img_x'],$v['img_y']);?>" class='cover-image' alt='<?php echo $v['title'];?>' height='100'></a>
-				<h4 class='m-t-10 m-b-0 font-size-14'>
-					<a href='<?php echo $v['url'];?>' title='<?php echo $v['title'];?>' target='_blank'><?php echo $v['title'];?></a>
-				</h4>
-				<p class='m-b-0 red-600'>价格-没有数据</p>
-			</li>
-			<?php endforeach;?>
-		</ul>
-	</div>
-	<?php } ?>
-</aside>
 </div>
-</div>
-<?php } ?>
-		</div>
-    </div>
-</main>
+<?php
+# MetInfo Enterprise Content Management System
+# Copyright (C) MetInfo Co.,Ltd (http://www.metinfo.cn). All rights reserved.
+defined('IN_MET') or exit('No permission');
+ ?>
+<script>
+var MET=[];
+MET['url']=[];
+MET['langtxt'] = {
+	"jsx15":"<?php echo $_M['word']['jsx15'];?>",
+	"js35":"<?php echo $_M['word']['js35'];?>",
+	"jsx17":"<?php echo $_M['word']['jsx17'];?>",
+	"formerror1":"<?php echo $_M['word']['formerror1'];?>",
+	"formerror2":"<?php echo $_M['word']['formerror2'];?>",
+	"formerror3":"<?php echo $_M['word']['formerror3'];?>",
+	"formerror4":"<?php echo $_M['word']['formerror4'];?>",
+	"formerror5":"<?php echo $_M['word']['formerror5'];?>",
+	"formerror6":"<?php echo $_M['word']['formerror6'];?>",
+	"formerror7":"<?php echo $_M['word']['formerror7'];?>",
+	"formerror8":"<?php echo $_M['word']['formerror8'];?>",
+	"js46":"<?php echo $_M['word']['js46'];?>",
+	"js23":"<?php echo $_M['word']['js23'];?>",
+	"checkupdatetips":"<?php echo $_M['word']['checkupdatetips'];?>",
+	"detection":"<?php echo $_M['word']['detection'];?>",
+	"try_again":"<?php echo $_M['word']['try_again'];?>",
+	"fileOK":"<?php echo $_M['word']['fileOK'];?>",
+};
+MET['met_editor']="<?php echo $_M['config']['met_editor'];?>";
+MET['met_keywords']="<?php echo $_M['config']['met_keywords'];?>";
+MET['url']['ui']="<?php echo $_M['url']['ui'];?>";
+MET['url']['own']="<?php echo $_M['url']['own'];?>";
+MET['url']['own_tem']="<?php echo $_M['url']['own_tem'];?>";
+MET['url']['api']="<?php echo $_M['url']['api'];?>";
+</script>
 
         <?php
             $id = 3;
@@ -1442,3 +1211,6 @@ if($lang_json_file_ok){
 ?>
 </body>
 </html>
+<script src="<?php echo $_M['url']['site'];?>public/ui/v2/static/js/app.js?<?php echo $met_file_version;?>"></script>
+<?php if(file_exists(PATH_OWN_FILE."templates/met/js/own.js") && !((M_NAME=='product' || M_NAME=='shop') && $_M['config']['shopv2_open'])){ ?>
+<script src="<?php echo $_M['url']['own_tem'];?>js/own.js?<?php echo $met_file_version;?>"></script><?php } ?>

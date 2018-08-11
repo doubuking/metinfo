@@ -33,6 +33,7 @@ class user_url {
 		$_M['url']['profile_safety_teladd'] = "{$_M['url']['profile']}&a=dosafety_teladd";
 		$_M['url']['profile_safety_teledit'] = "{$_M['url']['profile']}&a=dosafety_teledit";
         $_M['url']['profile_safety_idvalid'] = "{$_M['url']['profile']}&a=dosafety_idvalid";
+        $_M['url']['profile_safety_activity'] = "{$_M['url']['profile']}&a=doactivityshow";
 
 
         $_M['url']['info_save'] = "{$_M['url']['profile']}&a=doinfosave";

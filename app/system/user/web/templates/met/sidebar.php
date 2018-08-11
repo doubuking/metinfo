@@ -25,6 +25,7 @@ if(!$_M['config']['own_active']) $_M['config']['own_active']=array($_M['config']
     		<ul class="list-group m-l-15 met-sidebar-nav">
     			<li class="list-group-item {$_M['config']['own_active']['0_1']}"><a href="{$_M['url']['profile']}" title="{$_M['word']['memberIndex9']}">{$_M['word']['memberIndex9']}</a></li>
     			<li class="list-group-item {$_M['config']['own_active']['0_2']}"><a href="{$_M['url']['profile_safety']}" title="{$_M['word']['accsafe']}">{$_M['word']['accsafe']}</a></li>
+                <a class="dropdown-item {$_M['config']['own_active']['0_3']}" href="{$_M['url']['profile_safety_activity']}" title="报名的活动">报名的活动</a>
                 <?php
                 foreach($_M['html']['app_sidebar'] as $key=>$val){
                     $val['active']=$_M['config']['own_active'][$val['no'].'_'.$val['own_order']];

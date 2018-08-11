@@ -1,0 +1,1 @@
+<?php defined('IN_MET') or exit('No permission'); ?>{"mid":"17","ui_show":"1","download":"\u7acb\u5373\u4e0b\u8f7d","bgcolor":"","titlecolor":"","hovercolor":""}

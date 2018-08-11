@@ -286,6 +286,40 @@ class profile extends userweb {
         }
     }
 
+    public function doactivityshow()
+    {
+        global $_M;
+        $_M['config']['own_order'] = 3;
+        if (!$_M['user']['valid']) {
+            $valid = $_M['config']['met_member_vecan'] == 1 ? 'valid_email' : 'valid_admin';
+            require_once $this->view('app/' . $valid, $this->input);
+        } else {
+            $_M['paralist'] = $this->paralist;
+            $_M['paraclass'] = $this->paraclass;
+
+            $sql = "SELECT id,title,starttime,endtime FROM met_news WHERE id in (SELECT act_id FROM met_participants GROUP BY user_id HAVING user_id={$_M['user']['id']} )";
+
+            $result = DB::get_all($sql);
+
+            $sql2 = "SELECT act_id,`status` FROM met_participants GROUP BY user_id HAVING user_id={$_M['user']['id']}";
+
+            $result2 = DB::get_all($sql2);
+
+            $resultData = array();
+            foreach ($result2 as $k=>$v){
+                $resultData[$v['act_id']] = $v['status'];
+            }
+
+            foreach ($result as $key=>$value){
+                $result[$key]['title'] = mb_substr($value['title'],0,10);
+                $result[$key]['status'] = $resultData[$value['id']];
+            }
+
+            $this->input['result'] = $result;
+            require_once $this->view('app/profile_activity', $this->input);
+        }
+    }
+
 }
 
 # This program is an open source system, commercial use, please consciously to purchase commercial license.

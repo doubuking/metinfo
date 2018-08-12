@@ -50,7 +50,9 @@ $data['page_title']=$_M['word']['memberIndex9'].$data['page_title'];
                                     </if>
                                 </div>
                                 <div class="col-xs-2 col-sm-2">
-                                    查看
+                                    <div class="card-body-footer m-t-0">
+                                        <a class="btn btn-outline btn-squared btn-primary met-job-cvbtn" onclick="poPup(this)" href="javascript:;" data-toggle="modal" data-target="#met-job-cv" data-jobid="{$val.id}" data-cvurl="cv.php?lang=cn&selected">查看参会人员</a>
+                                    </div>
                                 </div>
 							</div>
                             </list>
@@ -61,4 +63,53 @@ $data['page_title']=$_M['word']['memberIndex9'].$data['page_title'];
 		</div>
 	</div>
 </div>
+
+
+<!--弹窗-->
+
+
+<div class="modal fade modal-primary" id="met-job-cv" aria-hidden="true" role="dialog" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">参加人员</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>手机号</th>
+                        <th>邮箱</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tbodytop">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function poPup(e) {
+        $.ajax({
+            type: "GET",
+            url: "{$_M['url']['profile_safety_participants']}",
+            data: {'id':e.getAttribute('data-jobid')},
+            dataType: "json",
+            success: function(data){
+                $('#tbodytop').html('');
+                var str = '';
+                for (i=0;i<data.length;i++){
+                    str += '<tr><td>'+data[i].name+'</td><td>'+data[i].phone+'</td><td>'+data[i].email+'</td></tr>';
+                }
+                $('#tbodytop').html(str);
+            }
+        });
+    }
+</script>
 <include file="sys_web/foot"/>

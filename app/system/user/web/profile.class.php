@@ -286,6 +286,9 @@ class profile extends userweb {
         }
     }
 
+    /**
+     * 已报名的列表
+     */
     public function doactivityshow()
     {
         global $_M;
@@ -319,6 +322,27 @@ class profile extends userweb {
             require_once $this->view('app/profile_activity', $this->input);
         }
     }
+
+    /**
+     * 获取参会人员
+     */
+    public function dogetParticipants()
+    {
+        global $_M;
+        $_M['config']['own_order'] = 3;
+        if (!$_M['user']['valid']) {
+            $valid = $_M['config']['met_member_vecan'] == 1 ? 'valid_email' : 'valid_admin';
+            require_once $this->view('app/' . $valid, $this->input);
+        } else {
+            $sql2 = "SELECT id,`name`,phone,email,`status` FROM met_participants WHERE act_id={$_M['form']['id']} AND user_id={$_M['user']['id']}";
+
+            $result2 = DB::get_all($sql2);
+
+            echo json_encode($result2);
+
+        }
+    }
+
 
 }
 

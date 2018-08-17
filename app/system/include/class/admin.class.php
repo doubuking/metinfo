@@ -277,6 +277,39 @@ class admin extends common {
 		return $re;
 	}
 
+    public function getQutos($id)
+    {
+        global $_M;
+
+        $sql = "SELECT ug.`name`,ug.access,fq.count FROM met_free_quota as fq LEFT JOIN met_user_group as ug ON fq.access_id = ug.access WHERE ug.lang='{$_M['form']['lang']}' AND fq.new_id={$id}";
+        $quitaList = DB::get_all($sql);
+
+        $temp = '';
+
+        if(!empty($quitaList)){
+            foreach ($quitaList as $val){
+                $temp .= <<<EOT
+		<dl>
+			<dt>{$val['name']}</dt>
+			<dd class="ftype_input">
+				<div class="fbox">
+					<labe><input type="text" name="quotascost[{$val['access']}]" style="width:100px;" value="{$val['count']}" /></labe>
+					<labe><a href="javascript:void(0)" onclick="deldiv(this)"">删除</a></labe>
+				</div>
+			</dd>
+		</dl>
+EOT;
+
+            }
+		}
+
+		return $temp;
+
+
+
+	}
+
+
 }
 
 ?>

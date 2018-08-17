@@ -480,7 +480,7 @@ class news_database extends base_database {
 	}
 
 	public function table_para(){
-		return 'id|title|ctitle|keywords|description|content|class1|class2|class3|no_order|wap_ok|img_ok|imgurl|imgurls|com_ok|issue|hits|updatetime|addtime|access|top_ok|filename|lang|recycle|displaytype|tag|links|is_activity|starttime|endtime';
+		return 'id|title|ctitle|keywords|description|content|class1|class2|class3|no_order|wap_ok|img_ok|imgurl|imgurls|com_ok|issue|hits|updatetime|addtime|access|top_ok|filename|lang|recycle|displaytype|tag|links|is_activity|starttime|endtime|isfree|cost';
 	}
 
 	//删除

@@ -1,1 +1,0 @@
-<?php defined('IN_MET') or exit('No permission'); ?>{"mid":"18","hovercolor":"","titlecolor":"","cvtitle":"\u5728\u7ebf\u5e94\u8058","bgcolor":"","ui_show":"1","polr":"left"}

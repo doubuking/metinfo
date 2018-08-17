@@ -1,1 +1,0 @@
-<?php defined('IN_MET') or exit('No permission'); ?>{"mid":"12","ui_show":"0","type":"1","sort_ok":"1","attr_ok":"1","bgcolor":"","attr_namebgcolor":"","attr_nametextcolor":"","attr_vbgcolor":"#fafafa","attr_vtextcolor":"","border_color":"","hovercolor":"","sort_textcolor":"","sort_bgcolor":"","sort_hovercolor":"","padding":"30","padding_p":"20","padding_m":"10"}

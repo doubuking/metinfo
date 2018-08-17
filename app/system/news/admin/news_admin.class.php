@@ -36,6 +36,7 @@ class news_admin extends base_admin {
 		$list[class3]=$_M[form][class3_select];
 		$turnurl="&class1={$_M['form']['class1_select']}&class2={$_M['form']['class2_select']}&class3={$_M['form']['class3_select']}";
 		$access_option = $this->access_option('access');
+		$quotas_option = $this->access_option('quotas');
 		$_M['url']['help_tutorials_helpid']='98#1、基本信息';
 		require $this->template('own/article_add');
 	}
@@ -97,6 +98,16 @@ class news_admin extends base_admin {
 
 		$pid = $this->insert_list_sql($list);
 		if($pid){
+			//add 免费参会人员
+            $temp = '';
+            foreach ($list['quotascost'] as $key=>$val){
+                $temp.="({$pid}, {$key}, {$val}),";
+            }
+
+
+            $freeSql = 'INSERT INTO met_free_quota (`new_id`,`access_id`,`count`) VALUES '.rtrim($temp,',');
+            DB::query($freeSql);
+
 			return $pid;
 		}else{
 			return false;
@@ -182,6 +193,9 @@ class news_admin extends base_admin {
 		$admin_name=get_met_cookie('metinfo_admin_name');
 		$admin_name=DB::get_one("select admin_name from {$_M[table][admin_table]} where admin_id='{$admin_name}'");
 		$list = $this->database->get_list_one_by_id($_M['form']['id']);
+
+        $quitaList = $this->getQutos($list['id']);
+
 		$list['addtype'] = strtotime($list['addtime'])>time()?2:1;
 		$list['updatetime'] = date("Y-m-d H:i:s");
 		$list['issue'] = $list['issue'] ? $list['issue'] : $admin_name['admin_name'];
@@ -189,6 +203,7 @@ class news_admin extends base_admin {
 		//$list[description]=str_replace(' ','',$list[description]);
 		$a = 'doeditorsave';
 		$access_option = $this->access_option('access',$list['access']);
+        $quotas_option = $this->access_option('quotas');
 		$_M['url']['help_tutorials_helpid']='98#1、基本信息';
 		require $this->template('own/article_add');
 	}
@@ -238,7 +253,25 @@ class news_admin extends base_admin {
 		$list = $this->form_imglist($list,2);
 
 		if($this->update_list_sql($list,$id)){
-			return true;
+
+
+            //先删除原先的关系
+
+            $delsql = "DELETE FROM met_free_quota WHERE `new_id` = ".$id;
+            DB::query($delsql);
+
+
+            $temp = '';
+            foreach ($list['quotascost'] as $key=>$val){
+                $temp.="({$id}, {$key}, {$val}),";
+            }
+
+
+            $freeSql = 'INSERT INTO met_free_quota (`new_id`,`access_id`,`count`) VALUES '.rtrim($temp,',');
+            DB::query($freeSql);
+
+
+            return true;
 		}else{
 			return false;
 		}

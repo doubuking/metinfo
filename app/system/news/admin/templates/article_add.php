@@ -6,6 +6,7 @@ defined('IN_MET') or exit('No permission');
 
 require $this->template('ui/head');
 $list['is_activity']?$open='checked':$close='checked';
+$list['isfree']?$isfreeopen='checked':$isfreeclose='checked';
 echo <<<EOT
 -->
 
@@ -157,8 +158,8 @@ echo <<<EOT
             <dt>活动开关</dt>
             <dd class="ftype_radio ftype_transverse">
                 <div class="fbox">
-                    <label><input name="is_activity" type="radio" value="0" {$close} >关</label>
-                    <label><input name="is_activity" type="radio" value="1" {$open} >开</label>
+                    <label><input name="is_activity" type="radio" value="0" {$isfreeclose} >关</label>
+                    <label><input name="is_activity" type="radio" value="1" {$isfreeopen} >开</label>
                 </div>
                 <span class="tips"></span>
             </dd>
@@ -215,6 +216,50 @@ echo <<<EOT
 			</dd>
 		</dl>
 		</div>
+		
+		
+		<h3 class="v52fmbx_hr clearfix">付费设置<button type='button' onclick="showorhiden()" class='btn btn-default btn-sm showmoresets-btn' style="float: right;">{$_M[word][click_enter]}</button></h3>
+		<div class='showmoresets-content' style="display: none">
+		
+		<dl>
+            <dt>是否付费报名</dt>
+            <dd class="ftype_radio ftype_transverse">
+                <div class="fbox">
+                    <label><input name="isfree" type="radio" value="0" {$close} >否</label>
+                    <label><input name="isfree" type="radio" value="1" {$open} >是</label>
+                </div>
+                <span class="tips"></span>
+            </dd>
+        </dl>
+		
+		<dl>
+			<dt>报名费</dt>
+			<dd class="ftype_input">
+				<div class="fbox">
+					<input type="text" name="cost" style="width:100px;" value="{$list[cost]}" />
+				</div>
+			</dd>
+		</dl>
+
+		<dl class="quotasdiv">
+			<dt>添加免费名额</dt>
+			<dd class="ftype_select">
+				<div class="fbox">
+					<label for="" >{$quotas_option}</label>
+					<labe><a href="javascript:void(0)" onclick="addQuotas(this)">添加</a></labe>
+				</div>
+			    
+			</dd>
+	
+		</dl>
+		{$quitaList}
+
+		</div>
+		
+		
+		
+		
+		
 		<dl>
 			<dt>{$_M[word][coverimg]}</dt>
 			<dd class="ftype_upload">
@@ -234,9 +279,46 @@ echo <<<EOT
 		<button type="submit" class="btn btn-success" onclick='return news_submit();'>{$_M[word][Submit]}</button>
 	</div>
 </form>
+<script >
+
+
+function addQuotas(e) {
+    var quotas = $("[name='quotas'] :checked");
+    var str = '		<dl >'+
+			'<dt>'+quotas.text()+'</dt>'+
+			'<dd class="ftype_input">'+
+				'<div class="fbox">'+
+					'<labe><input type="text" name="quotascost['+quotas.val()+']" style="width:100px;" value="" /></labe>'+
+					'<labe><a href="javascript:void(0)" onclick="deldiv(this)"">删除</a></labe>'+
+				'</div>'+
+			'</dd>'+
+		'</dl>';
+    $('.quotasdiv').after(str)
+    
+}
+
+
+function showorhiden() {
+  $('.showmoresets-content').toggle();
+  if($('.showmoresets-btn').text() == '展开更多设置'){
+      $('.showmoresets-btn').text('隐藏设置');
+  }else {
+      $('.showmoresets-btn').text('展开更多设置');
+  }
+  
+}
+
+function deldiv(e) {
+  $(e).parents('dl').remove();
+}
+
+</script>
 <!--
 EOT;
 require $this->template('ui/foot');
 # This program is an open source system, commercial use, please consciously to purchase commercial license.
 # Copyright (C) MetInfo Co., Ltd. (http://www.metinfo.cn). All rights reserved.
 ?>
+
+
+

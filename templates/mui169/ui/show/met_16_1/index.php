@@ -21,7 +21,23 @@
 	            </if>
 	        </if>
         <!-- /sidebar -->
-		{$data.content}
+		<section class="met-editor clearfix">
+					<if value="$data['content']">
+					{$data.content}
+					<else/>
+					<div class='h-100 text-xs-center font-size-20 vertical-align'>{$lang.nodata}</div>
+					</if>
+				</section>
+			    <if value="$ui.radio_ok">
+				    <div>
+					    <if value="$ui['title'] neq '0'">
+						    <h3 class="title">{$ui.title}</h3>
+						</if>
+						<section class="met-feedback animsition">
+				        	<tag action="feedback.form" cid="$ui[id]"></tag>
+				        </section>
+					</div>
+			    </if>
 		<!-- sidebar -->
 			    <if value="$_M['form']['pageset']">
 				    <if value="$sidebar">

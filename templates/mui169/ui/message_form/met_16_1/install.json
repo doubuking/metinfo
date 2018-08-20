@@ -5,12 +5,11 @@
         "ui_page": "|message_index|",
         "ui_title": "留言表单",
         "ui_description": "留言表单",
-        "ui_issue": "1",
+        "ui_issue": "0",
         "ui_order": "1",
-        "ui_version": "1.2",
+        "ui_version": "1.3",
         "ui_creater": "曾姣艳",
-        "ui_company": "metinfo",
-        "ui_edittime": "1531106679"
+        "ui_company": "metinfo"
     },
     "config": [
         {
@@ -51,7 +50,7 @@
             "uip_key": "hovercolor-1",
             "uip_value": "",
             "uip_default": "",
-            "uip_title": "鼠标经过颜色",
+            "uip_title": "鼠标经过颜色和选中颜色",
             "uip_description": "默认为模板配色调",
             "uip_order": "3"
         },
@@ -96,6 +95,76 @@
             "uip_title": "鼠标经过提交按钮文字颜色",
             "uip_description": "默认为 #ffffff",
             "uip_order": "6"
+        },
+        {
+            "parent_name": "message_form",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "conbgcolor",
+            "uip_key": "conbgcolor",
+            "uip_value": "",
+            "uip_default": "#ffffff",
+            "uip_title": "内容区块背景色",
+            "uip_description": "默认为 #ffffff",
+            "uip_order": "6"
+        },
+        {
+            "parent_name": "message_form",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "rcolor",
+            "uip_key": "rcolor",
+            "uip_value": "",
+            "uip_default": "#2a333c",
+            "uip_title": "单选多选文字颜色",
+            "uip_description": "默认为#2a333c",
+            "uip_order": "7"
+        },
+        {
+            "parent_name": "message_form",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "bordercolor",
+            "uip_key": "bordercolor-1",
+            "uip_value": "",
+            "uip_default": "#e4eaec",
+            "uip_title": "输入框边框颜色",
+            "uip_description": "默认为#e4eaec",
+            "uip_order": "8"
+        },
+        {
+            "parent_name": "message_form",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "sbgcolor",
+            "uip_key": "sbgcolor",
+            "uip_value": "",
+            "uip_default": "#ffffff",
+            "uip_title": "输入框背景颜色",
+            "uip_description": "默认为 #ffffff",
+            "uip_order": "9"
+        },
+        {
+            "parent_name": "message_form",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "placecolor",
+            "uip_key": "placecolor",
+            "uip_value": "",
+            "uip_default": "#a3afb7",
+            "uip_title": "输入框文字颜色",
+            "uip_description": "默认为#a3afb7",
+            "uip_order": "10"
         }
     ]
 }

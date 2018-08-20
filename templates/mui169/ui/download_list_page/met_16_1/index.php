@@ -1,15 +1,27 @@
 <?php defined('IN_MET') or exit('No permission'); ?>
+<?php $sidebar=strlen($ui[has][sidebar]);?>
 <main class="$uicss met-download animsition" m-id='{$ui.mid}'>
     <div class="container">
         <div class="row">
-<tag action='download.list' num="$c['met_download_list']"></tag>
+        <div class="met-download-list">
+<tag action='download.list' num="$c['met_download_list']" cid="$data[classnow]"></tag>
 <if value="$sub">
-        <if value="$ui[has][sidebar]">
+        <if value="$_M['form']['pageset']">
+            <if value="$sidebar">
             <div class="met-download-list col-md-9">
-            <div class="row">
-        <else/>
-            <div class="met-download-list col-md-10 offset-md-1">
-            <div class="row">
+                <div class="row">
+            <else/>
+            <div class="met-download-list">
+                <div class="row">
+            </if>
+            <else/>
+            <if value="$ui[has][sidebar]">
+            <div class="met-download-list col-md-9">
+                <div class="row">
+            <else/>
+            <div class="met-download-list">
+                <div class="row">
+            </if>
         </if>
                 <ul class="list-group list-group-dividered list-group-full met-pager-ajax ">
                 	<include file='ui_ajax/download'/>
@@ -27,8 +39,16 @@
             <else/>
             <div class='h-100 text-xs-center font-size-20 vertical-align' m-id='{$ui.mid}'>{$g.nodata}</div>
 </if>
-<if value="!$ui[has][sidebar]">
+<if value="$_M['form']['pageset']">
+    <if value="!$sidebar">
+                </div>
+            </div>
+        </main>
+    </if>
+<else/>
+    <if value="!$ui[has][sidebar]">
         </div>
     </div>
 </main>
+    </if>
 </if>

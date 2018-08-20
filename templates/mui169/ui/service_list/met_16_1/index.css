@@ -8,6 +8,11 @@ $uicss.met-index-body p.desc{padding:0 10%;font-size:16px;color:$secondcolor$;co
 $uicss .index-service-list li h3{color:$firstcolor$;color:$titlecolor$;}
 $uicss .index-service-list li p{color:$secondcolor$;color:$desccolor$;}
 $uicss .index-service-list li i{color:$secondcolor$;color: $desccolor$;}
+@media (min-width:768px){
+    $uicss.conceal{
+        display: none;
+    }
+}
 @media (max-width:991px){
 	$uicss.met-index-body{padding:$padding_p$px 0px;}
 }
@@ -15,8 +20,14 @@ $uicss .index-service-list li i{color:$secondcolor$;color: $desccolor$;}
 	$uicss.met-index-body{padding:$padding_m$px 0px;}
 	$uicss.met-index-body h2{font-size:28px;}
 	$uicss.met-index-body p.desc{font-size:14px;}
+    $uicss .index-service-list li h3{
+        font-size: 14px !important;
+        margin-top: 5px !important;
+    }
 }
-$uicss .index-service-list li{margin:50px 0 0;}
+$uicss .index-service-list li{margin:50px 0 0;float: left;}
+$uicss .index-service-list li.donttop{margin:0 !important;}
+$uicss .index-service-list{overflow: hidden;}
 $uicss .index-service-list li i{width:120px;background:$icon_bg$;height:120px;line-height:120px;font-size:50px;color:$icon_color$;}
 $uicss .index-service-list li:hover i{background:$thirdcolor$;background:$icon_hoverbg$; color:$icon_hovercolor$;}
 $uicss .index-service-list li img{max-width:100%;}

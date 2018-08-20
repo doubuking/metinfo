@@ -1,5 +1,5 @@
 <?php defined('IN_MET') or exit('No permission'); ?>
-<div class="$uicss met-index-body text-xs-center <if value="$ui['bg_type'] eq 1">bgcolor<else/>bgpic</if>" m-id='{$ui.mid}'>
+<div class="$uicss met-index-body text-xs-center <if value="$ui['bg_type'] eq 1">bgcolor<else/>bgpic</if> <if value="$ui[ifdisplay]&&!$_M['form']['pageset']">conceal<else/>display</if>" m-id='{$ui.mid}'>
 	<div class="<if value='$ui[ifwidth]'>container<else/>container-fluid</if>">
 		<if value="$ui['title']">
 			<h2 class="m-t-0 font-weight-300 invisible" data-plugin="appear" data-animate="slide-top" data-repeat="false">{$ui.title}</h2>
@@ -16,7 +16,7 @@
 		 	blocks-md-{$ui.column_md} blocks-lg-{$ui.column_lg} blocks-xxl-{$ui.column_xxl} index-service-list">
 			<tag action='category' cid="$ui['id']" type='son'>
 			<if value="$m[_index] lt $ui['num']">
-				<li class="invisible" data-plugin="appear" data-animate="slide-bottom50" data-repeat="false">
+				<li class="invisible <if value='!$ui[iconiftop]'>donttop<else/></if>" data-plugin="appear" data-animate="slide-bottom50" data-repeat="false">
 					<if value="$ui['link_ok']">
 					<a href="{$m.url}" title="{$m.name}" {$m.urlnew}>
 					</if>
@@ -27,7 +27,7 @@
 	                    </if>
 						<h3 class='m-t-20 m-b-5 font-weight-300'>{$m.name}</h3>
 						<if value="$ui['desc_ok']">
-						<p class='m-b-0 font-weight-300'>{$m.description}</p>
+						<p class='m-b-0 font-weight-300'>{$m.description|met_substr:0,$ui['long']}</p>
 						</if>
 					<if value="$ui['link_ok']">
 					</a>

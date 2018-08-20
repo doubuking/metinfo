@@ -171,6 +171,9 @@ $uicss .is-start {
   opacity: 1;
   z-index: 12;
 }
+@media (max-width: 1025px){
+  $uicss .about-video{width: 100%;}
+}
 @media (max-width: 768px) {
   $uicss .about-video {
     width: 100%;

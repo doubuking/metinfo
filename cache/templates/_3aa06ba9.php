@@ -1,5 +1,5 @@
 <?php defined('IN_MET') or exit('No permission'); ?>
-<div class="$uicss met-index-body text-xs-center     <?php if($ui['bg_type']==1){ ?>bgcolor<?php }else{ ?>bgpic<?php } ?>" m-id='<?php echo $ui['mid'];?>'>
+<div class="$uicss met-index-body text-xs-center     <?php if($ui['bg_type']==1){ ?>bgcolor<?php }else{ ?>bgpic<?php } ?>     <?php if($ui[ifdisplay]&&!$_M['form']['pageset']){ ?>conceal<?php }else{ ?>display<?php } ?>" m-id='<?php echo $ui['mid'];?>'>
 	<div class="    <?php if($ui[ifwidth]){ ?>container<?php }else{ ?>container-fluid<?php } ?>">
 		    <?php if($ui['title']){ ?>
 			<h2 class="m-t-0 font-weight-300 invisible" data-plugin="appear" data-animate="slide-top" data-repeat="false"><?php echo $ui['title'];?></h2>
@@ -65,7 +65,7 @@
         $$m = $m;
 ?>
 			    <?php if($m[_index]<$ui['num']){ ?>
-				<li class="invisible" data-plugin="appear" data-animate="slide-bottom50" data-repeat="false">
+				<li class="invisible     <?php if(!$ui[iconiftop]){ ?>donttop<?php }else{ ?><?php } ?>" data-plugin="appear" data-animate="slide-bottom50" data-repeat="false">
 					    <?php if($ui['link_ok']){ ?>
 					<a href="<?php echo $m['url'];?>" title="<?php echo $m['name'];?>" <?php echo $m['urlnew'];?>>
 					<?php } ?>
@@ -76,7 +76,7 @@
 	                    <?php } ?>
 						<h3 class='m-t-20 m-b-5 font-weight-300'><?php echo $m['name'];?></h3>
 						    <?php if($ui['desc_ok']){ ?>
-						<p class='m-b-0 font-weight-300'><?php echo $m['description'];?></p>
+						<p class='m-b-0 font-weight-300'><?php echo met_substr($m['description'],0,$ui['long']);?></p>
 						<?php } ?>
 					    <?php if($ui['link_ok']){ ?>
 					</a>

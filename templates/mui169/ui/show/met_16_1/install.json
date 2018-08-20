@@ -5,12 +5,11 @@
         "ui_page": "|show|",
         "ui_title": "简介模块详情内容",
         "ui_description": "简介模块详情内容",
-        "ui_issue": "1",
+        "ui_issue": "0",
         "ui_order": "1",
-        "ui_version": "1.4",
+        "ui_version": "1.5",
         "ui_creater": "曾姣艳",
-        "ui_company": "metinfo",
-        "ui_edittime": "1532575700"
+        "ui_company": "metinfo"
     },
     "config": [
         {
@@ -25,7 +24,8 @@
             "uip_default": "1",
             "uip_title": "区块显示开关",
             "uip_description": "当前UI区块的开启关闭设置，关闭后可以在可视化编辑中开启",
-            "uip_order": "0"
+            "uip_order": "0",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "show",
@@ -39,7 +39,8 @@
             "uip_default": "1",
             "uip_title": "展示样式",
             "uip_description": "",
-            "uip_order": "1"
+            "uip_order": "1",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "show",
@@ -53,7 +54,8 @@
             "uip_default": "1",
             "uip_title": "背景呈现方式",
             "uip_description": "默认为背景色",
-            "uip_order": "2"
+            "uip_order": "2",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "show",
@@ -67,7 +69,8 @@
             "uip_default": "",
             "uip_title": "背景色",
             "uip_description": "",
-            "uip_order": "3"
+            "uip_order": "3",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "show",
@@ -81,7 +84,8 @@
             "uip_default": "",
             "uip_title": "背景图",
             "uip_description": "",
-            "uip_order": "4"
+            "uip_order": "4",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "show",
@@ -95,7 +99,8 @@
             "uip_default": "0",
             "uip_title": "反馈表单开关",
             "uip_description": "",
-            "uip_order": "5"
+            "uip_order": "5",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "show",
@@ -109,7 +114,8 @@
             "uip_default": "Contact us",
             "uip_title": "反馈标题",
             "uip_description": "设置为0隐藏",
-            "uip_order": "6"
+            "uip_order": "6",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "show",
@@ -123,7 +129,8 @@
             "uip_default": "",
             "uip_title": "反馈表单",
             "uip_description": "只能选择反馈模块栏目;表单内容需到内容管理-反馈系统中设置",
-            "uip_order": "7"
+            "uip_order": "7",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "show",
@@ -137,7 +144,8 @@
             "uip_default": "",
             "uip_title": "文本框颜色",
             "uip_description": "默认继承网站副色调",
-            "uip_order": "8"
+            "uip_order": "8",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "show",
@@ -151,7 +159,8 @@
             "uip_default": "",
             "uip_title": "文本框选中颜色",
             "uip_description": "默认继承网站配色调",
-            "uip_order": "9"
+            "uip_order": "9",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "show",
@@ -165,7 +174,8 @@
             "uip_default": "",
             "uip_title": "提交按钮颜色",
             "uip_description": "默认继承网站主色调",
-            "uip_order": "10"
+            "uip_order": "10",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "show",
@@ -179,7 +189,8 @@
             "uip_default": "",
             "uip_title": "标题颜色",
             "uip_description": "默认继承网站主色调",
-            "uip_order": "11"
+            "uip_order": "11",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "show",
@@ -193,7 +204,8 @@
             "uip_default": "",
             "uip_title": "文本框字体颜色",
             "uip_description": "默认继承网站配色调",
-            "uip_order": "12"
+            "uip_order": "12",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "show",
@@ -207,7 +219,8 @@
             "uip_default": "",
             "uip_title": "多选按钮字体颜色",
             "uip_description": "默认继承网站主色调",
-            "uip_order": "13"
+            "uip_order": "13",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "show",
@@ -221,7 +234,8 @@
             "uip_default": "left",
             "uip_title": "列表位置",
             "uip_description": "",
-            "uip_order": "14"
+            "uip_order": "14",
+            "uip_hidden": "0"
         }
     ]
 }

@@ -20,15 +20,33 @@
 				    </div>
 				</if>
 				<if value="$ui['sort_ok']">
-					<tag action='search.option' type="page" order="1"></tag>
-					<div class="clearfix">
-						<ul class="order m-y-20 p-0">
-						<list data="$search.order" name="$res">
-						<li class="order-list inline-block m-r-10"><a href="{$res.url}" class="p-x-10 p-y-5">{$res.name}<i class="icon wb-triangle-up" aria-hidden="true"></i></a></li>
-						</list>
-						</ul>
+				<tag action='search.option' type="page" order="1"></tag>
+				<div class="clearfix m-y-10">
+					<ul class="order inline-block p-0 m-y-10 m-r-10">
+					<list data="$search.order" name="$res">
+					<li class="order-list inline-block m-r-10"><a href="{$res.url}" class="p-x-10 p-y-5">{$res.name}<i class="icon wb-triangle-up" aria-hidden="true"></i></a></li>
+					</list>
+					</ul>
+					<if value="$c['shopv2_open']">
+					<div class="clearfix inline-block m-y-10 m-l-10">
+						<form action="" method="get">
+							<input type="hidden" name="class1" value="{$data.class1}">
+							<input type="hidden" name="class2" value="{$data.class2}">
+							<input type="hidden" name="class3" value="{$data.class3}">
+							<input type="hidden" name="search" value="search">
+							<input type="hidden" name="content" value="{$_M['form']['content']}">
+							<input type="hidden" name="specv" value="{$_M['form']['specv']}">
+							<input type="hidden" name="order" value="{$_M['form']['order']}">
+							<span class="pricetxt">{$word.app_shop_remind_row4}：</span>
+							<input type="text" name="price_low" placeholder="" value="{$_M['form']['price_low']}" class="form-control inline-block w-100 price_num">
+							<span class="pricetxt">-</span>
+							<input type="text" name="price_top" placeholder="" value="{$_M['form']['price_top']}" class="form-control inline-block w-100 price_num">
+							<button type="submit" class='btn pricesearch' style="position: relative;top: -3px;">{$word.confirm}</button>
+						</form>
 					</div>
-				</if>
+					</if>
+				</div>
+			</if>
 		</div>
 	</div>
 </div>

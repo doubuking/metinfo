@@ -1,0 +1,323 @@
+$uicss.met-index-body{
+  padding:$fullpadding$px 0px;
+  background-color:$bodybgcolor$;
+  background-color:$bgfullcolor$;
+  background-image:url('$bgimg$');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+/*平板*/
+@media (max-width: 991px){
+    $uicss.met-index-body{padding: $padding_p$px 0px}
+}
+/*手机*/
+@media (max-width: 768px){
+    $uicss.met-index-body{padding: $padding_m$px 0px}
+}
+
+/*手机*/
+@media (max-width: 992px){
+  $uicss .col-xs-12 {
+    width: 25%;
+    }
+}
+
+/*平板*/
+@media (max-width: 767px){
+  $uicss .col-sm-3 {
+    width: 100%;
+    }
+}
+
+
+@media (min-width: 1200px)
+$uicss .container {
+    /* width: 1170px; */
+}
+@media (min-width: 992px)
+$uicss .container {
+    width: 970px;
+}
+@media (min-width: 768px)
+$uicss .container {
+    width: 750px;
+}
+
+@media (min-width: 768px)
+$uicss .col-sm-1,$uicss .col-sm-2,$uicss .col-sm-3,$uicss .col-sm-4,$uicss .col-sm-5,$uicss .col-sm-6,$uicss .col-sm-7,$uicss .col-sm-8,$uicss .col-sm-9,$uicss .col-sm-10,$uicss .col-sm-11,$uicss .col-sm-12 {
+    float: left;
+}
+
+$uicss .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$uicss .col-xs-1,$uicss .col-sm-1,$uicss .col-md-1,$uicss .col-lg-1,$uicss .col-xs-2,$uicss .col-sm-2,$uicss .col-md-2,$uicss .col-lg-2,$uicss .col-xs-3,$uicss .col-sm-3,$uicss .col-md-3,$uicss .col-lg-3,$uicss .col-xs-4,$uicss .col-sm-4,$uicss .col-md-4,$uicss .col-lg-4,$uicss .col-xs-5,$uicss .col-sm-5,$uicss .col-md-5,$uicss .col-lg-5,$uicss .col-xs-12,$uicss .col-sm-6,$uicss .col-md-6,$uicss .col-lg-6,$uicss .col-xs-7,$uicss .col-sm-7,$uicss .col-md-7,$uicss .col-lg-7,$uicss .col-xs-8,$uicss .col-sm-8,$uicss .col-md-8,$uicss .col-lg-8,$uicss .col-xs-9,$uicss .col-sm-9,$uicss .col-md-9,$uicss .col-lg-9,$uicss .col-xs-10,$uicss .col-sm-10,$uicss .col-md-10,$uicss .col-lg-10,$uicss .col-xs-11,$uicss .col-sm-11,$uicss .col-md-11,$uicss .col-lg-11,$uicss .col-xs-12,$uicss .col-sm-12,$uicss .col-md-12,$uicss .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 35px;
+}
+
+$uicss .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+$uicss .img-responsive {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+$uicss h3 {
+  color: $pctitlecolor$;
+  font-size: $picturetitlesize$px;
+  font-weight: $titlesize$;
+  text-transform: uppercase;
+  /*margin-top: 26px;*/
+  padding:0 20px;
+  /*margin-bottom: 30px;*/
+}
+
+$uicss .team-member h4 {
+  color: $subtitlecolor$;
+  font-size: $subtitlesize$px;
+  font-weight:$subtitleweight$;
+  margin-bottom: 18px;
+  padding:0 20px;
+}
+
+$uicss .team-member p {
+  color:$pricecolor$;
+  font-size:$pricesize$px;
+  font-weight:$priceweight$;
+  padding:0 20px;
+}
+
+
+$uicss .carousel {
+    position: relative;
+    width: 100%;
+}
+
+$uicss .carousel-control-prev {
+  left: 68px;
+}
+
+$uicss .carousel-control-next {
+  right: 68px;
+}
+
+/*左右箭头悬浮颜色*/
+$uicss .carousel-control-prev:hover i, 
+$uicss .carousel-control-next:hover i{
+  color:$arrowhovercolor$;
+}
+
+$uicss .carousel-control-prev, 
+$uicss .carousel-control-next{
+  height: 32px;
+  position: absolute;
+  text-align: center;
+  top: 55%;
+  width: 32px;
+  padding: 5px;
+}
+
+$uicss .team-member {
+  background-color: $bgcolor$;
+  overflow: hidden;
+}
+
+$uicss .carousel .team-member:hover{
+  color: $thirdcolor$;
+  color:$focuscolor$;
+  background-color: $bghovercolor$;
+  transition: all 0.9s ease 0s;
+  -moz-transition: all 0.9s ease 0s;
+  -webkit-transition: all 0.9s ease 0s;
+  -o-transition: all 0.9s ease 0s;
+}
+
+$uicss .carousel .team-member:hover ul li a, 
+$uicss .carousel .team-member:hover h3{
+  color: $thirdcolor$;
+  color: $focuscolor$;
+}
+
+$uicss .carousel .team-member:hover h4{
+  color: $thirdcolor$;
+  color: $description_hover_color$;
+}
+
+
+/*轮播左右箭头边框颜色设置*/
+$uicss .carousel-control-prev,
+$uicss .carousel-control-next{
+  border: 1px solid $arrowbordercolor$;
+  color: #777;
+  background-color: $bodybgcolor$;
+  background-color: $carousel_control_hover$;
+}
+
+$uicss .team-member img{
+  width:100%;
+  border: 0;
+  vertical-align: middle;
+  transition: all 0.7s ease 0s;
+  transform: scale(1);
+}
+$uicss .team-member img:hover{
+  transform:scale(1.1);
+  overflow: hidden;
+}
+
+$uicss .team-member ul {
+  margin: 0 auto;
+  width: 100px;
+}
+
+$uicss .team-member ul li a {
+  color: #CCCCC2;
+  font-size: 20px;
+  padding: 0 8px;
+}
+
+$uicss .team-member ul li a:hover , 
+$uicss .team-member ul li a:focus{
+  background:none;
+}
+$uicss h2.title {
+    color:$titlecolor$;
+    font-size: $titlesize$px;
+    font-weight: $titleweight$;
+    margin: 0 auto -8px;
+    padding-bottom: 22px;
+    text-transform: uppercase;
+    width: 190px;
+    position: relative;
+    text-align: center;
+}
+$uicss p.desc {
+    font-size: 16px; 
+    font-weight: 300;
+    text-align: center;
+    color: #8c8c8c;
+    margin: 0px auto;
+    margin-bottom: 47px;
+}
+$uicss .carousel.scale .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+/*渐隐效果*/
+$uicss .carousel.scale .carousel-inner .carousel-item{
+  opacity:0;
+  -webkit-transition-property:opacity ;
+  -moz-transition-property:opacity ;
+  -ms-transition-property:opacity ;
+  -o-transition-property:opacity ;
+  transition-property:opacity ;
+}
+
+$uicss .carousel.scale .carousel-inner .active{
+  opacity: 1;
+}
+
+$uicss .carousel.scale .carousel-inner .active.left,
+$uicss .carousel.scale .carousel-inner .active.right{
+  left: 0;
+  opacity: 0;
+}
+
+$uicss .carousel.scale .carousel-inner .next.left,
+$uicss .carousel.scale .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+$uicss .carousel.scale .carousel-inner > .next,
+$uicss .carousel.scale .carousel-inner > .prev,
+$uicss .carousel.scale .carousel-inner > .next.left,
+$uicss .carousel.scale .carousel-inner > .prev.right,
+$uicss .carousel.scale .carousel-inner > .active.left,
+$uicss .carousel.scale .carousel-inner > .active.right {
+  left: 0;
+}
+
+/*动画效果*/
+
+
+
+$uicss .carousel.scale .carousel-inner > .carousel-item.left > div:nth-child(1),
+$uicss .carousel.scale .carousel-inner > .carousel-item.right > div:nth-child(1) {
+  -webkit-animation: fadeOutDown 300ms linear 0ms both;
+  animation: fadeOutDown 300ms linear 0ms both;
+}
+$uicss .carousel.scale .carousel-inner > .carousel-item.next > div:nth-child(1),
+$uicss .carousel.scale .carousel-inner > .carousel-item.prev > div:nth-child(1) {
+  -webkit-animation: fadeInDown 300ms linear 75ms both;
+  animation: fadeInDown 300ms linear 75ms both;
+}
+
+
+
+$uicss .carousel.scale .carousel-inner > .carousel-item.left > div:nth-child(2),
+$uicss .carousel.scale .carousel-inner > .carousel-item.right > div:nth-child(2) {
+  -webkit-animation: fadeOutDown 300ms linear 75ms both;
+  animation: fadeOutDown 300ms linear 75ms both;
+}
+$uicss .carousel.scale .carousel-inner > .carousel-item.next > div:nth-child(2),
+$uicss .carousel.scale .carousel-inner > .carousel-item.prev > div:nth-child(2) {
+  -webkit-animation: fadeInDown 300ms linear 150ms both;
+  animation: fadeInDown 300ms linear 150ms both;
+}
+
+
+
+$uicss .carousel.scale .carousel-inner > .carousel-item.left > div:nth-child(3),
+$uicss .carousel.scale .carousel-inner > .carousel-item.right > div:nth-child(3) {
+  -webkit-animation: fadeOutDown 300ms linear 150ms both;
+  animation: fadeOutDown 300ms linear 150ms both;
+}
+$uicss .carousel.scale .carousel-inner > .carousel-item.next > div:nth-child(3),
+$uicss .carousel.scale .carousel-inner > .carousel-item.prev > div:nth-child(3) {
+  -webkit-animation: fadeInDown 300ms linear 225ms both;
+  animation: fadeInDown 300ms linear 225ms both;
+}
+
+
+
+
+$uicss .carousel.scale .carousel-inner > .carousel-item.left > div:nth-child(4),
+$uicss .carousel.scale .carousel-inner > .carousel-item.right > div:nth-child(4) {
+  -webkit-animation: fadeOutDown 300ms linear 225ms both;
+  animation: fadeOutDown 300ms linear 225ms both;
+}
+$uicss .carousel.scale .carousel-inner > .carousel-item.next > div:nth-child(4),
+$uicss .carousel.scale .carousel-inner > .carousel-item.prev > div:nth-child(4) {
+  -webkit-animation: fadeInDown 300ms linear 300ms both;
+  animation: fadeInDown 300ms linear 300ms both;
+}
+
+
+@media (min-width: 480px){
+  $uicss .col-sm-3 {
+    float: left;
+    width: 25%;
+  }
+}
+
+
+

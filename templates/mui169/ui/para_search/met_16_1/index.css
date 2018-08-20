@@ -24,7 +24,10 @@ $uicss .btn-outline.btn-primary.active, .btn-outline.btn-primary:active, .btn-ou
 }
 $uicss .order a{color:$firstcolor$;color:$sort_textcolor$;font-size:14px;background:#fff;background:$sort_bgcolor$;border-radius:2px;}
 $uicss .order a:hover{color:$thirdcolor$;color:$sort_hovercolor$;}
-
+$uicss .pricetxt{color: $firstcolor$;color: $pricecolor$;}
+$uicss .price_num{border-color: $priceline$;}
+$uicss .pricesearch{border-color: $confirmbgcolor$;background-color: $confirmbgcolor$;color: $confirmcolor$;}
+$uicss .pricesearch:hover{opacity: 0.8;}
 /*搜索*/ 
 $uicss .type-order{border-top:1px solid #e4e4e4;border-right: 1px solid #e4e4e4;border-left: 1px solid #e4e4e4;}
 $uicss .type-order{border-color:$border_color$;}

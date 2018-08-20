@@ -2,6 +2,7 @@
 <?php $sidebar=strlen($ui[has][sidebar]);?>
 <main class="$uicss">
     <div class="<if value="$ui[style]">container-fliud<else/>container</if>">
+        <div class="row">
         <!-- sidebar -->
             <if value="$_M['form']['pageset']">
             <if value="$sidebar">
@@ -17,7 +18,7 @@
         <!-- /sidebar -->
         <!-- 内容 -->
         <div class="mycontent">
-            <tag action='img.list' num="$c['met_img_list']"></tag>
+            <tag action='img.list' num="$c['met_img_list']" cid="$data['classnow']"></tag>
             <if value="$sub">
                 <ul class="<if value="$ui['img_column_xs'] eq 1">
                             blocks-100
@@ -41,27 +42,21 @@
                 <div class='h-100 text-xs-center font-size-20 vertical-align' m-id='{$ui.mid}'>{$g.nodata}</div>
             </if>
         </div>
+        </div>
+    </div>
         <!-- /内容 -->
         <!-- sidebar -->
-                <if value="$_M['form']['pageset']">
-                    <if value="$sidebar">
-                            </div>
-                        </div>
-                    <else/>
-                                </div>
-                         </div>
-                       </main>
-                    </if>
-                <else/>
-                    <if value="$ui[has][sidebar]">
-                            </div>
-                        </div>
-                    <else/>
-                            </div>
-                        </div>
-                       </main>
-                    </if>
-                </if>
-        <!-- /sidebar -->
-<!--     </div>
-</main> -->
+<if value="$_M['form']['pageset']">
+    <if value="!$sidebar">
+        </div>
+    </div>
+</main>
+    </if>
+<else/>
+<if value="!$ui[has][sidebar]">
+        </div>
+    </div>
+</main>
+    </if>
+</if>
+

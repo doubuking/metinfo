@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6 <if value='!$ui[position]'>fl_right</if>">
-        <img class="cover-image" src="{$ui.imgurl|thumb:$ui['img_x'],$ui['img_y']}" alt="">
+        <img class="cover-image" src="<if value='$ui[ifsuolve]'>{$ui.imgurl|thumb:$ui['img_x'],$ui['img_y']}<else/>{$ui.imgurl}</if>" alt="">
       </div>
       <div class="col-lg-6 col-md-offset-6 <if value='$ui[position]'>right</if>">
         <h2>{$ui.title}</h2>

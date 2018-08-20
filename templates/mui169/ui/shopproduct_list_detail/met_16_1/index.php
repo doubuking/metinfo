@@ -27,6 +27,16 @@
                         <if value="$data['description']">
                         <p class='description'>{$data.description}</p>
                         </if>
+                                <!-- 商城showproduct 参照文件新添加的 -->
+                                 <if value="$data['para_url']">
+                                            <div class='m-y-10'>
+                                                <list data="$data['para_url']" name="$para_url" num='100'>
+                                                <if value="$para_url['value']">
+                                                <a href="{$para_url.value}" class="btn btn-danger m-r-20" target="_blank">{$para_url.name}</a>
+                                                </if>
+                                                </list>
+                                            </div>
+                                </if>
                         <include file='ui_v2/module/shop/shop_option_ui.php'/>
                     </div>
                 </div>
@@ -65,7 +75,7 @@
                                     <if value="$data['para']">
                                         <ul class="product-para paralist blocks-100 blocks-sm-2 blocks-md-3 blocks-lg-2 m-x-0 <list data='$data[para]' name='$para'><if value='!$para[value] || !($s[_index] egt $ui[para_num])'>noboder</if></list>">
                                             <list data="$data['para']" name="$para">
-                                                <if value='$para[value] && $s[_index] egt $ui[para_num]'>
+                                                <if value="$para[value] && $para[_index] egt $ui[para_num]">
                                                     <li class="p-x-0 p-r-15 m-b-15">
                                                         <span>{$para.name}：</span>
                                                         {$para.value}
@@ -191,7 +201,6 @@ role="dialog" tabindex="-1">
     </nav>
     <div class="section">
         <list data="$data['displayimgs']" name="$s"></list>
-        <?php dump($sub); ?>
         <div class='met-showproduct-list text-center fngallery <if value="$sub gt 1">slick-dotted</if>' id='met-imgs-slick' m-id="noset" m-type="displayimgs"><!--兼容商城V3-->
                 <list data="$data['displayimgs']" name="$s">
                 <div class='slick-slide'>

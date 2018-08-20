@@ -127,7 +127,7 @@ body{
                 </button>
 <!-- 会员注册登录 -->
                     <?php if($c[met_member_register]&&$ui[member]){ ?>
-                <button type="button" class="navbar-toggler collapsed m-0 p-x-5 met-head-user-toggler" data-target="#met-head-user-collapse" data-toggle="collapse"> <i class="icon wb-user-circle" aria-hidden="true"></i>
+                <button type="button" class="navbar-toggler collapsed m-0 p-x-5 met-head-user-toggler" data-target="#met-head-user-collapse" data-toggle="collapse"> <i class="icon wb-user-circle" aria-hidden="true"></i> 
                 </button>
                 <div class="collapse navbar-collapse navbar-collapse-toolbar pull-md-right p-0" id='met-head-user-collapse' m-id='member' m-type='member'>
                     <?php if($user){ ?>
@@ -717,7 +717,7 @@ if($data['title']){
             $ui = $ui_compile->list_local_config($id);
             $ui['has'] =$ui_compile->list_page_config($met_page);
             ?>
-<div class="service_list_met_16_1 met-index-body text-xs-center     <?php if($ui['bg_type']==1){ ?>bgcolor<?php }else{ ?>bgpic<?php } ?>" m-id='<?php echo $ui['mid'];?>'>
+<div class="service_list_met_16_1 met-index-body text-xs-center     <?php if($ui['bg_type']==1){ ?>bgcolor<?php }else{ ?>bgpic<?php } ?>     <?php if($ui[ifdisplay]&&!$_M['form']['pageset']){ ?>conceal<?php }else{ ?>display<?php } ?>" m-id='<?php echo $ui['mid'];?>'>
 	<div class="    <?php if($ui[ifwidth]){ ?>container<?php }else{ ?>container-fluid<?php } ?>">
 		    <?php if($ui['title']){ ?>
 			<h2 class="m-t-0 font-weight-300 invisible" data-plugin="appear" data-animate="slide-top" data-repeat="false"><?php echo $ui['title'];?></h2>
@@ -783,7 +783,7 @@ if($data['title']){
         $$m = $m;
 ?>
 			    <?php if($m[_index]<$ui['num']){ ?>
-				<li class="invisible" data-plugin="appear" data-animate="slide-bottom50" data-repeat="false">
+				<li class="invisible     <?php if(!$ui[iconiftop]){ ?>donttop<?php }else{ ?><?php } ?>" data-plugin="appear" data-animate="slide-bottom50" data-repeat="false">
 					    <?php if($ui['link_ok']){ ?>
 					<a href="<?php echo $m['url'];?>" title="<?php echo $m['name'];?>" <?php echo $m['urlnew'];?>>
 					<?php } ?>
@@ -794,7 +794,7 @@ if($data['title']){
 	                    <?php } ?>
 						<h3 class='m-t-20 m-b-5 font-weight-300'><?php echo $m['name'];?></h3>
 						    <?php if($ui['desc_ok']){ ?>
-						<p class='m-b-0 font-weight-300'><?php echo $m['description'];?></p>
+						<p class='m-b-0 font-weight-300'><?php echo met_substr($m['description'],0,$ui['long']);?></p>
 						<?php } ?>
 					    <?php if($ui['link_ok']){ ?>
 					</a>
@@ -912,7 +912,7 @@ if($data['title']){
   <div class="container">
     <div class="row">
       <div class="col-lg-6     <?php if(!$ui[position]){ ?>fl_right<?php } ?>">
-        <img class="cover-image" src="<?php echo thumb($ui['imgurl'],$ui['img_x'],$ui['img_y']);?>" alt="">
+        <img class="cover-image" src="    <?php if($ui[ifsuolve]){ ?><?php echo thumb($ui['imgurl'],$ui['img_x'],$ui['img_y']);?><?php }else{ ?><?php echo $ui['imgurl'];?><?php } ?>" alt="">
       </div>
       <div class="col-lg-6 col-md-offset-6     <?php if($ui[position]){ ?>right<?php } ?>">
         <h2><?php echo $ui['title'];?></h2>
@@ -1151,6 +1151,81 @@ if($data['title']){
 
 
         <?php
+            $id = 10000;
+            $style = "met_36_1";
+            if(!isset($ui_compile)){
+                load::sys_class('view/ui_compile');
+                $ui_compile = new ui_compile();
+            }
+            $ui = $ui_compile->list_local_config($id);
+            $ui['has'] =$ui_compile->list_page_config($met_page);
+            ?><?php defined('IN_MET') or exit('No permission');?>
+<section class="product_member_list_met_36_1 met-index-body" m-id="<?php echo $ui['mid'];?>">
+    <div class="container">
+          <?php if($ui['picturetitle']){ ?>
+        <h2 class="title invisible" data-plugin="appear" data-animate="slide-top" data-repeat="false">
+          <?php echo $ui['picturetitle'];?>
+        </h2>
+      <?php } ?>
+        <?php $img=strstr($ui['titlebottompicture'],"upload"); ?>
+        <p class="desc animation-fade appear-no-repeat editable-click" data-plugin="appear" data-animate="fade" data-repeat="false" met-id="1757" met-table="ui_config" met-field="uip_value">
+              <?php if($img){ ?>
+            <img src="<?php echo $ui['titlebottompicture'];?>">
+          <?php } ?>
+        </p>
+        <div class="carousel slide scale" data-ride="carousel">
+            <div class="carousel-inner">
+                <?php
+    $cid=$ui['picturecolumn'];
+
+    $num = $ui['picturenum'];
+    $module = "";
+    $type = $ui['picturecom'];
+    $order = 'no_order asc';
+    $para = "";
+    if(!$module){
+        if(!$cid){
+            $value = $m['classnow'];
+        }else{
+            $value = $cid;
+        }
+    }else{
+        $value = $module;
+    }
+
+    $result = load::sys_class('label', 'new')->get('tag')->get_list($value, $num, $type, $order, $para);
+    $sub = count($result);
+    foreach($result as $index=>$v):
+        $id = $v['id'];
+        $v['sub'] = $sub;
+        $v['_index']= $index;
+        $v['_first']= $index==0 ? true:false;
+        $v['_last']=$index==(count($result)-1)?true:false;
+        $$v = $v;
+?>
+
+                </div>
+                <div class="carousel-item     <?php if($v[_index]==0){ ?>active<?php } ?>">
+                  <div class="col-xs-12 col-sm-3">
+                    <div class="team-member text-center">
+                      <a href="<?php echo $v['url'];?>" title="<?php echo $v['title'];?>" target="_blank">
+                        <img class="img-responsive" src="<?php echo thumb($v['imgurl'],$ui[img_x],$ui[img_y]);?>" alt="<?php echo $v['imgurl'];?>" />
+                        <h3><?php echo met_substr($v['title'],0,$ui['desc_num']);?>...</h3>
+                      </a>
+                    </div>
+                  </div>
+                 <?php endforeach;?>
+               </div>
+            </div>
+
+
+
+
+        </div>
+    </div> 
+</section>
+
+        <?php
             $id = 38;
             $style = "met_11_1";
             if(!isset($ui_compile)){
@@ -1186,7 +1261,7 @@ if($data['title']){
         $v['nofollow'] = $v['nofollow'] ? "rel='nofollow'" : '';
 ?>
                     <li class='breadcrumb-item     <?php if($ui[split]){ ?>split<?php } ?>'>
-                        <a href="<?php echo $v['weburl'];?>" title="<?php echo $v['webname'];?>" target="_blank">
+                        <a href="<?php echo $v['weburl'];?>" title="<?php echo $v['webname'];?>" <?php echo $v['nofollow'];?> target="_blank">
                                 <?php if($v['link_type']==1){ ?>
                                 <img data-original="<?php echo $v['weblogo'];?>" alt="<?php echo $v['webname'];?>" height='40'>
                             <?php }else{ ?>

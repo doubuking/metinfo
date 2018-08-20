@@ -1948,6 +1948,26 @@ var x=new metui(METUI_FUN['news_list_met_36_2']);
 
 
 
+METUI_FUN['product_member_list_met_36_1']={
+	name:'product_member_list_met_36_1',
+	init:function(){
+     $(".product_member_list_met_36_1 .carousel").carousel({
+     	interval: 10000
+     });
+     $(".product_member_list_met_36_1 .carousel-control-next").click(function(){
+     $(".product_member_list_met_36_1 .carousel").carousel('next');
+      });
+     $(".product_member_list_met_36_1 .carousel-control-prev").click(function(){
+      	$(".product_member_list_met_36_1 .carousel").carousel('prev');
+     });
+     //样式循环
+     
+	}
+};
+var x=new metui(METUI_FUN['product_member_list_met_36_1']);
+
+
+
 
 
 }

@@ -3,7 +3,7 @@ $uicss.pagetype1{background: $bgcolor$;}
 $uicss .section { padding: 15px 0;background:$bgconcolor$; }
 $uicss .met-showproduct-body{background:$bodybgcolor$;background: $bgcolor$;}
 $uicss .content .met-editor,$uicss .content .product-para{
-	padding:30px;
+	padding:0px 14px;
 }
 $uicss .product-para li {color:$attrcolor$;}
 @media (max-width:767px) {
@@ -81,7 +81,7 @@ $uicss .product-detail .met-editor .product-para { margin-bottom: 15px; padding-
 @media (max-width:767px) {
 $uicss .content { padding: 15px; }
 }
-
+$uicss .linkbtn{color: $outcolor$; border-color: $outbgcolor$; background-color: $outbgcolor$;}
 /* 产品详情页-侧栏 */
 $uicss .sidebar-piclist h4>a { color: $firstcolor$;color:$titlecolor$; text-shadow: none; }
 $uicss .sidebar-piclist li:hover a{color:$thirdcolor$;color:$hovercolor$;}

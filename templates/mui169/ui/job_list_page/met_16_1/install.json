@@ -7,7 +7,7 @@
         "ui_description": "默认招聘列表页",
         "ui_issue": "0",
         "ui_order": "0",
-        "ui_version": "1.2",
+        "ui_version": "1.3",
         "ui_creater": "曾姣艳",
         "ui_company": "metinfo"
     },
@@ -24,7 +24,8 @@
             "uip_default": "1",
             "uip_title": "区块显示开关",
             "uip_description": "当前UI区块的开启关闭设置，关闭后可以在可视化编辑中开启",
-            "uip_order": "0"
+            "uip_order": "0",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "job_list_page",
@@ -38,7 +39,8 @@
             "uip_default": "在线应聘",
             "uip_title": "按钮文字",
             "uip_description": "",
-            "uip_order": "1"
+            "uip_order": "1",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "job_list_page",
@@ -52,7 +54,8 @@
             "uip_default": "",
             "uip_title": "区块背景色",
             "uip_description": "默认为#f2f2f2",
-            "uip_order": "2"
+            "uip_order": "2",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "job_list_page",
@@ -66,7 +69,8 @@
             "uip_default": "",
             "uip_title": "标题颜色",
             "uip_description": "默认为模板公共参数副色调",
-            "uip_order": "3"
+            "uip_order": "3",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "job_list_page",
@@ -80,7 +84,8 @@
             "uip_default": "",
             "uip_title": "鼠标经过颜色和按钮颜色",
             "uip_description": "默认为模板公共参数配色调",
-            "uip_order": "4"
+            "uip_order": "4",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "job_list_page",
@@ -94,7 +99,8 @@
             "uip_default": "left",
             "uip_title": "列表位置",
             "uip_description": "",
-            "uip_order": "5"
+            "uip_order": "5",
+            "uip_hidden": "0"
         }
     ]
 }

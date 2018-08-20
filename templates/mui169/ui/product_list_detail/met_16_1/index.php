@@ -39,6 +39,15 @@
                                 </list>
                             </ul>
                             </if>
+                            <if value="$data['para_url']">
+                            <div class='m-t-10'>
+                                <list data="$data['para_url']" name="$s" num='100'>
+                                <if value="$s['value']">
+                                <a href="{$s.value}" class="btn btn-danger linkbtn m-r-20" target="_blank">{$s.name}</a>
+                                </if>
+                                </list>
+                            </div>
+                            </if>
                         </div>
                 </div>
             </div>
@@ -177,9 +186,9 @@
             </div>
         </div>
     </list>
-    <if value="$data['para']">
-        <div class="content contenti" id="contenti">
+    <div class="content contenti" id="contenti">
         <div class="container">
+        <if value="$data['para']">
             <ul class="product-para paralist blocks-100 blocks-sm-2 blocks-md-3 blocks-lg-2">
                 <list data="$data['para']" name="$s">
                 <li class="p-x-0 m-b-15">
@@ -188,9 +197,18 @@
                 </li>
                 </list>
             </ul>
+        </if>
+            <if value="$data['para_url']">
+                <div class='m-t-10'>
+                    <list data="$data['para_url']" name="$s" num='100'>
+                    <if value="$s['value']">
+                    <a href="{$s.value}" class="btn btn-danger m-r-20 linkbtn" target="_blank">{$s.name}</a>
+                    </if>
+                    </list>
+                </div>
+            </if>
         </div>
     </div>
-    </if>
     <if value="$data[taglist]">
          <div class="content">
             <div class="container">

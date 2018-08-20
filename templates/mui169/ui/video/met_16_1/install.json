@@ -5,12 +5,11 @@
         "ui_page": "|index|",
         "ui_title": "视频区块",
         "ui_description": "视频区块",
-        "ui_issue": "1",
+        "ui_issue": "0",
         "ui_order": "1",
-        "ui_version": "1.2",
+        "ui_version": "1.3",
         "ui_creater": "metinfo",
-        "ui_company": "metinfo",
-        "ui_edittime": "1531967586"
+        "ui_company": "metinfo"
     },
     "config": [
         {
@@ -25,7 +24,8 @@
             "uip_default": "1",
             "uip_title": "区块显示开关",
             "uip_description": "当前UI区块的开启关闭设置，关闭后可以在可视化编辑中开启",
-            "uip_order": "0"
+            "uip_order": "0",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "video",
@@ -39,7 +39,8 @@
             "uip_default": "标题",
             "uip_title": "标题",
             "uip_description": "",
-            "uip_order": "1"
+            "uip_order": "1",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "video",
@@ -53,7 +54,8 @@
             "uip_default": "描述",
             "uip_title": "描述",
             "uip_description": "",
-            "uip_order": "2"
+            "uip_order": "2",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "video",
@@ -67,7 +69,8 @@
             "uip_default": "",
             "uip_title": "视频封面图",
             "uip_description": "建议图片尺寸：【1000】X【560】，图片在移动端生效",
-            "uip_order": "4"
+            "uip_order": "4",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "video",
@@ -81,7 +84,8 @@
             "uip_default": "",
             "uip_title": "上传视频",
             "uip_description": "请使用编辑器的上传视频功能，插入视频无效。",
-            "uip_order": "5"
+            "uip_order": "5",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "video",
@@ -95,7 +99,8 @@
             "uip_default": "",
             "uip_title": "视频主标题",
             "uip_description": "",
-            "uip_order": "6"
+            "uip_order": "6",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "video",
@@ -109,7 +114,8 @@
             "uip_default": "",
             "uip_title": "视频副标题",
             "uip_description": "",
-            "uip_order": "7"
+            "uip_order": "7",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "video",
@@ -123,7 +129,8 @@
             "uip_default": "",
             "uip_title": "按钮文本",
             "uip_description": "",
-            "uip_order": "8"
+            "uip_order": "8",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "video",
@@ -137,7 +144,8 @@
             "uip_default": "",
             "uip_title": "按钮链接",
             "uip_description": "",
-            "uip_order": "9"
+            "uip_order": "9",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "video",
@@ -151,7 +159,8 @@
             "uip_default": "",
             "uip_title": "区块背景图",
             "uip_description": "",
-            "uip_order": "9"
+            "uip_order": "9",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "video",
@@ -165,7 +174,8 @@
             "uip_default": "",
             "uip_title": "区块标题颜色",
             "uip_description": "默认为模板主色调",
-            "uip_order": "10"
+            "uip_order": "10",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "video",
@@ -179,7 +189,8 @@
             "uip_default": "",
             "uip_title": "区块描述颜色",
             "uip_description": "默认为模板副色调",
-            "uip_order": "11"
+            "uip_order": "11",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "video",
@@ -193,7 +204,8 @@
             "uip_default": "70",
             "uip_title": "电脑端区块边距",
             "uip_description": "默认为70px",
-            "uip_order": "12"
+            "uip_order": "12",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "video",
@@ -207,7 +219,8 @@
             "uip_default": "60",
             "uip_title": "平板区块间距",
             "uip_description": "默认为60px",
-            "uip_order": "13"
+            "uip_order": "13",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "video",
@@ -221,7 +234,8 @@
             "uip_default": "50",
             "uip_title": "手机区块间距",
             "uip_description": "默认为50px",
-            "uip_order": "14"
+            "uip_order": "14",
+            "uip_hidden": "1"
         }
     ]
 }

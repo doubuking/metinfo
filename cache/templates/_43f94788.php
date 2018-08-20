@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6     <?php if(!$ui[position]){ ?>fl_right<?php } ?>">
-        <img class="cover-image" src="<?php echo thumb($ui['imgurl'],$ui['img_x'],$ui['img_y']);?>" alt="">
+        <img class="cover-image" src="    <?php if($ui[ifsuolve]){ ?><?php echo thumb($ui['imgurl'],$ui['img_x'],$ui['img_y']);?><?php }else{ ?><?php echo $ui['imgurl'];?><?php } ?>" alt="">
       </div>
       <div class="col-lg-6 col-md-offset-6     <?php if($ui[position]){ ?>right<?php } ?>">
         <h2><?php echo $ui['title'];?></h2>

@@ -7,7 +7,7 @@
         "ui_description": "头部导航（简洁风格）",
         "ui_issue": "0",
         "ui_order": "1",
-        "ui_version": "2.7",
+        "ui_version": "2.8",
         "ui_creater": "metinfo",
         "ui_company": "metinfo"
     },
@@ -24,7 +24,8 @@
             "uip_default": "1",
             "uip_title": "区块显示开关",
             "uip_description": "当前UI区块的开启关闭设置，关闭后可以在可视化编辑中开启",
-            "uip_order": "0"
+            "uip_order": "0",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "head_nav",
@@ -38,7 +39,8 @@
             "uip_default": "",
             "uip_title": "背景颜色",
             "uip_description": "默认为网站背景色",
-            "uip_order": "1"
+            "uip_order": "1",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "head_nav",
@@ -52,7 +54,8 @@
             "uip_default": "",
             "uip_title": "标题颜色",
             "uip_description": "默认为网站主色调",
-            "uip_order": "2"
+            "uip_order": "2",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "head_nav",
@@ -66,7 +69,8 @@
             "uip_default": "",
             "uip_title": "鼠标经过颜色",
             "uip_description": "默认为网站配色调",
-            "uip_order": "3"
+            "uip_order": "3",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "head_nav",
@@ -80,7 +84,8 @@
             "uip_default": "",
             "uip_title": "下拉菜单文字颜色",
             "uip_description": "默认为网站副色调",
-            "uip_order": "4"
+            "uip_order": "4",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "head_nav",
@@ -94,7 +99,8 @@
             "uip_default": "",
             "uip_title": "下拉菜单背景颜色",
             "uip_description": "默认为网站背景色",
-            "uip_order": "4"
+            "uip_order": "4",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "head_nav",
@@ -108,7 +114,8 @@
             "uip_default": "#f2f2f2",
             "uip_title": "下拉菜单鼠标经过背景颜色",
             "uip_description": "默认为f2f2f2",
-            "uip_order": "5"
+            "uip_order": "5",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "head_nav",
@@ -122,7 +129,8 @@
             "uip_default": "",
             "uip_title": "下拉菜单鼠标经过文字颜色",
             "uip_description": "默认为网站副色调",
-            "uip_order": "5"
+            "uip_order": "5",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "head_nav",
@@ -136,7 +144,8 @@
             "uip_default": "15",
             "uip_title": "导航间距",
             "uip_description": "",
-            "uip_order": "6"
+            "uip_order": "6",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "head_nav",
@@ -150,7 +159,8 @@
             "uip_default": "1",
             "uip_title": "下拉菜单",
             "uip_description": "",
-            "uip_order": "7"
+            "uip_order": "7",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "head_nav",
@@ -164,7 +174,8 @@
             "uip_default": "1",
             "uip_title": "下拉方式",
             "uip_description": "",
-            "uip_order": "8"
+            "uip_order": "8",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "head_nav",
@@ -178,7 +189,8 @@
             "uip_default": "1",
             "uip_title": "导航固定",
             "uip_description": "",
-            "uip_order": "9"
+            "uip_order": "9",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "head_nav",
@@ -192,7 +204,8 @@
             "uip_default": "全部",
             "uip_title": "二级栏目全部文本",
             "uip_description": "",
-            "uip_order": "10"
+            "uip_order": "10",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "head_nav",
@@ -206,7 +219,8 @@
             "uip_default": "1",
             "uip_title": "多语言切换",
             "uip_description": "需要在后台开启多语言切换功能",
-            "uip_order": "11"
+            "uip_order": "11",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "head_nav",
@@ -220,7 +234,8 @@
             "uip_default": "1",
             "uip_title": "国旗图标",
             "uip_description": "",
-            "uip_order": "12"
+            "uip_order": "12",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "head_nav",
@@ -234,7 +249,8 @@
             "uip_default": "1",
             "uip_title": "简繁体切换",
             "uip_description": "需要在后台开启简繁体切换功能",
-            "uip_order": "13"
+            "uip_order": "13",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "head_nav",
@@ -248,7 +264,8 @@
             "uip_default": "1",
             "uip_title": "会员登录注册",
             "uip_description": "",
-            "uip_order": "14"
+            "uip_order": "14",
+            "uip_hidden": "0"
         }
     ]
 }

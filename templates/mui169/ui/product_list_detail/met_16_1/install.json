@@ -5,12 +5,11 @@
         "ui_page": "|showproduct|",
         "ui_title": "无商城产品模块详情",
         "ui_description": "无商城产品模块详情",
-        "ui_issue": "1",
+        "ui_issue": "0",
         "ui_order": "1",
-        "ui_version": "2.3",
+        "ui_version": "2.4",
         "ui_creater": "metinfo",
-        "ui_company": "metinfo",
-        "ui_edittime": "1531724505"
+        "ui_company": "metinfo"
     },
     "config": [
         {
@@ -25,7 +24,8 @@
             "uip_default": "1",
             "uip_title": "区块显示开关",
             "uip_description": "当前UI区块的开启关闭设置，关闭后可以在可视化编辑中开启",
-            "uip_order": "0"
+            "uip_order": "0",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "product_list_detail",
@@ -39,7 +39,8 @@
             "uip_default": "为您推荐",
             "uip_title": "推荐产品侧栏标题",
             "uip_description": "",
-            "uip_order": "1"
+            "uip_order": "1",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "product_list_detail",
@@ -53,7 +54,8 @@
             "uip_default": "5",
             "uip_title": "推荐产品侧栏调用条数",
             "uip_description": "",
-            "uip_order": "2"
+            "uip_order": "2",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "product_list_detail",
@@ -67,7 +69,8 @@
             "uip_default": "all",
             "uip_title": "推荐产品侧栏调用类型",
             "uip_description": "",
-            "uip_order": "3"
+            "uip_order": "3",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "product_list_detail",
@@ -81,7 +84,8 @@
             "uip_default": "1",
             "uip_title": "展示方式",
             "uip_description": "",
-            "uip_order": "4"
+            "uip_order": "4",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "product_list_detail",
@@ -95,7 +99,8 @@
             "uip_default": "1",
             "uip_title": "产品侧栏",
             "uip_description": "",
-            "uip_order": "5"
+            "uip_order": "5",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "product_list_detail",
@@ -109,7 +114,8 @@
             "uip_default": "1",
             "uip_title": "tag开关",
             "uip_description": "",
-            "uip_order": "6"
+            "uip_order": "6",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "product_list_detail",
@@ -123,7 +129,8 @@
             "uip_default": "2",
             "uip_title": "tag调用条数",
             "uip_description": "默认调用两条",
-            "uip_order": "7"
+            "uip_order": "7",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "product_list_detail",
@@ -137,7 +144,8 @@
             "uip_default": "",
             "uip_title": "区块背景色",
             "uip_description": "默认为网页背景色",
-            "uip_order": "8"
+            "uip_order": "8",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "product_list_detail",
@@ -151,7 +159,8 @@
             "uip_default": "",
             "uip_title": "产品标题颜色",
             "uip_description": "默认为模板公共参数主色调",
-            "uip_order": "9"
+            "uip_order": "9",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "product_list_detail",
@@ -165,7 +174,8 @@
             "uip_default": "",
             "uip_title": "参数颜色",
             "uip_description": "默认为#76838f",
-            "uip_order": "10"
+            "uip_order": "10",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "product_list_detail",
@@ -179,7 +189,8 @@
             "uip_default": "",
             "uip_title": "时尚模式奇块背景色",
             "uip_description": "默认为白色",
-            "uip_order": "12"
+            "uip_order": "12",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "product_list_detail",
@@ -193,7 +204,8 @@
             "uip_default": "",
             "uip_title": "时尚模式偶块背景色",
             "uip_description": "默认为#f2f2f2",
-            "uip_order": "13"
+            "uip_order": "13",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "product_list_detail",
@@ -207,7 +219,8 @@
             "uip_default": "",
             "uip_title": "描述颜色",
             "uip_description": "默认为模板公共参数副色调",
-            "uip_order": "14"
+            "uip_order": "14",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "product_list_detail",
@@ -221,7 +234,8 @@
             "uip_default": "",
             "uip_title": "时尚模式导航背景色",
             "uip_description": "",
-            "uip_order": "14"
+            "uip_order": "14",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "product_list_detail",
@@ -235,7 +249,8 @@
             "uip_default": "",
             "uip_title": "鼠标经过色和选项卡选中颜色",
             "uip_description": "默认为网页配色调",
-            "uip_order": "14"
+            "uip_order": "14",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "product_list_detail",
@@ -249,7 +264,8 @@
             "uip_default": "参数",
             "uip_title": "参数名称",
             "uip_description": "",
-            "uip_order": "15"
+            "uip_order": "15",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "product_list_detail",
@@ -263,7 +279,8 @@
             "uip_default": "#ffffff",
             "uip_title": "内容背景色",
             "uip_description": "默认为白色",
-            "uip_order": "17"
+            "uip_order": "17",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "product_list_detail",
@@ -277,7 +294,8 @@
             "uip_default": "1",
             "uip_title": "推荐产品产品位置",
             "uip_description": "",
-            "uip_order": "18"
+            "uip_order": "18",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "product_list_detail",
@@ -291,7 +309,38 @@
             "uip_default": "0",
             "uip_title": "关闭参数个数",
             "uip_description": "设置之后前N个参数不显示，默认都显示",
-            "uip_order": "19"
+            "uip_order": "19",
+            "uip_hidden": "0"
+        },
+        {
+            "parent_name": "product_list_detail",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "outbgcolor",
+            "uip_key": "outbgcolor",
+            "uip_value": "",
+            "uip_default": "#f96868",
+            "uip_title": "外部链接按钮背景颜色",
+            "uip_description": "默认为#f96868",
+            "uip_order": "20",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "product_list_detail",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "outcolor",
+            "uip_key": "outcolor",
+            "uip_value": "",
+            "uip_default": "#ffffff",
+            "uip_title": "外部链接按钮文字颜色",
+            "uip_description": "默认为#ffffff",
+            "uip_order": "21",
+            "uip_hidden": "1"
         }
     ]
 }

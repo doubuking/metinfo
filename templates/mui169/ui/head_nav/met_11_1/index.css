@@ -42,6 +42,9 @@ $uicss .navhover-bg, .met-head-user .dropdown > a { background: transparent; col
 $uicss .met-head-user i { color: $firstcolor$; color: $titlecolor$; }
 $uicss .met-head-user .dropdown-item { line-height: 22px; }
 $uicss .met-head-user .dropdown-item i { color: $firstcolor$; color: $titlecolor$; }
+.navbar-toggler::before{
+
+}
 @media (min-width:768px) {
     $uicss .nav>li>a { padding: 0; height: 60px; line-height: 60px }
     $uicss .dropdown-menu { top: 48px; border-radius: 0; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); }
@@ -73,4 +76,9 @@ $uicss .met-head-user .dropdown-item i { color: $firstcolor$; color: $titlecolor
     $uicss .nav>li>.link:hover:after { height: 1px; bottom: 0; top: auto; left: 15px }
     $uicss .met-head-user { width: 100%; margin: 0; }
     $uicss .navbar-toggler { color: $firstcolor$; color: $titlecolor$; }
+    $uicss .navbar-toggler::before,$uicss .navbar-toggler::after { background: $firstcolor$!important; background: $titlecolor$!important; }
+    $uicss .navbar-toggler .hamburger-bar{
+        background: $firstcolor$!important; background: $titlecolor$!important;
+    }
+
 }

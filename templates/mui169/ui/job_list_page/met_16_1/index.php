@@ -16,7 +16,7 @@
         </if>
          <!-- /sidebar -->
                 
-                    <tag action='job.list' num="$c['met_job_list']"></tag>
+                    <tag action='job.list' num="$c['met_job_list']" cid="$data['classnow']"></tag>
                     <if value="$sub">
                         <div class="met-job-list met-pager-ajax" >
                         	<include file='ui_ajax/job'/>

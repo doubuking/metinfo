@@ -5,12 +5,11 @@
         "ui_page": "|showimg|",
         "ui_title": "图片模块详情",
         "ui_description": "图片模块详情",
-        "ui_issue": "1",
+        "ui_issue": "0",
         "ui_order": "1",
-        "ui_version": "1.6",
+        "ui_version": "1.7",
         "ui_creater": "metinfo",
-        "ui_company": "metinfo",
-        "ui_edittime": "1530272442"
+        "ui_company": "metinfo"
     },
     "config": [
         {
@@ -25,7 +24,8 @@
             "uip_default": "1",
             "uip_title": "区块显示开关",
             "uip_description": "当前UI区块的开启关闭设置，关闭后可以在可视化编辑中开启",
-            "uip_order": "0"
+            "uip_order": "0",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "img_list_detail",
@@ -39,7 +39,8 @@
             "uip_default": "1",
             "uip_title": "tag开关",
             "uip_description": "",
-            "uip_order": "4"
+            "uip_order": "4",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "img_list_detail",
@@ -53,7 +54,8 @@
             "uip_default": "2",
             "uip_title": "tag调用条数",
             "uip_description": "默认调用2条",
-            "uip_order": "5"
+            "uip_order": "5",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "img_list_detail",
@@ -67,7 +69,8 @@
             "uip_default": "",
             "uip_title": "线条颜色和边框颜色",
             "uip_description": "默认为模板副色调",
-            "uip_order": "7"
+            "uip_order": "7",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "img_list_detail",
@@ -81,7 +84,8 @@
             "uip_default": "",
             "uip_title": "上下翻页文字颜色",
             "uip_description": "默认为模板副色调",
-            "uip_order": "8"
+            "uip_order": "8",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "img_list_detail",
@@ -95,7 +99,8 @@
             "uip_default": "",
             "uip_title": "上下翻页鼠标经过背景颜色",
             "uip_description": "默认为透明色",
-            "uip_order": "9"
+            "uip_order": "9",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "img_list_detail",
@@ -109,7 +114,8 @@
             "uip_default": "",
             "uip_title": "区块背景色",
             "uip_description": "默认为网页背景色",
-            "uip_order": "10"
+            "uip_order": "10",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "img_list_detail",
@@ -123,7 +129,8 @@
             "uip_default": "",
             "uip_title": "内容背景色",
             "uip_description": "默认为透明色",
-            "uip_order": "10"
+            "uip_order": "10",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "img_list_detail",
@@ -137,7 +144,8 @@
             "uip_default": "",
             "uip_title": "标题颜色",
             "uip_description": "默认为模板主色调",
-            "uip_order": "11"
+            "uip_order": "11",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "img_list_detail",
@@ -151,7 +159,8 @@
             "uip_default": "#666666",
             "uip_title": "tag文字颜色",
             "uip_description": "默认为#666666",
-            "uip_order": "11"
+            "uip_order": "11",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "img_list_detail",
@@ -165,7 +174,23 @@
             "uip_default": "",
             "uip_title": "时间点击量处的文字颜色",
             "uip_description": "默认使用模板副色调",
-            "uip_order": "12"
+            "uip_order": "12",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "img_list_detail",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "btncolor",
+            "uip_key": "btncolor-1",
+            "uip_value": "",
+            "uip_default": "#ffffff",
+            "uip_title": "按钮背景颜色",
+            "uip_description": "默认为#ffffff",
+            "uip_order": "12",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "img_list_detail",
@@ -179,7 +204,8 @@
             "uip_default": "",
             "uip_title": "鼠标经过颜色",
             "uip_description": "默认为模板配色调",
-            "uip_order": "13"
+            "uip_order": "13",
+            "uip_hidden": "1"
         }
     ]
 }

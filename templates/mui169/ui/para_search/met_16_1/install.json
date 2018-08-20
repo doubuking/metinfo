@@ -5,12 +5,11 @@
         "ui_page": "|news|product|img|download|",
         "ui_title": "参数搜索",
         "ui_description": "参数搜索",
-        "ui_issue": "1",
+        "ui_issue": "0",
         "ui_order": "1",
-        "ui_version": "2.0",
+        "ui_version": "2.1",
         "ui_creater": "metinfo",
-        "ui_company": "metinfo",
-        "ui_edittime": "1530758699"
+        "ui_company": "metinfo"
     },
     "config": [
         {
@@ -25,7 +24,8 @@
             "uip_default": "1",
             "uip_title": "区块显示开关",
             "uip_description": "当前UI区块的开启关闭设置，关闭后可以在可视化编辑中开启",
-            "uip_order": "0"
+            "uip_order": "0",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "para_search",
@@ -39,7 +39,8 @@
             "uip_default": "1",
             "uip_title": "展示样式",
             "uip_description": "",
-            "uip_order": "1"
+            "uip_order": "1",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "para_search",
@@ -53,7 +54,8 @@
             "uip_default": "1",
             "uip_title": "排序",
             "uip_description": "可以按照推荐，点击次数，最新来排序，在开启商城的前提下产品模块还有按销量来排序",
-            "uip_order": "9"
+            "uip_order": "9",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "para_search",
@@ -67,7 +69,68 @@
             "uip_default": "1",
             "uip_title": "参数搜索",
             "uip_description": "只有在有参数管理的的模块下才有参数搜索，比如产品，图片，下载等模块",
-            "uip_order": "11"
+            "uip_order": "11",
+            "uip_hidden": "0"
+        },
+        {
+            "parent_name": "para_search",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "pricecolor",
+            "uip_key": "pricecolor-1",
+            "uip_value": "",
+            "uip_default": "",
+            "uip_title": "价格颜色",
+            "uip_description": "默认为模板主色调",
+            "uip_order": "17",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "para_search",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "priceline",
+            "uip_key": "priceline",
+            "uip_value": "",
+            "uip_default": "#e4eaec",
+            "uip_title": "价格搜索框颜色",
+            "uip_description": "默认为#e4eaec",
+            "uip_order": "18",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "para_search",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "confirmbgcolor",
+            "uip_key": "confirmbgcolor",
+            "uip_value": "",
+            "uip_default": "#f96868",
+            "uip_title": "确认按钮背景色",
+            "uip_description": "默认为#f96868",
+            "uip_order": "19",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "para_search",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "confirmcolor",
+            "uip_key": "confirmcolor",
+            "uip_value": "",
+            "uip_default": "#ffffff",
+            "uip_title": "确认按钮文字色",
+            "uip_description": "默认为#ffffff",
+            "uip_order": "20",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "para_search",
@@ -81,7 +144,8 @@
             "uip_default": "",
             "uip_title": "区块背景色",
             "uip_description": "默认为网站背景色",
-            "uip_order": "50"
+            "uip_order": "50",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "para_search",
@@ -95,7 +159,8 @@
             "uip_default": "",
             "uip_title": "筛选参数名称背景色",
             "uip_description": "默认为#e5e5e5",
-            "uip_order": "53"
+            "uip_order": "53",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "para_search",
@@ -109,7 +174,8 @@
             "uip_default": "",
             "uip_title": "筛选参数名称字体颜色",
             "uip_description": "默认为#76838f",
-            "uip_order": "54"
+            "uip_order": "54",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "para_search",
@@ -123,7 +189,8 @@
             "uip_default": "#fafafa",
             "uip_title": "筛选参数值背景色",
             "uip_description": "默认为#fafafa",
-            "uip_order": "55"
+            "uip_order": "55",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "para_search",
@@ -137,7 +204,8 @@
             "uip_default": "",
             "uip_title": "筛选参数值字体颜色",
             "uip_description": "默认为模板副色调",
-            "uip_order": "56"
+            "uip_order": "56",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "para_search",
@@ -151,7 +219,8 @@
             "uip_default": "",
             "uip_title": "筛选边框颜色",
             "uip_description": "默认为#e4e4e4",
-            "uip_order": "57"
+            "uip_order": "57",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "para_search",
@@ -165,7 +234,8 @@
             "uip_default": "",
             "uip_title": "筛选文字鼠标经过色",
             "uip_description": "默认为模板配色调",
-            "uip_order": "59"
+            "uip_order": "59",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "para_search",
@@ -179,7 +249,8 @@
             "uip_default": "",
             "uip_title": "排序背景色",
             "uip_description": "默认为白色",
-            "uip_order": "60"
+            "uip_order": "60",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "para_search",
@@ -193,7 +264,8 @@
             "uip_default": "",
             "uip_title": "排序字体颜色",
             "uip_description": "默认为模板主色调",
-            "uip_order": "60"
+            "uip_order": "60",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "para_search",
@@ -207,7 +279,8 @@
             "uip_default": "",
             "uip_title": "排序字体鼠标经过颜色",
             "uip_description": "默认为模板配色调",
-            "uip_order": "61"
+            "uip_order": "61",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "para_search",
@@ -221,7 +294,8 @@
             "uip_default": "30",
             "uip_title": "电脑区块边距",
             "uip_description": "默认为30px",
-            "uip_order": "62"
+            "uip_order": "62",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "para_search",
@@ -235,7 +309,8 @@
             "uip_default": "20",
             "uip_title": "平板区块边距",
             "uip_description": "默认为20px",
-            "uip_order": "63"
+            "uip_order": "63",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "para_search",
@@ -249,7 +324,8 @@
             "uip_default": "10",
             "uip_title": "手机区块边距",
             "uip_description": "默认为10px",
-            "uip_order": "64"
+            "uip_order": "64",
+            "uip_hidden": "0"
         }
     ]
 }

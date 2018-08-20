@@ -1,8 +1,9 @@
 @charset "utf-8";
 /* 详情页-通用 */
-$uicss{background:$bodybgcolor$;background:$bgcolor$;}
+$uicss{background-color:$bodybgcolor$;background-color:$bgcolor$;}
+$uicss .met-showimg-body{background-color:transparent;background-color:$bgconcolor$;}
 $uicss .details-title{    padding-bottom: 20px;
-    border-bottom: 1px solid #eee;}
+    border-bottom: 1px solid;border-bottom-color: $secondcolor$;border-bottom-color: $linecolor$;}
 $uicss .details-title h1{font-size:30px;line-height:1.5;color:$firstcolor$;color:$titlecolor$;}
 $uicss .details-title .info{font-size: 16px;color: $secondcolor$;color:$desccolor$;}
 $uicss .details-title .info span{padding-right:10px;}
@@ -59,7 +60,7 @@ $uicss  #met-imgs-slick.slick-slider .slick-arrow{height:calc(100% - 80px);}
 $uicss  #met-imgs-slick .slick-arrow{width:15%;height:100%;top:0;transform:translate(0,0);}
 $uicss  #met-imgs-slick .slick-arrow.slick-prev{text-align:left;}
 $uicss  #met-imgs-slick .slick-arrow.slick-next{text-align:right;}
-$uicss  #met-imgs-slick .slick-arrow i{font-size:50px;color:#999;}
+$uicss  #met-imgs-slick .slick-arrow i{font-size:50px;color:$secondcolor$;color:$linecolor$;}
 @media (max-width:767px){
     $uicss  #met-imgs-slick.slick-slider .slick-arrow{height:calc(100% - 60px);}
     $uicss  #met-imgs-slick.slick-dotted{padding-bottom:60px;}
@@ -95,16 +96,18 @@ $uicss .panel{
         box-shadow: none;
 }
 
-$uicss .met-page li a{
-background:#fff;
-}
 $uicss .met-page .container{
-    border-top: 1px solid #eee;
+    border-top: 1px solid;
+    border-top-color: $secondcolor$;border-top-color: $linecolor$;
 }
-$uicss .met-page li a:hover{
+$uicss .page-link{border-color:$secondcolor$;border-color:$linecolor$;}
+$uicss .met-page li a{background-color: $btncolor$;}
+$uicss .met-page .pagination li a:hover{
+    background-color: transparent;background-color: $pagebgcolor$;
     color:$thirdcolor$;color:$hovercolor$;
 }
+$uicss .met-page .pagination li a{color: $secondcolor$;color: $textcolor$;}
 $uicss .met-page{border:none;}
-$uicss .tags{font-size:14px;color:#666;display: block;text-align:left;}
-$uicss .tags a{color:#666;padding:5px;}
+$uicss .tags{font-size:14px;color:$tagcolor$;display: block;text-align:left;}
+$uicss .tags a{color:$tagcolor$;padding:5px;}
 $uicss .tags a:hover{color:$thirdcolor$;color:$hovercolor$;}

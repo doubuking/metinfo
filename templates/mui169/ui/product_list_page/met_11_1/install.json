@@ -5,12 +5,11 @@
         "ui_page": "|product|",
         "ui_title": "产品列表页（简洁风格）",
         "ui_description": "产品列表页（简洁风格）",
-        "ui_issue": "1",
+        "ui_issue": "0",
         "ui_order": "1",
-        "ui_version": "1.5",
+        "ui_version": "1.8",
         "ui_creater": "metinfo",
-        "ui_company": "metinfo",
-        "ui_edittime": "1532575591"
+        "ui_company": "metinfo"
     },
     "config": [
         {
@@ -25,7 +24,8 @@
             "uip_default": "1",
             "uip_title": "区块显示开关",
             "uip_description": "当前UI区块的开启关闭设置，关闭后可以在可视化编辑中开启",
-            "uip_order": "0"
+            "uip_order": "0",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "product_list_page",
@@ -39,7 +39,8 @@
             "uip_default": "1",
             "uip_title": "展示方式",
             "uip_description": "",
-            "uip_order": "1"
+            "uip_order": "1",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "product_list_page",
@@ -53,7 +54,8 @@
             "uip_default": "",
             "uip_title": "区块背景色",
             "uip_description": "默认为网站背景色",
-            "uip_order": "2"
+            "uip_order": "2",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "product_list_page",
@@ -67,7 +69,8 @@
             "uip_default": "",
             "uip_title": "标题颜色",
             "uip_description": "默认为模板主色调",
-            "uip_order": "3"
+            "uip_order": "3",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "product_list_page",
@@ -81,7 +84,8 @@
             "uip_default": "",
             "uip_title": "描述颜色",
             "uip_description": "默认为模板副色调",
-            "uip_order": "4"
+            "uip_order": "4",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "product_list_page",
@@ -93,9 +97,10 @@
             "uip_key": "hovercolor-1",
             "uip_value": "",
             "uip_default": "",
-            "uip_title": "鼠标经过颜色和产品按钮及当前分页按钮颜色",
+            "uip_title": "鼠标经过颜色和产品按钮及手机分页按钮颜色",
             "uip_description": "默认为模板配色调",
-            "uip_order": "5"
+            "uip_order": "5",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "product_list_page",
@@ -109,7 +114,8 @@
             "uip_default": "4",
             "uip_title": "大尺寸电脑显示列数",
             "uip_description": "大尺寸电脑：浏览器宽度大于1600像素",
-            "uip_order": "6"
+            "uip_order": "6",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "product_list_page",
@@ -123,7 +129,8 @@
             "uip_default": "4",
             "uip_title": "普通电脑显示列数",
             "uip_description": "普通电脑：浏览器宽度大于992像素小于1600像素",
-            "uip_order": "7"
+            "uip_order": "7",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "product_list_page",
@@ -137,7 +144,8 @@
             "uip_default": "2",
             "uip_title": "平板显示列数",
             "uip_description": "平板：浏览器宽度大于768像素小于992像素",
-            "uip_order": "8"
+            "uip_order": "8",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "product_list_page",
@@ -151,7 +159,8 @@
             "uip_default": "2",
             "uip_title": "手机显示列数",
             "uip_description": "手机：浏览器宽度小于768像素",
-            "uip_order": "9"
+            "uip_order": "9",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "product_list_page",
@@ -165,7 +174,188 @@
             "uip_default": "left",
             "uip_title": "列表位置",
             "uip_description": "",
-            "uip_order": "10"
+            "uip_order": "10",
+            "uip_hidden": "0"
+        },
+        {
+            "parent_name": "product_list_page",
+            "ui_name": "met_11_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "center_color",
+            "uip_key": "center_color-1",
+            "uip_value": "",
+            "uip_default": "#ffffff",
+            "uip_title": "区块内容背景色",
+            "uip_description": "默认#ffffff",
+            "uip_order": "11",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "product_list_page",
+            "ui_name": "met_11_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "btn_all",
+            "uip_key": "btn_all",
+            "uip_value": "",
+            "uip_default": "#ffffff",
+            "uip_title": "分页按钮颜色",
+            "uip_description": "默认#ffffff",
+            "uip_order": "12",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "product_list_page",
+            "ui_name": "met_11_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "linecolor",
+            "uip_key": "linecolor-1",
+            "uip_value": "",
+            "uip_default": "#e4eaec",
+            "uip_title": "分页线条颜色",
+            "uip_description": "默认为#e4eaec",
+            "uip_order": "13",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "product_list_page",
+            "ui_name": "met_11_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "hovertxtcolor",
+            "uip_key": "hovertxtcolor-1",
+            "uip_value": "",
+            "uip_default": "#ffffff",
+            "uip_title": "当前页文字的颜色",
+            "uip_description": "默认为#ffffff",
+            "uip_order": "14",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "product_list_page",
+            "ui_name": "met_11_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "pagetxtcolor",
+            "uip_key": "pagetxtcolor-1",
+            "uip_value": "",
+            "uip_default": "#76838f",
+            "uip_title": "分页文字颜色",
+            "uip_description": "默认为#76838f",
+            "uip_order": "15",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "product_list_page",
+            "ui_name": "met_11_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "pagebgcolor",
+            "uip_key": "pagebgcolor-1",
+            "uip_value": "",
+            "uip_default": "#ffffff",
+            "uip_title": "分页背景颜色",
+            "uip_description": "默认为#ffffff",
+            "uip_order": "16",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "product_list_page",
+            "ui_name": "met_11_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "hoverpagebgcolor",
+            "uip_key": "hoverpagebgcolor-1",
+            "uip_value": "",
+            "uip_default": "#f5f5f5",
+            "uip_title": "鼠标经过分页背景颜色",
+            "uip_description": "默认为#f5f5f5",
+            "uip_order": "17",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "product_list_page",
+            "ui_name": "met_11_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "hoverpagetxtcolor",
+            "uip_key": "hoverpagetxtcolor-1",
+            "uip_value": "",
+            "uip_default": "",
+            "uip_title": "鼠标经过分页文字颜色",
+            "uip_description": "默认为分页文字颜色",
+            "uip_order": "18",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "product_list_page",
+            "ui_name": "met_11_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "nopagebg",
+            "uip_key": "nopagebg-1",
+            "uip_value": "",
+            "uip_default": "#ffffff",
+            "uip_title": "分页无效按钮背景颜色",
+            "uip_description": "默认为#ffffff",
+            "uip_order": "19",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "product_list_page",
+            "ui_name": "met_11_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "nopagetxt",
+            "uip_key": "nopagetxt-1",
+            "uip_value": "",
+            "uip_default": "#ccd5db",
+            "uip_title": "分页无效按钮文字颜色",
+            "uip_description": "默认为#ccd5db",
+            "uip_order": "20",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "product_list_page",
+            "ui_name": "met_11_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "btniconcolor",
+            "uip_key": "btniconcolor-1",
+            "uip_value": "",
+            "uip_default": "#ffffff",
+            "uip_title": "手机端分页图标颜色",
+            "uip_description": "默认#ffffff",
+            "uip_order": "21",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "product_list_page",
+            "ui_name": "met_11_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "byncolor",
+            "uip_key": "byncolor",
+            "uip_value": "",
+            "uip_default": "#e0e0e0",
+            "uip_title": "区块内容底部边框线颜色",
+            "uip_description": "默认e0e0e0",
+            "uip_order": "22",
+            "uip_hidden": "1"
         }
     ]
 }

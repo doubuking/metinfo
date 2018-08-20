@@ -25,7 +25,7 @@
         $v['nofollow'] = $v['nofollow'] ? "rel='nofollow'" : '';
 ?>
                     <li class='breadcrumb-item     <?php if($ui[split]){ ?>split<?php } ?>'>
-                        <a href="<?php echo $v['weburl'];?>" title="<?php echo $v['webname'];?>" target="_blank">
+                        <a href="<?php echo $v['weburl'];?>" title="<?php echo $v['webname'];?>" <?php echo $v['nofollow'];?> target="_blank">
                                 <?php if($v['link_type']==1){ ?>
                                 <img data-original="<?php echo $v['weblogo'];?>" alt="<?php echo $v['webname'];?>" height='40'>
                             <?php }else{ ?>

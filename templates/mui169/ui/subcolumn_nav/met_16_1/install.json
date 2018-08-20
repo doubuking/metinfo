@@ -5,12 +5,11 @@
         "ui_page": "|head|show|news|product|img|download|job|message_index|feedback|shownews|showproduct|showdownload|sh",
         "ui_title": "内页子栏目列表",
         "ui_description": "",
-        "ui_issue": "1",
+        "ui_issue": "0",
         "ui_order": "1",
-        "ui_version": "1.9",
+        "ui_version": "2.0",
         "ui_creater": "metinfo",
-        "ui_company": "metinfo",
-        "ui_edittime": "1529028475"
+        "ui_company": "metinfo"
     },
     "config": [
         {
@@ -25,7 +24,8 @@
             "uip_default": "1",
             "uip_title": "区块显示开关",
             "uip_description": "当前UI区块的开启关闭设置，关闭后可以在可视化编辑中开启",
-            "uip_order": "0"
+            "uip_order": "0",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "subcolumn_nav",
@@ -39,7 +39,8 @@
             "uip_default": "全部",
             "uip_title": "全部文字",
             "uip_description": "",
-            "uip_order": "1"
+            "uip_order": "1",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "subcolumn_nav",
@@ -53,7 +54,8 @@
             "uip_default": "search",
             "uip_title": "搜索提示文字",
             "uip_description": "",
-            "uip_order": "2"
+            "uip_order": "2",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "subcolumn_nav",
@@ -67,7 +69,8 @@
             "uip_default": "1",
             "uip_title": "搜索",
             "uip_description": "存在于产品模块",
-            "uip_order": "3"
+            "uip_order": "3",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "subcolumn_nav",
@@ -80,8 +83,9 @@
             "uip_value": "",
             "uip_default": "",
             "uip_title": "区块背景色",
-            "uip_description": "",
-            "uip_order": "4"
+            "uip_description": "默认为网页背景色",
+            "uip_order": "4",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "subcolumn_nav",
@@ -95,7 +99,8 @@
             "uip_default": "",
             "uip_title": "标题颜色",
             "uip_description": "默认为模板主色调",
-            "uip_order": "5"
+            "uip_order": "5",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "subcolumn_nav",
@@ -109,7 +114,8 @@
             "uip_default": "",
             "uip_title": "鼠标经过颜色和搜索框选中颜色",
             "uip_description": "默认为模板配色调",
-            "uip_order": "6"
+            "uip_order": "6",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "subcolumn_nav",
@@ -122,8 +128,9 @@
             "uip_value": "",
             "uip_default": "#f0f2f5",
             "uip_title": "下边框线条颜色",
-            "uip_description": "",
-            "uip_order": "7"
+            "uip_description": "默认为#f0f2f5",
+            "uip_order": "7",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "subcolumn_nav",
@@ -137,7 +144,8 @@
             "uip_default": "0",
             "uip_title": "展示样式",
             "uip_description": "",
-            "uip_order": "8"
+            "uip_order": "8",
+            "uip_hidden": "0"
         }
     ]
 }

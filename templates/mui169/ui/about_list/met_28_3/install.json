@@ -5,12 +5,11 @@
         "ui_page": "|index|",
         "ui_title": "首页简介内容(背景滚动)",
         "ui_description": "",
-        "ui_issue": "1",
+        "ui_issue": "0",
         "ui_order": "1",
-        "ui_version": "1.0",
+        "ui_version": "1.1",
         "ui_creater": "metinfo",
-        "ui_company": "metinfo",
-        "ui_edittime": "1527644942"
+        "ui_company": "metinfo"
     },
     "config": [
         {
@@ -25,7 +24,8 @@
             "uip_default": "1",
             "uip_title": "区块显示开关",
             "uip_description": "当前UI区块的开启关闭设置，关闭后可以在可视化编辑中开启",
-            "uip_order": "0"
+            "uip_order": "0",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "about_list",
@@ -39,7 +39,8 @@
             "uip_default": "",
             "uip_title": "区块背景图",
             "uip_description": "",
-            "uip_order": "1"
+            "uip_order": "1",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "about_list",
@@ -53,7 +54,8 @@
             "uip_default": "标题",
             "uip_title": "标题",
             "uip_description": "",
-            "uip_order": "2"
+            "uip_order": "2",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "about_list",
@@ -67,7 +69,8 @@
             "uip_default": "1",
             "uip_title": "背景显示类型",
             "uip_description": "",
-            "uip_order": "2"
+            "uip_order": "2",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "about_list",
@@ -81,7 +84,8 @@
             "uip_default": "描述一",
             "uip_title": "描述一",
             "uip_description": "填0隐藏",
-            "uip_order": "3"
+            "uip_order": "3",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "about_list",
@@ -95,7 +99,8 @@
             "uip_default": "描述二",
             "uip_title": "描述二",
             "uip_description": "填0隐藏",
-            "uip_order": "4"
+            "uip_order": "4",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "about_list",
@@ -109,7 +114,8 @@
             "uip_default": "描述三",
             "uip_title": "描述三",
             "uip_description": "填0隐藏",
-            "uip_order": "5"
+            "uip_order": "5",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "about_list",
@@ -123,7 +129,8 @@
             "uip_default": "查看更多",
             "uip_title": "查看更多文字",
             "uip_description": "",
-            "uip_order": "6"
+            "uip_order": "6",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "about_list",
@@ -137,7 +144,8 @@
             "uip_default": "",
             "uip_title": "标题文字颜色",
             "uip_description": "默认为网站主色调",
-            "uip_order": "7"
+            "uip_order": "7",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "about_list",
@@ -151,7 +159,8 @@
             "uip_default": "",
             "uip_title": "区块背景色",
             "uip_description": "默认为网站背景色",
-            "uip_order": "7"
+            "uip_order": "7",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "about_list",
@@ -165,7 +174,8 @@
             "uip_default": "",
             "uip_title": "描述颜色",
             "uip_description": "默认为网站副色调",
-            "uip_order": "8"
+            "uip_order": "8",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "about_list",
@@ -179,7 +189,8 @@
             "uip_default": "#f0f0f0",
             "uip_title": "查看更多按钮背景色",
             "uip_description": "默认为#f0f0f0",
-            "uip_order": "9"
+            "uip_order": "9",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "about_list",
@@ -193,7 +204,8 @@
             "uip_default": "#ffffff",
             "uip_title": "查看更多按钮文字颜色",
             "uip_description": "默认为#fff",
-            "uip_order": "10"
+            "uip_order": "10",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "about_list",
@@ -207,7 +219,8 @@
             "uip_default": "",
             "uip_title": "鼠标经过颜色",
             "uip_description": "默认为网站配色调",
-            "uip_order": "10"
+            "uip_order": "10",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "about_list",
@@ -221,7 +234,8 @@
             "uip_default": "",
             "uip_title": "按钮链接地址",
             "uip_description": "",
-            "uip_order": "11"
+            "uip_order": "11",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "about_list",
@@ -235,7 +249,8 @@
             "uip_default": "1",
             "uip_title": "文字位置",
             "uip_description": "电脑端起效",
-            "uip_order": "12"
+            "uip_order": "12",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "about_list",
@@ -249,7 +264,8 @@
             "uip_default": "",
             "uip_title": "上传图片",
             "uip_description": "建议不使用背景图时使用，会根据文字位置改变居左或居右",
-            "uip_order": "15"
+            "uip_order": "15",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "about_list",
@@ -263,7 +279,8 @@
             "uip_default": "480",
             "uip_title": "图片缩略图宽",
             "uip_description": "",
-            "uip_order": "16"
+            "uip_order": "16",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "about_list",
@@ -277,7 +294,23 @@
             "uip_default": "360",
             "uip_title": "图片缩略图高",
             "uip_description": "",
-            "uip_order": "17"
+            "uip_order": "17",
+            "uip_hidden": "0"
+        },
+        {
+            "parent_name": "about_list",
+            "ui_name": "met_28_3",
+            "uip_type": "4",
+            "uip_style": "0",
+            "uip_select": "是$T$1$M$否$T$0",
+            "uip_name": "ifsuolve",
+            "uip_key": "ifsuolve",
+            "uip_value": "",
+            "uip_default": "1",
+            "uip_title": "图片是否缩略",
+            "uip_description": "不使用缩略图设置图片则会显示原图大小",
+            "uip_order": "19",
+            "uip_hidden": "0"
         }
     ]
 }

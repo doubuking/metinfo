@@ -50,7 +50,13 @@
 		<if value="$ui['product_search'] && $data['module'] eq 3">
 		<tag action='search.option' type="page" order="1"></tag>
 		<div class="product-search">
-			<form method="post" action="{$search[form][action]}">
+			<form method="get" action="{$search['form']['action']}">
+				<input type="hidden" name='lang' value="{$data.lang}">
+				<input type="hidden" name='class1' value="{$data.class1}">
+				<input type="hidden" name='class2' value="{$data.class2}">
+				<input type="hidden" name='class3' value="{$data.class3}">
+				<input type="hidden" name='search' value="search">
+				<input type="hidden" name='order' value="com">
 				<div class="form-group">
 					<div class="input-search">
 						<button type="submit" class="input-search-btn">
@@ -60,7 +66,7 @@
 							type="text"
 							class="form-control"
 							name="content"
-							value=""
+							value="{$search['form']['content']}"
 							placeholder="{$ui.product_placeholder}"
 						>
 					</div>

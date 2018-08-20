@@ -1,8 +1,7 @@
 @charset "utf-8";
 /* 留言表单 */
 .message-list-no .leftsidebar{margin-right:0;}
-$uicss { display: block; padding: 30px;background:$bodybgcolor$; }
-$uicss{background:$bgcolor$;}
+$uicss { display: block; padding: 30px;background-color:$bodybgcolor$;background-color:$bgcolor$; }
 $uicss select { border-radius: 0; }
 $uicss input { border-radius: 0; }
 .btn-primary { border-radius: 0; background: $firstcolor$; border-color: $firstcolor$;background: $btncolor$; border-color: $btncolor$; color: $txtcolor$; }
@@ -10,8 +9,14 @@ $uicss input { border-radius: 0; }
 $uicss .form-control.focus, .form-control:focus { border-color: $thirdcolor$;border-color: $hovercolor$; }
 $uicss .checkbox-primary input[type=radio]:checked+label::before, .checkbox-primary input[type=checkbox]:checked+label::before { background: $thirdcolor$;background: $hovercolor$; border-color: $thirdcolor$;border-color: $hovercolor$; }
 $uicss .checkbox-custom input[type=radio]:focus+label::before, .checkbox-custom input[type=checkbox]:focus+label::before { outline: 5px auto $thirdcolor$; }
-// $uicss .btn-primary.disabled, .btn-primary.disabled.active, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled], .btn-primary[disabled].active, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary.active, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover { background: #e4eaec; border-color: #e4eaec; }
-$uicss .panel { box-shadow: none; }
+$uicss .btn-primary.disabled, .btn-primary.disabled.active, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled], .btn-primary[disabled].active, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary.active, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover { background: #e4eaec; border-color: #e4eaec; }
+$uicss .panel { box-shadow: none; background-color: $conbgcolor$;}
+$uicss label{color: $rcolor$;}
+$uicss .form-control{color: $placecolor$;border-color: $bordercolor$;background-color: $sbgcolor$;}
+$uicss ::-webkit-input-placeholder{color:$placecolor$ !important; }
+$uicss ::-moz-placeholder{color:$placecolor$ !important; }
+$uicss :-moz-placeholder{color:$placecolor$ !important; }
+$uicss :-ms-input-placeholder{color:$placecolor$ !important; }
 $uicss .media-body{
     width:100%;
 }

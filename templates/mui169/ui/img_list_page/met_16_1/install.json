@@ -5,12 +5,11 @@
         "ui_page": "|img|",
         "ui_title": "图片模块列表",
         "ui_description": "",
-        "ui_issue": "1",
+        "ui_issue": "0",
         "ui_order": "1",
-        "ui_version": "1.5",
+        "ui_version": "1.7",
         "ui_creater": "metinfo",
-        "ui_company": "metinfo",
-        "ui_edittime": "1532594351"
+        "ui_company": "metinfo"
     },
     "config": [
         {
@@ -25,21 +24,8 @@
             "uip_default": "1",
             "uip_title": "区块显示开关",
             "uip_description": "当前UI区块的开启关闭设置，关闭后可以在可视化编辑中开启",
-            "uip_order": "0"
-        },
-        {
-            "parent_name": "img_list_page",
-            "ui_name": "met_16_1",
-            "uip_type": "2",
-            "uip_style": "0",
-            "uip_select": "",
-            "uip_name": "img_listlook",
-            "uip_key": "img_listlook",
-            "uip_value": "",
-            "uip_default": "浏览",
-            "uip_title": "按钮文字",
-            "uip_description": "",
-            "uip_order": "1"
+            "uip_order": "0",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "img_list_page",
@@ -53,7 +39,23 @@
             "uip_default": "1",
             "uip_title": "展示样式",
             "uip_description": "",
-            "uip_order": "1"
+            "uip_order": "1",
+            "uip_hidden": "0"
+        },
+        {
+            "parent_name": "img_list_page",
+            "ui_name": "met_16_1",
+            "uip_type": "2",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "img_listlook",
+            "uip_key": "img_listlook",
+            "uip_value": "",
+            "uip_default": "浏览",
+            "uip_title": "按钮文字",
+            "uip_description": "",
+            "uip_order": "1",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "img_list_page",
@@ -67,7 +69,8 @@
             "uip_default": "4",
             "uip_title": "大尺寸电脑显示列数",
             "uip_description": "大尺寸电脑：浏览器宽度大于1600像素",
-            "uip_order": "3"
+            "uip_order": "3",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "img_list_page",
@@ -81,7 +84,8 @@
             "uip_default": "4",
             "uip_title": "普通电脑显示列数",
             "uip_description": "普通电脑：浏览器宽度大于992像素小于1600像素",
-            "uip_order": "4"
+            "uip_order": "4",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "img_list_page",
@@ -95,7 +99,8 @@
             "uip_default": "2",
             "uip_title": "平板显示列数",
             "uip_description": "平板：浏览器宽度大于768像素小于992像素",
-            "uip_order": "5"
+            "uip_order": "5",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "img_list_page",
@@ -109,7 +114,8 @@
             "uip_default": "1",
             "uip_title": "手机显示列数",
             "uip_description": "手机：浏览器宽度小于768像素",
-            "uip_order": "6"
+            "uip_order": "6",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "img_list_page",
@@ -123,7 +129,8 @@
             "uip_default": "",
             "uip_title": "当前页颜色",
             "uip_description": "默认为网页配色调",
-            "uip_order": "7"
+            "uip_order": "7",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "img_list_page",
@@ -137,7 +144,8 @@
             "uip_default": "",
             "uip_title": "区块背景色",
             "uip_description": "默认为网页背景调",
-            "uip_order": "8"
+            "uip_order": "8",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "img_list_page",
@@ -151,7 +159,8 @@
             "uip_default": "left",
             "uip_title": "列表位置",
             "uip_description": "",
-            "uip_order": "9"
+            "uip_order": "9",
+            "uip_hidden": "0"
         }
     ]
 }

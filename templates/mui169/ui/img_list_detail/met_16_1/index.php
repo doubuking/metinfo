@@ -28,7 +28,7 @@
 				<list data="$data['displayimgs']" name="$v">
 				<div class='slick-slide'>
 					<a href='{$v.img}' data-size='{$v.x}x{$v.y}' data-med='{$v.img}' data-med-size='{$v.x}x{$v.y}' class='lg-item-box' data-src='{$v.img}' data-exthumbimage="{$v.img|thumb:60,60}" data-sub-html='{$v.title}'>
-						<img <if value="$v['sub'] gt 1">data-lazy<else/>src</if>="{$v.img|thumb:$c['met_imgdetail_x'],$c['met_imgdetail_y']}" class='img-fluid' alt='{$v.title}' height="200" />
+						<img <if value="$v['_index'] gt 0">data-lazy<else/>src</if>="{$v.img|thumb:$c['met_imgdetail_x'],$c['met_imgdetail_y']}" class='img-fluid' alt='{$v.title}' height="200" />
 					</a>
 				</div>
 				</list>

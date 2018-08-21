@@ -1,4 +1,4 @@
-<?php defined('IN_MET') or exit('No permission');?>
+<?php defined('IN_MET') or exit('No permission'); ?>
 <section class="$uicss met-index-body" m-id="<?php echo $ui['mid'];?>">
     <div class="container">
           <?php if($ui['picturetitle']){ ?>
@@ -43,77 +43,33 @@
         $$v = $v;
 ?>
 
-                </div>
-                <div class="carousel-item     <?php if($v[_index]==0){ ?>active<?php } ?>">
+                      <?php if($v['_index']%4==0){ ?>
+                          <?php if($v['_index']<>0){ ?>
+                        </div>
+                      <?php } ?>
+                      <div class="carousel-item     <?php if($v[_index]==0){ ?>active<?php } ?>">
+                  <?php } ?>
                   <div class="col-xs-12 col-sm-3">
                     <div class="team-member text-center">
                       <a href="<?php echo $v['url'];?>" title="<?php echo $v['title'];?>" target="_blank">
                         <img class="img-responsive" src="<?php echo thumb($v['imgurl'],$ui[img_x],$ui[img_y]);?>" alt="<?php echo $v['imgurl'];?>" />
                         <h3><?php echo met_substr($v['title'],0,$ui['desc_num']);?>...</h3>
+                        <h4><?php echo met_substr($v['description'],0,$ui['subtitlenum']);?>...</h4>
+                            <?php if($v[price_str]){ ?>
+                              <p class='para m-b-0 m-t-5'><?php echo $v['price_str'];?></p>
+                        <?php } ?>
                       </a>
                     </div>
                   </div>
                  <?php endforeach;?>
                </div>
             </div>
-
-
         </div>
-
-    <?php
-    $type=strtolower(trim('current'));
-    $cid=$ui['picturecolumn'];
-    $column = load::sys_class('label', 'new')->get('column');
-
-    unset($result);
-    switch ($type) {
-            case 'son':
-                $result = $column->get_column_son($cid);
-                break;
-            case 'current':
-                $result[0] = $column->get_column_id($cid);
-                break;
-            case 'head':
-                $result = $column->get_column_head();
-                break;
-            case 'foot':
-                $result = $column->get_column_foot();
-                break;
-            default:
-                $result[0] = $column->get_column_id($cid);
-                break;
-        }
-    $sub = count($result);
-    foreach($result as $index=>$m):
-        $hides = 1;
-        $hide = explode("|",$hides);
-        $m['_index']= $index;
-        if($data['classnow']==$m['id'] || $data['class1']==$m['id'] || $data['class2']==$m['id']){
-            $m['class']="";
-        }else{
-            $m['class'] = '';
-        }
-        if(in_array($m['name'],$hide)){
-            unset($m['id']);
-            unset($m['class']);
-            $m['hide'] = $hide;
-            $m['sub'] = 0;
-        }
-
-
-        if(substr(trim($m['icon']),0,1) == 'm' || substr(trim($m['icon']),0,1) == ''){
-            $m['icon'] = 'icon fa-pencil-square-o '.$m['icon'];
-        }
-        $m['urlnew'] = $m['new_windows'] ? "target='_blank'" :"target='_self'";
-        $m['urlnew'] = $m['nofollow'] ? $m['urlnew']." rel='nofollow'" :$m['urlnew'];
-        $m['_first']=$index==0 ? true:false;
-        $m['_last']=$index==(count($result)-1)?true:false;
-        $$m = $m;
-?>
-        <a href="<?php echo $m['url'];?>" title="<?php echo $m['name'];?>" <?php echo $m['urlnew'];?> class="btn-more">
-            更多
-            <i class="fa fa-angle-right"></i>
+        <a class="carousel-control-prev member-carousel-control hidden-xs" href="javascript:void(0);" role="button" data-slide="prev">
+          <i class="fa fa-angle-left"></i>
         </a>
-    <?php endforeach;?>
+        <a class="carousel-control-next member-carousel-control hidden-xs" href="javascript:void(0);" role="button" data-slide="next">
+          <i class="fa fa-angle-right"></i>
+        </a>      
     </div> 
 </section>

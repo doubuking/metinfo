@@ -3,7 +3,7 @@
 # Copyright (C) MetInfo Co.,Ltd (http://www.metinfo.cn). All rights reserved. 
 
 define('IN_ADMIN', true);
-//½Ó¿Ú
+//ï¿½Ó¿ï¿½
 $M_MODULE='admin';
 if(@$_GET['m'])$M_MODULE=$_GET['m'];
 if(@!$_GET['n'])$_GET['n']="index";

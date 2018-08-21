@@ -311,6 +311,11 @@ $uicss .carousel.scale .carousel-inner > .carousel-item.prev > div:nth-child(4) 
   animation: fadeInDown 300ms linear 300ms both;
 }
 
+$uicss .btn-more { padding: 5px 15px; border: 1px solid; color: $thirdcolor$; color: $hovercolor$; display: block; width: 110px; text-align: center; margin: 30px auto 0 auto; -webkit-transition: all .6s cubic-bezier(.165, .84, .44, 1) 0ms; transition: all .6s cubic-bezier(.165, .84, .44, 1) 0ms }
+$uicss .btn-more .fa { padding-left: 10px }
+$uicss .btn-more:hover { background: $thirdcolor$; background: $hovercolor$;color: $hover_btn_color$; padding-left: 15px;  border-color: $thirdcolor$; border-color: $hovercolor$; text-decoration: none }
+$uicss .btn-more:hover .fa { color: $hover_btn_color$; }
+
 
 @media (min-width: 480px){
   $uicss .col-sm-3 {

@@ -10,11 +10,7 @@ class install {
 	function dosql(){
 		global $_M;		
 		
-$sql = array (
-  0 => 'pos =\'0\',no_order=\'1\',type=\'1\',style=\'3\',selectd=\'\',name =\'\',value=\'\',defaultvalue=\'\',valueinfo =\'报名表单\',tips=\'\'',
-  1 => 'pos =\'0\',no_order=\'2\',type=\'2\',style=\'3\',selectd=\'\',name =\'name\',value=\'\',defaultvalue=\'\',valueinfo =\'名称\',tips=\'请输入名称\'',
-  2 => 'pos =\'0\',no_order=\'3\',type=\'2\',style=\'3\',selectd=\'\',name =\'phone\',value=\'\',defaultvalue=\'\',valueinfo =\'手机号\',tips=\'请输入手机号\'',
-);
+$sql = NULL;
 $no='mui169';
 $devices='0';
 		$re['sql'] = $sql;

@@ -1,1 +1,1 @@
-<?php defined('IN_MET') or exit('No permission'); ?>{"name":"","phone":""}
+<?php defined('IN_MET') or exit('No permission'); ?>[]

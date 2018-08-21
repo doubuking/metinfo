@@ -1,5 +1,6 @@
 <?php defined('IN_MET') or exit('No permission'); ?>
-<?php $sidebar=strlen($ui[has][sidebar]);?>
+<?php $sidebar=strlen($ui[has][sidebar]);
+?>
 <main class="$uicss" m-id='{$ui.mid}'>
     <div class="container">
     <!-- sidebar -->
@@ -43,6 +44,7 @@
             </tag>
 <!--展示下级栏目-->
         <else/>
+
             <tag action='product.list' num="$c['met_product_list']" cid="$data['classnow']"></tag>
                 <if value="$sub">
 <!--展示内容-->

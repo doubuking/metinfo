@@ -31,8 +31,13 @@
             </div>
 
 
-
-
         </div>
+
+    <tag action="category" type="current" cid="$ui['picturecolumn']" >
+        <a href="{$m.url}" title="{$m.name}" {$m.urlnew} class="btn-more">
+            更多
+            <i class="fa fa-angle-right"></i>
+        </a>
+    </tag>
     </div> 
 </section>

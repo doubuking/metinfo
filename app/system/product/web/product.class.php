@@ -14,8 +14,10 @@ class product extends news {
 
   public function doproduct() {
 		global $_M;
-		if($this->listpage('product') == 'list'){
+		//控制每页显示的个数
+      	$_M['config']['met_product_list']=80;
 
+		if($this->listpage('product') == 'list'){
 			require_once $this->template('tem/product');
 		}else{
 			$this->doshowproduct();

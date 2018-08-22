@@ -46,7 +46,17 @@ body{
                     <span class="hamburger-bar"></span>
                 </button>
 <!-- 会员注册登录 -->
-                    
+                                    <button type="button" class="navbar-toggler collapsed m-0 p-x-5 met-head-user-toggler" data-target="#met-head-user-collapse" data-toggle="collapse"> <i class="icon wb-user-circle" aria-hidden="true"></i> 
+                </button>
+                <div class="collapse navbar-collapse navbar-collapse-toolbar pull-md-right p-0" id='met-head-user-collapse' m-id='member' m-type='member'>
+                                        <ul class="navbar-nav vertical-align p-l-0 m-b-0 met-head-user" m-id="member" m-type="member">
+                        <li class=" text-xs-center vertical-align-middle animation-fade">
+                            <a href="http://127.0.0.1/member/login.php?lang=cn" class="btn btn-squared btn-primary btn-outline m-r-10">登录</a>
+                            <a href="http://127.0.0.1/member/register_include.php?lang=cn" class="btn btn-squared btn-success">注册</a>
+                        </li>
+                    </ul>
+                                </div>
+                
                 <!-- 会员注册登录 -->
                 <div class="collapse navbar-collapse navbar-collapse-toolbar pull-md-right p-0" id="met-nav-collapse">
                     <ul class="nav navbar-nav navlist">
@@ -115,13 +125,45 @@ body{
                                                                                                                                     <a href="http://127.0.0.1/job/"  title="在线应聘" class='dropdown-item  navlist-2' target='_self'>在线应聘</a>
                                                                                             </div>
                         </li>
-                                                                                                    <li class='nav-item m-l-30'>
-                            <a href="http://127.0.0.1/download/" title="资料下载" class="nav-link " target='_self'>资料下载</a>
+                                                                                                    <li class="nav-item dropdown m-l-30">
+                                                            <a
+                                target='_self'                                href="http://127.0.0.1/download/"
+                                title="资料下载"
+                                class="nav-link dropdown-toggle "
+                                data-toggle="dropdown" data-hover="dropdown"
+                            >
+                                                        资料下载<i class="fa fa-angle-down"></i></a>
+                                                            <div class="dropdown-menu dropdown-menu-right secondmenu">
+                                                            <a href="http://127.0.0.1/download/"  title="全部" class='navlist-2 dropdown-item nav-parent hidden-lg-up '>全部</a>
+                                                                                                    <a href="http://127.0.0.1/download/download.php?class2=58"  title="活动资料" class='dropdown-item  navlist-2' target='_self'>活动资料</a>
+                                                                                                                                    <a href="http://127.0.0.1/download/download.php?class2=57"  title="政策法规" class='dropdown-item  navlist-2' target='_self'>政策法规</a>
+                                                                                                                                    <a href="http://127.0.0.1/download/download.php?class2=56"  title="白皮书" class='dropdown-item  navlist-2' target='_self'>白皮书</a>
+                                                                                                                                    <a href="http://127.0.0.1/download/download.php?class2=55"  title="蓝皮书" class='dropdown-item  navlist-2' target='_self'>蓝皮书</a>
+                                                                                                                                    <a href="http://127.0.0.1/download/download.php?class2=54"  title="行业应用" class='dropdown-item  navlist-2' target='_self'>行业应用</a>
+                                                                                            </div>
                         </li>
                                                 <!--简繁体切换-->
-                        <!--简繁体切换-->
+                                                                        <li class="met-langlist met-s2t  nav-item m-l-15" m-id="lang" m-type="lang">
+                        <button type="button" class="btn btn-outline btn-default btn-squared btn-lang btn-cntotc" data-tolang='tc'>繁体</button>
+                                        <!--简繁体切换-->
 <!--多语言-->
-            <!--多语言-->
+                    <li class="met-langlist nav-item m-l-15" m-id="lang" m-type="lang">
+            <div class="inline-block">
+                                                     <button type="button" data-toggle="dropdown" class="btn btn-outline btn-default btn-squared dropdown-toggle btn-lang">
+                                               <img src="http://127.0.0.1/public/images/flag/cn.gif" alt="简体中文" style="max-width:100%;">
+                                        <span >简体中文</span>
+                </button>
+                                                                             <ul class="dropdown-menu dropdown-menu-right animate animate-reverse" id="met-langlist-dropdown" role="menu">
+                                        <a href="http://127.0.0.1/" title="简体中文" class='dropdown-item'>
+                                                            <img src="http://127.0.0.1/public/images/flag/cn.gif" alt="简体中文" style="max-width:100%;">
+                                                简体中文                    </a>
+                                    <a href="http://127.0.0.1/index.php?lang=en" title="英语" class='dropdown-item'>
+                                                            <img src="http://127.0.0.1/public/images/flag/en.gif" alt="英语" style="max-width:100%;">
+                                                英语                    </a>
+                                </ul>
+            </div>
+        </li>
+        <!--多语言-->
                     </ul>
                 </div>
             </div>
@@ -242,6 +284,6 @@ body{
 <input type="hidden" name="met_lazyloadbg" value="">
 <script src="http://127.0.0.1/public/ui/v2/static/js/basic.js?6100"></script>
 <script src="http://127.0.0.1/templates/mui169/cache/show_cn.js?"></script>
-<script src="http://127.0.0.1/cache/lang_json_cn.js?1534757598"></script>
+<script src="http://127.0.0.1/cache/lang_json_cn.js?1534920498"></script>
 </body>
 </html>

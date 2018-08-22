@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/*支付页面*/
+#balanceinput .form-group{max-width:300px;}
+.pay-order-mode-body>li a.block{border: 1px solid  #eee;}
+.pay-order-top .pay-order-price{margin-top:10px;}
+@media (min-width:768px){
+	.pay-order-top h1{font-size:24px;}
+	.pay-order-top .pay-order-price{margin-top:20px;}
+	#balanceinput button.btn{display:inline-block;width:auto;}
+}
+@media (max-width:767px){
+	.pay-order-top{padding-top: 30px;}
+	.pay-order-top h1{font-size:20px;padding-top:30px;padding-bottom:20px;}
+}
+@media (max-width:479px){
+	.pay-order-top .dropdown-toggle{display: inline-block;margin-top: 10px;}
+	.pay-order-mode-body{margin: 0 -5px;}
+	.pay-order-mode-body>li{margin-bottom: 10px;padding: 0 5px;}
+}
+#payment-weixin-modal .modal-body img{margin:0px auto;}

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* 商品编辑详情页 */
+.product_shop .para-add .existing,
+.product_shop .standard .panel .parakulist{white-space: nowrap;max-height:300px; overflow:auto;}
+.product_shop .standard .para-set{color: #23b7e5;}
+.product_shop,
+.product_shop_logistics{margin-bottom:0;border-left:none;border-right:none;border-bottom:none;border-radius:0;}
+.product_shop>.panel-heading,
+.product_shop_logistics>.panel-heading{border-bottom:none;}
+.product_shop .table th{white-space:nowrap;}
+.product_shop .table .picture-list .sort{margin-bottom:0;}
+.product_shop .table .ftype_upload .app-image-list li.sort img{max-height:32px;}
+.specification-modal iframe{vertical-align: top;}
+@media (min-width:1200px){
+	.specification-modal .modal-dialog{width: 1200px;}
+}
+@media (max-height: 800px){
+    .specification-modal iframe{height: 500px;}
+}

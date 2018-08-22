@@ -22,6 +22,8 @@ class paygroup extends web{
         $data = array();
         $payclass = load::mod_class('pay/pay_op','new');
         $paygroup_list = $this->paygroup_list;
+        echo "<pre>";
+        var_dump($paygroup_list);
         foreach ($paygroup_list as $value) {
             if ($value['groupid'] == $_M['form']['groupid']) {
                 $pricestr       = $payclass->price_str($value['price']);
@@ -36,6 +38,8 @@ class paygroup extends web{
                 $data['attach']         = base64_encode(jsonencode($value));
             }
         }
+        var_dump($data);
+        die();
         $payhtml = $payclass->createPayForm($data);
         echo $payhtml;
         die();

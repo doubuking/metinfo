@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* 产品详情页 */
+/* 产品图片轮播图*/
+#met-imgs-slick.shop-default{min-height:200px;}
+#met-imgs-slick.shop-default.slick-dotted{padding-bottom:80px;}
+#met-imgs-slick.shop-default.slick-slider:not(.slick-fade) .slick-slide{cursor:-webkit-grab;cursor:grab;}
+#met-imgs-slick.shop-default.slick-slider.fngallery.slick-fade .slick-slide:not(.slick-active){visibility:hidden;}
+#met-imgs-slick.shop-default.fngallery .slick-slide img,
+#met-imgs-slick.shop-default.fngallery .slick-slide img{cursor:-webkit-zoom-in;cursor:zoom-in;}
+@media screen\0{
+    #met-imgs-slick.shop-default.fngallery .slick-slide a,
+    #met-imgs-slick.shop-default.fngallery .slick-slide img{cursor:url(https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/img/frs/cur_zin.cur?t=1489493164029),pointer;}
+}
+#met-imgs-slick.shop-default .slick-slide a{display:inline-block;}
+#met-imgs-slick.shop-default .slick-img-cover{height:100%;position:absolute;left:0;top:0;z-index:1000;}
+#met-imgs-slick.shop-default .swiper-navtab{width:100%;height:69px;position:absolute;left:0;bottom:0;cursor:-webkit-grab;cursor:grab;}
+/*#met-imgs-slick.shop-default .swiper-navtab .slick-dots{bottom:5px;}*/
+#met-imgs-slick.shop-default .slick-dots{height:64px;bottom:0;z-index:2;}
+#met-imgs-slick.shop-default .slick-dots li{width:60px;height:60px;margin:0 0 0 10px;border:2px solid  #ddd;opacity:.7;}
+#met-imgs-slick.shop-default .slick-dots li:first-child{margin:0;}
+#met-imgs-slick.shop-default .slick-dots li.slick-active{border-color:#4E97D9;}
+#met-imgs-slick.shop-default .slick-dots li img{width:100%;height:100%;object-fit:cover;}
+#met-imgs-slick.shop-default.slick-slider .slick-arrow{height:calc(100% - 80px);}
+#met-imgs-slick.shop-default .slick-arrow{width:15%;height:100%;top:0;-webkit-transform:translate(0,0);-o-transform:translate(0,0);-moz-transform:translate(0,0);transform:translate(0,0);}
+#met-imgs-slick.shop-default .slick-arrow.slick-prev{text-align:left;}
+#met-imgs-slick.shop-default .slick-arrow.slick-next{text-align:right;}
+#met-imgs-slick.shop-default .slick-arrow i{font-size:50px;color:#999;}
+@media (max-width:767px){
+    #met-imgs-slick.shop-default.slick-slider .slick-arrow{height:calc(100% - 60px);}
+    #met-imgs-slick.shop-default.slick-dotted{padding-bottom:60px;}
+    #met-imgs-slick.shop-default .swiper-navtab{height:47px;}
+    #met-imgs-slick.shop-default .slick-dots{height:42px;}
+    #met-imgs-slick.shop-default .slick-dots li{width:40px;height:40px;margin-left:5px;border-width:1px;}
+}
+/* 标准模式 */
+@media (min-width:992px){
+    .met-showproduct-head .met-showproduct-list{margin-right:15px;}
+}
+@media (max-width:991px){
+    .met-showproduct-head .product-intro{margin-top:20px;}
+}
+.product-detail .met-editor .product-para{margin-bottom:15px;padding-bottom:10px;}
+.met-showproduct #met-imgs-slick.shop-default .swiper-navtab{width:96%;margin:0 2%;}
+@media (max-width:767px){
+    .met-showproduct.pagetype1 .met-showproduct-navtabs{margin-bottom:15px!important;}
+}
+/* 商品详情页右侧商品信息 */
+.shop-product-para > .row{margin-bottom:-5px;}
+.shop-product-para .selectpara-list .btn{margin-bottom:5px;}
+.shop-product-para .selectpara-list .selectpara{max-width:50%;}
+.shop-product-para .selectpara-list .selectpara.btn-outline.btn-danger:focus,
+.shop-product-para .selectpara-list .selectpara.btn-outline.btn-danger:hover{background-color:transparent;color:#f96868;}
+.shop-product-intro .shoppro-discount{margin-top:15px;margin-bottom:-5px;}
+.shop-product-intro .cart-favorite{display:inline-block;}
+@media (min-width:768px){
+    .shop-product-intro .cart-favorite .btn{padding:10px 30px;}
+}
+@media (min-width:480px){
+    .shop-product-intro .form-control-label{line-height:35px;}
+}
+@media (max-width:479px){
+    .shop-product-intro .price{padding:10px 20px!important;}
+    .shop-product-intro .cart-favorite{width:100%;background:#fff;display:flex;position:fixed;left:0;bottom:0;z-index:11;display:-webkit-flex;display:-moz-flex;display:-ms-flex;display:-o-flex;display:flex;}
+    .shop-product-intro .cart-favorite .btn{flex:auto;padding-left:10px;padding-right:10px;}
+    .shop-product-intro .cart-favorite.notcn .btn{font-size:14px;}
+    .shop-product-intro .cart-favorite.notcn .btn i{display:none;}
+    .shop-product-intro .cart-favorite .product-tocart{margin-right:0!important;}
+}
+/* 优惠券 */
+.shoppro-discount-body .btn{margin-right:5px;margin-bottom:5px;}
+.shoppro-discount-list .btn span{max-width:200px;}

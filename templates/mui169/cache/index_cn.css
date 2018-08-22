@@ -233,7 +233,7 @@ overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
 @charset "utf-8";
 /* 首页服务区块 */
 .service_list_met_16_1.met-index-body.bgcolor{background:#ffffff;background:;}
-.service_list_met_16_1.met-index-body.bgpic{background:url(?met-id=0&met-table=ui_config&met-field=uip_value) no-repeat;background-size: cover;background-position: center;}
+.service_list_met_16_1.met-index-body.bgpic{background:url() no-repeat;background-size: cover;background-position: center;}
 .service_list_met_16_1.met-index-body{padding:70px 0px;}
 .service_list_met_16_1.met-index-body h2{font-size:36px;color:#333333;color:;}
 .service_list_met_16_1.met-index-body p.desc{padding:0 10%;font-size:16px;color:#666666;color:;}
@@ -392,7 +392,7 @@ overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
   padding:70px 0px;
   background-color:#ffffff;
   background-color:;
-  background-image:url('?met-id=0&met-table=ui_config&met-field=uip_value');
+  background-image:url('');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -726,7 +726,7 @@ overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
   padding: 100px 0;
 }
 .about_list_met_28_3.imgbg{
-  background: url(?met-id=0&met-table=ui_config&met-field=uip_value);
+  background: url();
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1028,7 +1028,7 @@ overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
   padding:70px 0px;
   background-color:#ffffff;
   background-color:;
-  background-image:url('?met-id=0&met-table=ui_config&met-field=uip_value');
+  background-image:url('');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1462,7 +1462,7 @@ overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
   padding:70px 0px;
   background-color:#ffffff;
   background-color:;
-  background-image:url('?met-id=0&met-table=ui_config&met-field=uip_value');
+  background-image:url('');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

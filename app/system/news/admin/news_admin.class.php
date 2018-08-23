@@ -367,31 +367,61 @@ class news_admin extends base_admin {
         require $this->template('own/article_activity');
 	}
 
+    /**
+     * 更改状态
+     */
+    public function dochangestatus()
+    {
+        global $_M;
+        $select_id = $_M['form']['select_id'];
+        $sql = "UPDATE met_participants SET `status`=1 WHERE id =".$select_id;
+        DB::query($sql);
+        echo 'ok';
 
-	function dojson_activity_list(){
+	}
 
-        $sql = "SELECT pa.id,us.username,pa.`name`,pa.phone,pa.email,pa.description,pa.`status`,pa.addtime FROM met_participants AS pa LEFT JOIN met_user AS us ON pa.user_id = us.id ";
+    public function dojson_activity_list(){
+        global $_M;
+        $keyword = $_M['form']['keyword'];
+        $class1_select = $_M['form']['class1_select'];
+		$like = '';
+		if(!empty($keyword)){
+            switch ($class1_select){
+                case 0:
+                    $like .= "WHERE pa.`name` like '%{$keyword}%'";
+                    break;
+                case 1:
+                    $like .= "WHERE pa.phone like '%{$keyword}%'";
+                    break;
+                case 2:
+                    $like .= "WHERE pa.email like '%{$keyword}%'";
+                    break;
+            }
+		}
 
-        $row = DB::get_all($sql);
-        foreach ($row as $key=>$val){
+
+        $table = load::sys_class('tabledata', 'new'); //加载表格数据获取类
+        $sql = "SELECT pa.id,us.username,pa.`name`,pa.phone,pa.email,pa.description,pa.`status`,pa.addtime FROM met_participants AS pa LEFT JOIN met_user AS us ON pa.user_id = us.id {$like}";
+
+        $where = ""; //查询条件
+        $order = ""; //排序方式
+        $array = $table->getdata('', '', $where, $order,$sql);//获取数据
+
+        $rarray = array();
+        foreach($array as $key => $val){
             $list = array();
-            $list[] = "<input name=\"id\" type=\"checkbox\" value=\"{$val['id']}\">";
+            $list[] = intval($_M['form']['start'])+$key+1;
             $list[] = "<div class=\"ui-table-a\">{$val['name']}</div>";
             $list[] = $val['phone'];
             $list[] = $val['email'];
             $list[] = $val['status']=='0'?'未付款':'已付款';
             $list[] = $val['addtime'];
-            $list[] = "";
+            $list[] = "<button type=\"button\" data-id='{$val['id']}' class=\"btn btn-primary\" onclick='changstatus(this)' data-plugin=\"alertify\" data-type=\"log\" data-delay=\"2000\" data-log-message=\"提示\">更改状态</button>";
             $rarray[] = $list;
-		}
-		$data_array = array(
-			'draw'=>"1",
-			'recordsTotal'=>"10",
-			'recordsFiltered'=>"10",
-			'data'=>$rarray
-		);
-        echo json_encode($data_array);
-	}
+        }
+        $table->rdata($rarray);//返回数据
+    }
+
 
 	/**
 	 * 栏目json

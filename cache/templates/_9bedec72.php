@@ -111,7 +111,7 @@
         $$m = $m;
 ?>
         <a href="<?php echo $m['url'];?>" title="<?php echo $m['name'];?>" <?php echo $m['urlnew'];?> class="btn-more">
-            更多
+            <?php echo $word['fliptext1'];?>
             <i class="fa fa-angle-right"></i>
         </a>
     <?php endforeach;?>

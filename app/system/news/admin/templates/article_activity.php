@@ -19,6 +19,17 @@ echo <<<EOT
 				<input name="keyword" data-table-search="1" type="text" value="" class="ui-input" placeholder="{$_M[word][search]}">
 			</div>
 		</div>
+		<div class="ui-float-right">
+			<div class="ftype_select-linkage">
+				
+					<select name="class1_select" class="prov" data-table-search="1" data-checked="" data-required='1'>
+					<option value="0"  >姓名</option>
+					<option value="1" >电话</option>
+					<option value="2">邮箱</option>
+                    </select>
+				
+			</div>
+		</div>
 	</div>
 	<input id="class1id" name="class1" data-table-search="1" value="{$list[class1]}" class="ui-input" type="hidden" />
 	<input id="class2id" name="class2" data-table-search="1" value="{$list[class2]}" class="ui-input" type="hidden" />
@@ -26,7 +37,7 @@ echo <<<EOT
 	<table class="display dataTable ui-table" data-table-ajaxurl="{$_M[url][own_form]}a=dojson_activity_list&class1={$list[class1]}&class2={$list[class2]}&class3={$list[class3]}"  data-table-pageLength="20">
 		<thead>
 			<tr>
-				<th width="20" data-table-columnclass="met-center"><input name="id" data-table-chckall="id" type="checkbox" value="" /></th>
+				<th width="20" data-table-columnclass="met-center">编号</th>
 				<th width="120">
 					名字
 				</th>
@@ -39,7 +50,7 @@ echo <<<EOT
 				<th width="120">
 					{$_M[word][state]}
 				</th>
-				<th data-table-columnclass="met-center" width="160"><abbr title="{$_M[word][article4]}">报名时间</abbr></th>
+				<th data-table-columnclass="met-center" width="160">报名时间</th>
 				<th width="40">操作</th>
 			</tr>
 		</thead>
@@ -51,6 +62,22 @@ echo <<<EOT
 	</table>
 </div>
 </form>
+<script >
+    function changstatus(e) {
+        if(confirm('确定要更改吗')){
+            $.ajax({
+             type: "POST",
+             url: "{$_M[url][own_form]}a=dochangestatus",
+             data: {'select_id':$(e).attr('data-id')},
+             success: function(data){
+                  if(data=='ok'){
+                      $(e).parent().prev().prev().html('已付款');
+                  }
+             }
+         });
+        }
+    }
+</script>
 <!--
 EOT;
 require $this->template('ui/foot');

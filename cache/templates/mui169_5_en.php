@@ -1,0 +1,1 @@
+<?php defined('IN_MET') or exit('No permission'); ?>{"mid":5,"hovercolor":"","bgcolor":"","ui_show":"1","iconhovercolor":"#000000","iconcolor":"#ffffff"}

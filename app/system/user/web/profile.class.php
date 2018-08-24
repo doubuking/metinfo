@@ -300,24 +300,24 @@ class profile extends userweb {
             $_M['paralist'] = $this->paralist;
             $_M['paraclass'] = $this->paraclass;
 
-            $sql = "SELECT id,title,starttime,endtime FROM met_news WHERE id in (SELECT act_id FROM met_participants GROUP BY user_id HAVING user_id={$_M['user']['id']} )";
+            $tempsql = "SELECT act_id,user_id FROM met_participants GROUP BY act_id HAVING user_id={$_M['user']['id']}";
+            $tempresult = DB::get_all($tempsql);
+            $temstr = '';
+            foreach ($tempresult as $value){
+                $temstr .= $value['act_id'].',';
+            }
+            $temstr = rtrim($temstr,',');
+
+            $sql = "SELECT id,title,starttime,endtime FROM met_news WHERE id in ({$temstr}) ORDER BY starttime DESC ";
 
             $result = DB::get_all($sql);
 
-            $sql2 = "SELECT act_id,`status` FROM met_participants GROUP BY user_id HAVING user_id={$_M['user']['id']}";
-
-            $result2 = DB::get_all($sql2);
-
-            $resultData = array();
-            foreach ($result2 as $k=>$v){
-                $resultData[$v['act_id']] = $v['status'];
-            }
 
             foreach ($result as $key=>$value){
-                $result[$key]['title'] = mb_substr($value['title'],0,10);
-                $result[$key]['status'] = $resultData[$value['id']];
-            }
 
+                $title = mb_substr($value['title'],0,10);
+                $result[$key]['title'] = "<a href='{$_M['url']['site']}activity/shownews.php?id={$value[id]}' target='_blank'>{$title}</a>";
+            }
             $this->input['result'] = $result;
             require_once $this->view('app/profile_activity', $this->input);
         }
@@ -337,6 +337,10 @@ class profile extends userweb {
             $sql2 = "SELECT id,`name`,phone,email,`status` FROM met_participants WHERE act_id={$_M['form']['id']} AND user_id={$_M['user']['id']}";
 
             $result2 = DB::get_all($sql2);
+
+            foreach ($result2 as $key=>$value){
+                $result2[$key]['status'] = $value['status']==1?'已付款':'未付款';
+            }
 
             echo json_encode($result2);
 

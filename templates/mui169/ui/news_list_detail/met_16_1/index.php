@@ -1,6 +1,5 @@
 <?php defined('IN_MET') or exit('No permission'); ?>
 <?php $sidebar=strlen($ui[has][sidebar]);
-dump($word);
 ?>
 <main class="$uicss met-shownews animsition">
     <div class="container">

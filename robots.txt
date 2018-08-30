@@ -16,4 +16,4 @@ Disallow: /sitemap/templates/
 Disallow: /wap/templates/
 
 
-Sitemap: http://127.0.0.1/sitemap.xml
+Sitemap: http://events.smart-alliance.com/sitemap.xml

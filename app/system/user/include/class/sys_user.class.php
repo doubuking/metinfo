@@ -56,6 +56,76 @@ class sys_user extends user {
 
 		$table->rdata($rarray);
 	}
+
+
+
+    public function json_enterprisel_user_list(){
+        global $_M;
+
+        $groupid = $_M['form']['groupid'];
+        $keyword = $_M['form']['keyword'];
+        $idvalid = $_M['form']['idvalid'];
+
+        $search = $groupid ? " and groupid = '{$groupid}'":'';
+        $search .= $idvalid ? ($idvalid==1?" and idvalid = '1'":" and (idvalid is null or idvalid = 0)"):'';
+        $search.= $keyword?" and (username like '%{$keyword}%' || email like '%{$keyword}%' || tel like '%{$keyword}%')":'';
+
+        $table = load::sys_class('tabledata', 'new');
+        $order = "login_time DESC,register_time DESC";
+        $where = "lang='{$_M['lang']}' {$search} and source='ent'";
+        $userlist = $table->getdata($_M['table']['user'], '*', $where, $order);
+        $user_group = array();
+        $group = DB::get_all("SELECT * FROM {$_M[table][user_group]} WHERE lang = '{$_M[form]['lang']}'");
+        foreach($group as $key=>$val){
+            $user_group[$val['id']] = $val['name'];
+        }
+
+        foreach($userlist as $key=>$val){
+            switch($val['source']){
+                case 'weixin': $val['source'] = $_M['word']['weixinlogin']; break;
+                case 'weibo': $val['source']  = $_M['word']['sinalogin']; break;
+                case 'qq': $val['source']     = $_M['word']['qqlogin']; break;
+                case 'ent': $val['source']     = $_M['word']['regenterprisel']; break;
+                default:$val['source']        = $_M['word']['registration'] ; break;
+            }
+            if(!$val['login_time'])$val['login_time'] = $val['register_time'];
+
+            $endtemptime = $val['endtime'];
+            if(strtotime($val['endtime'])<time()){
+                $val['endtime'] = $val['endtime'].'<br><span class="label label-success">会员中</span>';
+            }else{
+                $val['endtime'] = $val['endtime'].'<br><span class="label label-danger">过期</span>';
+            }
+
+            if($val['delay']){
+                $val['endtime'] = $endtemptime.'<br><span class="label label-warning">临时延期</span>';
+            }
+
+
+            $list = array();
+            $list[] = "<input name=\"id\" type=\"checkbox\" value=\"{$val['id']}\">";
+            $list[] = $val['username'];
+
+            $list[] = $user_group[$val['groupid']];
+            $list[] = $val['endtime'];
+            $list[] = timeFormat($val['register_time']);
+            $list[] = timeFormat($val['login_time']);
+            $list[] = $val['enterprisel'];
+            $list[] = $val['contacts'];
+            $list[] = $val['valid']?$_M['word']['memberChecked']:$_M['word']['memberUnChecked'];
+//            $list[] = $val['idvalid']?$_M['word']['yes']:$_M['word']['no'];
+            $list[] = $val['source'];
+            $list[] = "<a href=\"{$_M['url']['own_form']}a=doenterpriseleditor&id={$val['id']}\" class=\"edit\">".$_M['word']['editor']."</a><span class=\"line\">|</span><a href=\"{$_M['url']['own_form']}a=dodellist&allid={$val['id']}\" class=\"delet\" data-confirm='{$_M['word']['js7']}'>{$_M['word']['delete']}</a>";
+            $rarray[] = $list;
+        }
+
+        $table->rdata($rarray);
+    }
+
+
+
+
+
 	public function del_uesr($useridlist){
 		global $_M;
 		if(!$useridlist){

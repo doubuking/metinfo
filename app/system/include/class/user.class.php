@@ -396,6 +396,17 @@ class user {
         return $user;
     }
 
+    //更具邮箱检测
+    public function get_user_by_useremail_sql($email)
+    {
+        global $_M;
+
+        $query = "SELECT id FROM {$_M['table']['user']} WHERE email='{$email}'";
+        $user = DB::get_one($query);
+        return $user;
+    }
+
+
     public function get_user_by_id($id) {
         $user = $this->get_user_by_id_sql($id);
         return $this->analyze($user);

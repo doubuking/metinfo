@@ -316,7 +316,7 @@ class profile extends userweb {
             foreach ($result as $key=>$value){
 
                 $title = mb_substr($value['title'],0,10);
-                $result[$key]['title'] = "<a href='{$_M['url']['site']}activity/shownews.php?id={$value[id]}' target='_blank'>{$title}</a>";
+                $result[$key]['title'] = "<a href='{$_M['url']['site']}activity/shownews.php?id={$value['id']}' target='_blank'>{$title}</a>";
             }
             $this->input['result'] = $result;
             require_once $this->view('app/profile_activity', $this->input);

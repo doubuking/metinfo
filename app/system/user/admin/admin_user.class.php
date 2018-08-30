@@ -21,7 +21,7 @@ class admin_user extends admin {
 		nav::set_nav(4, $_M[word][memberfunc], $_M['url']['own_name'].'c=admin_set&a=doindex');
 		nav::set_nav(5, $_M[word][thirdlogin], $_M['url']['own_name'].'c=admin_set&a=doopen');
 		nav::set_nav(6, $_M[word][mailcontentsetting], $_M['url']['own_name'].'c=admin_set&a=doemailset');
-        // nav::set_nav(7, $_M[word][paygroup], $_M['url']['own_name'].'c=admin_group&a=do_pay_group');
+        nav::set_nav(7, $_M[word][enterpriselmember], $_M['url']['own_name'].'c=admin_user&a=doenterprisel');
 
 		$this->userclass = load::mod_class('user/web/class/sys_user', 'new');
 		$this->paraclass = load::sys_class('para', 'new');
@@ -31,12 +31,29 @@ class admin_user extends admin {
 	public function dojson_user_list(){
 		$this->userclass->json_user_list();
 	}
+
+
+    public function dojson_enterprisel_user_list(){
+        $this->userclass->json_enterprisel_user_list();
+    }
+
 	public function doindex(){
 		global $_M;
 		nav::select_nav(1);
 		$_M['url']['help_tutorials_helpid']='118';
+		$_M['admin']['user']['type'] = 'dojson_user_list';
 		require_once $this->template('tem/user_index');
 	}
+
+
+    public function doenterprisel(){
+        global $_M;
+        nav::select_nav(7);
+        $_M['url']['help_tutorials_helpid']='118';
+        $_M['admin']['user']['type'] = 'dojson_enterprisel_user_list';
+        require_once $this->template('tem/user_enter_index');
+    }
+
 
 	public function doadd(){
 		global $_M;
@@ -94,6 +111,53 @@ class admin_user extends admin {
 		$_M['url']['help_tutorials_helpid']='118';
 		require_once $this->template('tem/user_editor');
 	}
+
+
+
+    public function doenterpriseleditor(){
+        global $_M;
+        nav::select_nav(7);
+        $user = $this->userclass->get_user_by_id($_M['form']['id']);
+        $user['realidinfo'] = $this->userclass->getRealIdInfo($user);
+        $user['idvalid'] = $user['idvalid'] ? $_M['word']['yes'] : $_M['word']['no'];
+        $_M['url']['help_tutorials_helpid']='118';
+        require_once $this->template('tem/user_enter_editor');
+    }
+
+    public function doeditorerpriselsave(){
+        global $_M;
+        if($_M['form']['password']){
+            if(!$this->userclass->editor_uesr_password($_M['form']['id'], $_M['form']['password'])){
+                if($this->userclass->errorno=='error_password_cha'){
+                    turnover("{$_M[url][own_form]}a=doeditor&id={$_M['form']['id']}", $_M[word][user_tips4_v6]);
+                }
+            }
+        }
+        $this->userclass->editor_uesr($_M['form']['id'], $_M['form']['email'],$_M['form']['tel'], $_M['form']['valid'],$_M['form']['groupid']);
+        $info = $this->paraclass->form_para($_M['form'],10);
+        $this->paraclass->update_para($_M['form']['id'],$info,10);
+
+
+        //插入特殊信息
+        $query = "UPDATE {$_M['table']['user']} SET 
+                        enterprisel = '{$_M['form']['enterprisel']}',
+                        enterprisel_phone = '{$_M['form']['enterprisel_phone']}', 
+                        enterprisel_address = '{$_M['form']['enterprisel_address']}', 
+                        contacts = '{$_M['form']['contacts']}', 
+                        contacts_phone = '{$_M['form']['contacts_phone']}', 
+                        contacts_post = '{$_M['form']['contacts_post']}', 
+                        email = '{$_M['form']['email']}', 
+                        endtime = '{$_M['form']['endtime']}', 
+                        delay = '{$_M['form']['delay']}', 
+                        source = 'ent' 
+                        WHERE id = {$_M['form']['id']}
+                ";
+
+        DB::query($query);
+
+        turnover("{$_M[url][own_form]}a=doenterprisel", $_M[word][edsuccess]);
+    }
+
 
 	public function doeditorsave(){
 		global $_M;

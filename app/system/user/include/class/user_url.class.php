@@ -17,7 +17,9 @@ class user_url {
 		$_M['url']['member']=$_M['url']['site'].'member/';
 		$_M['url']['login'] = "{$_M['url']['member']}login.php{$lang}";
 		$_M['url']['register'] = "{$_M['url']['member']}register_include.php{$lang}";
+		$_M['url']['enterprisel_register'] = "{$_M['url']['member']}register_include.php{$lang}&type=1";
 		$_M['url']['register_userok'] = "{$_M['url']['register']}&a=douserok";
+		$_M['url']['register_useremailok'] = "{$_M['url']['register']}&a=douserok";
 		$_M['url']['getpassword'] = "{$_M['url']['member']}getpassword.php{$lang}";
         $_M['url']['paygroup']="{$_M['url']['member']}paygroup.php{$lang}";
 

@@ -38,73 +38,110 @@ class register extends userweb {
         {
             okinfo($_M['url']['user_home']);
         }
-
+        $_M['enterprisel'] = false;
+        if($_M['form']['type']==1){
+            $_M['enterprisel'] = true;
+        }
 		require_once $this->view('app/register',$this->input);
 	}
 
 	public function dosave() {
 		global $_M;
         $info = $this->paraclass->form_para($_M['form'],10);
-        switch($_M['config']['met_member_vecan']){
-			case 1:
-                $pinok = load::sys_class('pin', 'new')->check_pin($_M['form']['code']);
-                if(!$pinok && $_M['config']['met_memberlogin_code'] ){
-                    okinfo(-1, $_M['word']['membercode']);
-				}
-				if($this->userclass->register($_M['form']['username'], $_M['form']['password'], $_M['form']['username'],'',$info, 0)){
-					$valid = load::mod_class('user/web/class/valid','new');
-					if ($valid->get_email($_M['form']['username'])) {
-						$this->userclass->login_by_password($_M['form']['username'],  $_M['form']['password']);
-						okinfo($_M['url']['profile'], $_M['word']['js25']);
-					} else {
-						okinfo($_M['url']['login'], $_M['word']['emailfail']);
-					}
-				}else{
-					okinfo(-1, $_M['word']['regfail']);
-				}
-			break;
-			case 3:
-                $pinok = load::sys_class('pin', 'new')->check_pin($_M['form']['code']);
-                if(!$pinok && $_M['config']['met_memberlogin_code'] ){
-                    okinfo(-1, $_M['word']['membercode']);
-                }
-				$session = load::sys_class('session', 'new');
-				if($_M['form']['phonecode']!=$session->get("phonecode")){
-					okinfo(-1, $_M['word']['phonecodeerror']);
-				}
-				if(time()>$session->get("phonetime")){
-					okinfo(-1, $_M['word']['codetimeout']);
-				}
+        //注册企业用户
+        if(true){
+            $pinok = load::sys_class('pin', 'new')->check_pin($_M['form']['code']);
+            if(!$pinok && $_M['config']['met_memberlogin_code'] ){
+                okinfo(-1, $_M['word']['membercode']);
+            }
+            $valid = 0;
+            $turnovertext=$_M['word']['js25'];
+            if($id = $this->userclass->register($_M['form']['username'], $_M['form']['password'], '','',$info, $valid)){
+                //插入特殊信息
+                $query = "UPDATE {$_M['table']['user']} SET 
+                        enterprisel = '{$_M['form']['enterprisel']}',
+                        enterprisel_phone = '{$_M['form']['enterprisel_phone']}', 
+                        enterprisel_address = '{$_M['form']['enterprisel_address']}', 
+                        contacts = '{$_M['form']['contacts']}', 
+                        contacts_phone = '{$_M['form']['contacts_phone']}', 
+                        contacts_post = '{$_M['form']['contacts_post']}', 
+                        email = '{$_M['form']['email']}', 
+                        source = 'ent' 
+                        WHERE id = {$id}
+                ";
 
-				$_M['form']['username'] = $_M['form']['phone'];
-				if($_M['form']['username']!=$session->get("phonetel")){
-					okinfo(-1, $_M['word']['telcheckfail']);
-				}
-				$session->del('phonecode');
-				$session->del('phonetime');
-				$session->del('phonetel');
+                DB::query($query);
+                $this->userclass->login_by_password($_M['form']['username'],  $_M['form']['password']);
+                okinfo($_M['url']['profile'], $turnovertext);
+            }else{
+                okinfo(-1, $_M['word']['regfail']);
+            }
+        }else{
+            switch($_M['config']['met_member_vecan']){
+                case 1:
+                    $pinok = load::sys_class('pin', 'new')->check_pin($_M['form']['code']);
+                    if(!$pinok && $_M['config']['met_memberlogin_code'] ){
+                        okinfo(-1, $_M['word']['membercode']);
+                    }
+                    if($this->userclass->register($_M['form']['username'], $_M['form']['password'], $_M['form']['username'],'',$info, 0)){
+                        $valid = load::mod_class('user/web/class/valid','new');
+                        if ($valid->get_email($_M['form']['username'])) {
+                            $this->userclass->login_by_password($_M['form']['username'],  $_M['form']['password']);
+                            okinfo($_M['url']['profile'], $_M['word']['js25']);
+                        } else {
+                            okinfo($_M['url']['login'], $_M['word']['emailfail']);
+                        }
+                    }else{
+                        okinfo(-1, $_M['word']['regfail']);
+                    }
+                    break;
+                case 3:
+                    $pinok = load::sys_class('pin', 'new')->check_pin($_M['form']['code']);
+                    if(!$pinok && $_M['config']['met_memberlogin_code'] ){
+                        okinfo(-1, $_M['word']['membercode']);
+                    }
+                    $session = load::sys_class('session', 'new');
+                    if($_M['form']['phonecode']!=$session->get("phonecode")){
+                        okinfo(-1, $_M['word']['phonecodeerror']);
+                    }
+                    if(time()>$session->get("phonetime")){
+                        okinfo(-1, $_M['word']['codetimeout']);
+                    }
 
-				if($this->userclass->register($_M['form']['username'], $_M['form']['password'], '',$_M['form']['username'],$info, 1)){
-                    $this->userclass->login_by_password($_M['form']['username'],  $_M['form']['password']);
-					okinfo($_M['url']['profile'], $_M['word']['regsuc']);
-				}else{
-					okinfo(-1, $_M['word']['regfail']);
-				}
-			break;
-			default :
-				if(!load::sys_class('pin', 'new')->check_pin($_M['form']['code']) && $_M['config']['met_memberlogin_code']){
-					okinfo(-1, $_M['word']['membercode']);
-				}
-				$valid = $_M['config']['met_member_vecan'] == 2?0:1;
-				$turnovertext=$_M['config']['met_member_vecan'] == 2?$_M['word']['js25']:$_M['word']['regsuc'];
-				if($this->userclass->register($_M['form']['username'], $_M['form']['password'], '','',$info, $valid)){
-					$this->userclass->login_by_password($_M['form']['username'],  $_M['form']['password']);
-					okinfo($_M['url']['profile'], $turnovertext);
-				}else{
-					okinfo(-1, $_M['word']['regfail']);
-				}
-			break;
-		}
+                    $_M['form']['username'] = $_M['form']['phone'];
+                    if($_M['form']['username']!=$session->get("phonetel")){
+                        okinfo(-1, $_M['word']['telcheckfail']);
+                    }
+                    $session->del('phonecode');
+                    $session->del('phonetime');
+                    $session->del('phonetel');
+
+                    if($this->userclass->register($_M['form']['username'], $_M['form']['password'], '',$_M['form']['username'],$info, 1)){
+                        $this->userclass->login_by_password($_M['form']['username'],  $_M['form']['password']);
+                        okinfo($_M['url']['profile'], $_M['word']['regsuc']);
+                    }else{
+                        okinfo(-1, $_M['word']['regfail']);
+                    }
+                    break;
+                default :
+                    if(!load::sys_class('pin', 'new')->check_pin($_M['form']['code']) && $_M['config']['met_memberlogin_code']){
+                        okinfo(-1, $_M['word']['membercode']);
+                    }
+                    $valid = $_M['config']['met_member_vecan'] == 2?0:1;
+                    $turnovertext=$_M['config']['met_member_vecan'] == 2?$_M['word']['js25']:$_M['word']['regsuc'];
+                    if($this->userclass->register($_M['form']['username'], $_M['form']['password'], '','',$info, $valid)){
+                        $this->userclass->login_by_password($_M['form']['username'],  $_M['form']['password']);
+                        okinfo($_M['url']['profile'], $turnovertext);
+                    }else{
+                        okinfo(-1, $_M['word']['regfail']);
+                    }
+                    break;
+            }
+        }
+
+
+
+
 	}
 
 	public function doemailvild() {
@@ -131,6 +168,18 @@ class register extends userweb {
 		echo json_encode(array(
 			'valid' => $valid
 		));
+	}
+
+    public function doemailok()
+    {
+        global $_M;
+        $valid = true;
+        if($this->userclass->get_user_by_useremail_sql($_M['form']['email'])){
+            $valid = false;
+        }
+        echo json_encode(array(
+            'valid' => $valid
+        ));
 	}
 
 	public function dophonecode() {

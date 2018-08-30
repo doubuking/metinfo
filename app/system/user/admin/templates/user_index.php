@@ -28,7 +28,7 @@ echo <<<EOT
 <!--
 EOT;
 foreach($this->grouplist as $val){
-echo <<<EOT
+    echo <<<EOT
 -->
 	<option value="{$val['id']}">{$val['name']}</option>
 <!--

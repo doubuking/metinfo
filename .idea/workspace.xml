@@ -2,51 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a690bf9f-ab16-4839-8faa-4d952577935f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/para/paralist_10_cn.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/templates/_06e60376.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/templates/_1766e344.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/templates/_21999ac9.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/templates/_6a84831a.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/templates/_832c77ca.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/templates/_857d637f.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/templates/_a5db1cae.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/templates/_e270ad6f.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/templates/_f6ebb0e9.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/templates/_fee3ef64.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app/met_template/admin/ui_list" afterPath="$PROJECT_DIR$/app/app/met_template/admin/ui_list" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/system/download/admin/download_admin.class.php" afterPath="$PROJECT_DIR$/app/system/download/admin/download_admin.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/system/download/admin/templates/product_add.php" afterPath="$PROJECT_DIR$/app/system/download/admin/templates/product_add.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/system/user/web/paygroup.class.php" afterPath="$PROJECT_DIR$/app/system/user/web/paygroup.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/column.php" afterPath="$PROJECT_DIR$/cache/column.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/templates/_5c357585.php" afterPath="$PROJECT_DIR$/cache/templates/_5c357585.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/templates/_7f9c17bd.php" afterPath="$PROJECT_DIR$/cache/templates/_7f9c17bd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/templates/_83ab0801.php" afterPath="$PROJECT_DIR$/cache/templates/_83ab0801.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/templates/_c06c885a.php" afterPath="$PROJECT_DIR$/cache/templates/_c06c885a.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/templates/mui169_36_cn.php" afterPath="$PROJECT_DIR$/cache/templates/mui169_36_cn.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/templates/mui169_39_cn.php" afterPath="$PROJECT_DIR$/cache/templates/mui169_39_cn.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/templates/mui169_42_cn.php" afterPath="$PROJECT_DIR$/cache/templates/mui169_42_cn.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sitemap.xml" afterPath="$PROJECT_DIR$/sitemap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mui169/cache/index_cn.css" afterPath="$PROJECT_DIR$/templates/mui169/cache/index_cn.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mui169/ui/img_list_detail/met_16_1/index.css" afterPath="$PROJECT_DIR$/templates/mui169/ui/img_list_detail/met_16_1/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mui169/ui/img_list_detail/met_16_1/index.js" afterPath="$PROJECT_DIR$/templates/mui169/ui/img_list_detail/met_16_1/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mui169/ui/img_list_detail/met_16_1/index.php" afterPath="$PROJECT_DIR$/templates/mui169/ui/img_list_detail/met_16_1/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mui169/ui/img_list_detail/met_16_1/install.json" afterPath="$PROJECT_DIR$/templates/mui169/ui/img_list_detail/met_16_1/install.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mui169/ui/news_list/met_36_2/index.css" afterPath="$PROJECT_DIR$/templates/mui169/ui/news_list/met_36_2/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mui169/ui/news_list/met_36_2/index.php" afterPath="$PROJECT_DIR$/templates/mui169/ui/news_list/met_36_2/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mui169/ui/news_list/met_36_2/install.json" afterPath="$PROJECT_DIR$/templates/mui169/ui/news_list/met_36_2/install.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mui169/ui/news_list_detail/met_16_1/index.css" afterPath="$PROJECT_DIR$/templates/mui169/ui/news_list_detail/met_16_1/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/templates/_1655241b.php" afterPath="$PROJECT_DIR$/cache/templates/_1655241b.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/templates/_a65c4f07.php" afterPath="$PROJECT_DIR$/cache/templates/_a65c4f07.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mui169/ui/news_list_detail/met_16_1/index.php" afterPath="$PROJECT_DIR$/templates/mui169/ui/news_list_detail/met_16_1/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mui169/ui/news_list_detail/met_16_1/install.json" afterPath="$PROJECT_DIR$/templates/mui169/ui/news_list_detail/met_16_1/install.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mui169/ui/para_search/met_16_1/index.css" afterPath="$PROJECT_DIR$/templates/mui169/ui/para_search/met_16_1/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mui169/ui/para_search/met_16_1/install.json" afterPath="$PROJECT_DIR$/templates/mui169/ui/para_search/met_16_1/install.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mui169/ui/product_list_page/met_11_1/index.css" afterPath="$PROJECT_DIR$/templates/mui169/ui/product_list_page/met_11_1/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mui169/ui/product_list_page/met_11_1/index.php" afterPath="$PROJECT_DIR$/templates/mui169/ui/product_list_page/met_11_1/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mui169/ui/product_list_page/met_11_1/install.json" afterPath="$PROJECT_DIR$/templates/mui169/ui/product_list_page/met_11_1/install.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mui169/ui/subcolumn_nav/met_16_1/index.css" afterPath="$PROJECT_DIR$/templates/mui169/ui/subcolumn_nav/met_16_1/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mui169/ui/subcolumn_nav/met_16_1/install.json" afterPath="$PROJECT_DIR$/templates/mui169/ui/subcolumn_nav/met_16_1/install.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mui169/ui/video/met_16_1/index.css" afterPath="$PROJECT_DIR$/templates/mui169/ui/video/met_16_1/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mui169/ui/video/met_16_1/install.json" afterPath="$PROJECT_DIR$/templates/mui169/ui/video/met_16_1/install.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -81,17 +40,17 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/mui169/ui/news_list_detail/met_16_1/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="151" column="10" lean-forward="true" selection-start-line="151" selection-start-column="10" selection-end-line="151" selection-end-column="10" />
+            <state relative-caret-position="355">
+              <caret line="185" column="31" lean-forward="true" selection-start-line="185" selection-start-column="31" selection-end-line="185" selection-end-column="31" />
               <folding>
                 <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <marker date="1535709518807" expanded="true" signature="5838:5866" ph="..." />
-                <marker date="1535709518807" expanded="true" signature="6133:6145" ph="..." />
-                <marker date="1535709518807" expanded="true" signature="6351:6363" ph="..." />
-                <marker date="1535709518807" expanded="true" signature="6569:6581" ph="..." />
+                <marker date="1535711231806" expanded="true" signature="5838:5866" ph="..." />
+                <marker date="1535711231806" expanded="true" signature="6133:6145" ph="..." />
+                <marker date="1535711231806" expanded="true" signature="6351:6363" ph="..." />
+                <marker date="1535711231806" expanded="true" signature="6569:6581" ph="..." />
               </folding>
             </state>
           </provider>
@@ -364,10 +323,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="165" />
-    <option name="y" value="58" />
-    <option name="width" value="1452" />
-    <option name="height" value="865" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -1258,7 +1217,7 @@
       <workItem from="1535096080687" duration="8420000" />
       <workItem from="1535333336143" duration="3575000" />
       <workItem from="1535350286545" duration="656000" />
-      <workItem from="1535594119640" duration="45777000" />
+      <workItem from="1535594119640" duration="47458000" />
     </task>
     <task id="LOCAL-00001" summary="添加注释">
       <created>1533537458466</created>
@@ -1278,12 +1237,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="325717000" />
+    <option name="totallyTimeSpent" value="327398000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="165" y="58" width="1452" height="865" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1954023" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14498934" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14642082" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1291,7 +1251,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18467852" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14642082" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27982646" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2243,17 +2203,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/mui169/ui/news_list_detail/met_16_1/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="151" column="10" lean-forward="true" selection-start-line="151" selection-start-column="10" selection-end-line="151" selection-end-column="10" />
+        <state relative-caret-position="355">
+          <caret line="185" column="31" lean-forward="true" selection-start-line="185" selection-start-column="31" selection-end-line="185" selection-end-column="31" />
           <folding>
             <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1535709518807" expanded="true" signature="5838:5866" ph="..." />
-            <marker date="1535709518807" expanded="true" signature="6133:6145" ph="..." />
-            <marker date="1535709518807" expanded="true" signature="6351:6363" ph="..." />
-            <marker date="1535709518807" expanded="true" signature="6569:6581" ph="..." />
+            <marker date="1535711231806" expanded="true" signature="5838:5866" ph="..." />
+            <marker date="1535711231806" expanded="true" signature="6133:6145" ph="..." />
+            <marker date="1535711231806" expanded="true" signature="6351:6363" ph="..." />
+            <marker date="1535711231806" expanded="true" signature="6569:6581" ph="..." />
           </folding>
         </state>
       </provider>

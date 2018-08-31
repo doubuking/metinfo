@@ -909,35 +909,28 @@ if($data['title']){
     function deldiv(e) {
         $(e).parent().parent().remove();
     }
-
+    var valimobile = false;
+    var valiphone = false;
 
     function check(from) {
-//        var valimobile = false;
-//        var valiphone = false;
-//        $("form :input").blur(function (e) {
-//            console.log($(e).attr('name'))
-//            if($(e).attr('name') == 'phone[]'){
-//                valimobile = validatemobile(e)
-//            }
-//            if($(e).attr('name') == 'email[]'){
-//                valiphone = validateemail(e)
-//            }
-//        });
-//        console.log(valimobile);
-//        console.log(valiphone);
+//        alert(111);
+        $("form :input").blur();
+
+        console.log(valimobile);
+        console.log(valiphone);
+        if(valimobile && valiphone){
+            return true
+        }
+        return false;
+
+//        var aa= $(form).childrens().find('.form-group .form-control').attr(name="phone[]");
+//         validatemobile(aa)
 //
-//        if(valimobile && valiphone){
-//            return true
-//        }
+//        var bb= $(form).childrens().find('.form-group .form-control').attr(name='email[]');
+//
+//        validateemail(bb);
+//
 //        return false;
-
-        var aa= $(form).parents().find('.form-group .form-control').attr('phone[]');
-        return validatemobile(aa)
-
-        var bb= $(form).parents().find('.form-group .form-control').attr('email[]');
-
-        return validateemail(bb);
-
     }
 
 
@@ -947,11 +940,13 @@ if($data['title']){
         if(mobile.length==0)
         {
             $(e).next(".error").text('手机号码不能为空！').show();
+            valimobile = false;
             return false;
         }
         if(mobile.length!=11)
         {
             $(e).next(".error").text('请输入有效的手机号码，需是11位！').show();
+            valimobile = false;
             return false;
         }
 
@@ -959,10 +954,12 @@ if($data['title']){
         if(!myreg.test(mobile))
         {
             $(e).next(".error").text('请输入有效的手机号码！').show();
+            valimobile = false;
             return false;
         }
 
         $(e).next(".error").hide();
+        valimobile = true;
         return true;
     }
 
@@ -973,9 +970,11 @@ if($data['title']){
         if(!myreg.test(obj))
         {
             $(e).next(".error").text('请输入有效的邮箱').show();
+            valiphone = false;
             return false;
         }
         $(e).next(".error").hide();
+        valiphone = true;
         return true;
     }
 

@@ -31,17 +31,20 @@
 								<i class="icon wb-eye m-r-5" aria-hidden="true"></i>
 								{$data.hits}
 							</span>
+
+                    <div class="tag">
+                        <span>{$data.tagname}</span>
+                        <list data="$data[taglist]" name="$tag" num="$ui[tag_num]">
+                            <a href="{$tag.url}" title="{$tag.name}">{$tag.name}</a>
+                        </list>
+                    </div>
                 </div>
+
             </section>
             <section class="met-editor clearfix">
                 {$data.content}
             </section>
-            <div class="tag">
-                <span>{$data.tagname}</span>
-                <list data="$data[taglist]" name="$tag" num="$ui[tag_num]">
-                    <a href="{$tag.url}" title="{$tag.name}">{$tag.name}</a>
-                </list>
-            </div>
+
             <pagination/>
 
             <if value="$_M['form']['pageset']">

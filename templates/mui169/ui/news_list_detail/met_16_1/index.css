@@ -45,3 +45,5 @@ $uicss .met-editor {
 .met-page a:hover{color:$thirdcolor$ !important;color:$hovercolor$ !important;}
 .met-page .pagination li a{white-space: nowrap;text-overflow: ellipsis;
     overflow: hidden;}
+
+.error{color: orangered}

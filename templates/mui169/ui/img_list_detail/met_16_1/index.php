@@ -5,13 +5,13 @@
 		<div class="row">
 			<if value="$_M['form']['pageset']">
 	            <if value="$sidebar">
-	            <div class="col-md-9 met-showimg-body" boxmh-mh m-id='{$ui.mid}'>
+	            <div class="col-md-9 met-showimg-body <if value='!$ui[position] && $ui[has][sidebar]'>pright</if>"  boxmh-mh m-id='{$ui.mid}'>
 	            <else/>
 	                <div class="met-showimg-body col-md-10 offset-md-1" boxmh-mh m-id='{$ui.mid}'>
 	            </if>
 	            <else/>
 	            <if value="$ui[has][sidebar]">
-	            <div class="col-md-9 met-showimg-body" boxmh-mh m-id='{$ui.mid}'>
+	            <div class="col-md-9 met-showimg-body <if value='!$ui[position] && $ui[has][sidebar]'>pright</if>" boxmh-mh m-id='{$ui.mid}'>
 	            <else/>
 	                <div class="met-showimg-body col-md-10 offset-md-1" boxmh-mh m-id='{$ui.mid}'>
 	            </if>

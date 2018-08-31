@@ -7,7 +7,7 @@
         "ui_description": "产品列表页（简洁风格）",
         "ui_issue": "0",
         "ui_order": "1",
-        "ui_version": "1.8",
+        "ui_version": "1.9",
         "ui_creater": "metinfo",
         "ui_company": "metinfo"
     },
@@ -355,6 +355,51 @@
             "uip_title": "区块内容底部边框线颜色",
             "uip_description": "默认e0e0e0",
             "uip_order": "22",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "product_list_page",
+            "ui_name": "met_11_1",
+            "uip_type": "2",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "padding",
+            "uip_key": "padding-1",
+            "uip_value": "",
+            "uip_default": "70",
+            "uip_title": "电脑端内边距设置",
+            "uip_description": "默认为70px",
+            "uip_order": "23",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "product_list_page",
+            "ui_name": "met_11_1",
+            "uip_type": "2",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "padding_p",
+            "uip_key": "padding_p-1",
+            "uip_value": "",
+            "uip_default": "50",
+            "uip_title": "ipad端内边距设置",
+            "uip_description": "默认为50px",
+            "uip_order": "24",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "product_list_page",
+            "ui_name": "met_11_1",
+            "uip_type": "2",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "padding_m",
+            "uip_key": "padding_m-1",
+            "uip_value": "",
+            "uip_default": "20",
+            "uip_title": "手机端内边距设置",
+            "uip_description": "默认为20px",
+            "uip_order": "25",
             "uip_hidden": "1"
         }
     ]

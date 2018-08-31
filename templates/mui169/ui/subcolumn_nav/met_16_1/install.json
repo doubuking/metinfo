@@ -7,7 +7,7 @@
         "ui_description": "",
         "ui_issue": "0",
         "ui_order": "1",
-        "ui_version": "2.0",
+        "ui_version": "2.1",
         "ui_creater": "metinfo",
         "ui_company": "metinfo"
     },
@@ -146,6 +146,51 @@
             "uip_description": "",
             "uip_order": "8",
             "uip_hidden": "0"
+        },
+        {
+            "parent_name": "subcolumn_nav",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "downbg",
+            "uip_key": "downbg",
+            "uip_value": "",
+            "uip_default": "#ffffff",
+            "uip_title": "下拉的三级栏目背景色",
+            "uip_description": "默认#ffffff",
+            "uip_order": "9",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "subcolumn_nav",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "downtxt",
+            "uip_key": "downtxt",
+            "uip_value": "",
+            "uip_default": "",
+            "uip_title": "下拉的三级栏目文字颜色",
+            "uip_description": "默认为标题颜色",
+            "uip_order": "10",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "subcolumn_nav",
+            "ui_name": "met_16_1",
+            "uip_type": "9",
+            "uip_style": "0",
+            "uip_select": "",
+            "uip_name": "hoverdowntxt",
+            "uip_key": "hoverdowntxt",
+            "uip_value": "",
+            "uip_default": "",
+            "uip_title": "下拉的三级栏目鼠标经过文字颜色",
+            "uip_description": "默认为鼠标经过颜色和搜索框选中颜色",
+            "uip_order": "11",
+            "uip_hidden": "1"
         }
     ]
 }

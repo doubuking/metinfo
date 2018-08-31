@@ -86,13 +86,23 @@
         $$v = $v;
 ?>	
 						<li role="presentation"   >
-							<a href="javascript:void(0);" index="<?php echo $v['_index'];?>"  role="tab" class="    <?php if($v[_index]==0){ ?>active<?php } ?>">
+							<a href="javascript:void(0);" index="<?php echo $v['_index'];?>"  role="tab" class="my-icon     <?php if($v[_index]==0){ ?>active<?php } ?>">
 								<span class="time">
 									<span class="day"><?php echo $v['original_updatetime'];?></span>
                                 </span>
-                                <span class="description">
-									<?php echo met_substr($v['description'],0,$ui['subtitlenum']);?>...
-								</span>
+                                
+                                	    <?php if($ui['right_desc']){ ?>
+                                		<span class="description">
+                                			<?php echo met_substr($v['description'],0,$ui['subtitlenum']);?>...
+                                		</span>
+                                	<?php }else{ ?>
+	                                	<a href="<?php echo $v['url'];?>" title="<?php echo $v['title'];?>" <?php echo $g['urlnew'];?>>
+	                                		<span class="description">
+											<?php echo met_substr($v['description'],0,$ui['subtitlenum']);?>...
+											</span>
+										</a>
+									<?php } ?>
+								
 							</a>
 						</li>
 					<?php endforeach;?>

@@ -111,3 +111,6 @@ $uicss .met-page{border:none;}
 $uicss .tags{font-size:14px;color:$tagcolor$;display: block;text-align:left;}
 $uicss .tags a{color:$tagcolor$;padding:5px;}
 $uicss .tags a:hover{color:$thirdcolor$;color:$hovercolor$;}
+@media (min-width:768px){
+  $uicss .met-showimg-body.pright{float: right;}
+}

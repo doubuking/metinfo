@@ -2,12 +2,12 @@
     "ui": {
         "parent_name": "img_list_detail",
         "ui_name": "met_16_1",
-        "ui_page": "|showimg|",
+        "ui_page": "|img|",
         "ui_title": "图片模块详情",
         "ui_description": "图片模块详情",
         "ui_issue": "0",
         "ui_order": "1",
-        "ui_version": "1.7",
+        "ui_version": "1.8",
         "ui_creater": "metinfo",
         "ui_company": "metinfo"
     },
@@ -206,6 +206,21 @@
             "uip_description": "默认为模板配色调",
             "uip_order": "13",
             "uip_hidden": "1"
+        },
+        {
+            "parent_name": "img_list_detail",
+            "ui_name": "met_16_1",
+            "uip_type": "4",
+            "uip_style": "0",
+            "uip_select": "左$T$1$M$右$T$0",
+            "uip_name": "position",
+            "uip_key": "position-1",
+            "uip_value": "",
+            "uip_default": "1",
+            "uip_title": "图片模块列表位置",
+            "uip_description": "搭配侧边栏时生效",
+            "uip_order": "13",
+            "uip_hidden": "0"
         }
     ]
 }

@@ -32,13 +32,23 @@
 
 					<tag action="list" cid="$ui['select']" num="$ui['right_list_num']" type="$ui['type']" >	
 						<li role="presentation"   >
-							<a href="javascript:void(0);" index="{$v._index}"  role="tab" class="<if value='$v[_index] eq 0'>active</if>">
+							<a href="javascript:void(0);" index="{$v._index}"  role="tab" class="my-icon <if value='$v[_index] eq 0'>active</if>">
 								<span class="time">
 									<span class="day">{$v.original_updatetime}</span>
                                 </span>
-                                <span class="description">
-									{$v.description|met_substr:0,$ui['subtitlenum']}...
-								</span>
+                                
+                                	<if value="$ui['right_desc']">
+                                		<span class="description">
+                                			{$v.description|met_substr:0,$ui['subtitlenum']}...
+                                		</span>
+                                	<else/>
+	                                	<a href="{$v.url}" title="{$v.title}" {$g.urlnew}>
+	                                		<span class="description">
+											{$v.description|met_substr:0,$ui['subtitlenum']}...
+											</span>
+										</a>
+									</if>
+								
 							</a>
 						</li>
 					</tag>

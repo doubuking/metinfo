@@ -8,18 +8,14 @@ $uicss.met-index-body{
   background-repeat: no-repeat;
   position: relative;
 }
-
 /*平板*/
 @media (max-width: 768px){
     $uicss.met-index-body{padding: $padding_paid$px 0px}
 }
-
 /*手机*/
 @media (max-width: 767px){
     $uicss.met-index-body{padding: $padding_mobile$px 0px}
 }
-
-
 $uicss h2.title {
     color:$firstcolor$;
     color:$m_title_color$;
@@ -32,9 +28,6 @@ $uicss h2.title {
     position: relative;
     text-align: center;
 }
-
-
-
 $uicss .line_news .time, .time {
   color: $time_color$;
   font-size: $time_size$px;
@@ -42,7 +35,6 @@ $uicss .line_news .time, .time {
   display: block;
   margin: 0;
 }
-
 $uicss .news-tabs__title.h2 {
   margin-top: 0;
 }
@@ -50,8 +42,7 @@ $uicss .header_news_panel .nav-tabs li {
   float: none;
   margin-bottom: 20px;
 }
-
-$uicss .header_news_panel .nav-tabs li a:before {
+$uicss .header_news_panel .nav-tabs li a.my-icon:before {
   display: block;
   position: absolute;
   content: "";
@@ -63,7 +54,6 @@ $uicss .header_news_panel .nav-tabs li a:before {
   background-size: 147px, 138px;
   background-repeat: no-repeat;
 }
-
 $uicss .header_news_panel .nav > li > a:focus,
 $uicss .header_news_panel .nav > li > a:hover {
   color: $thirdcolor$;
@@ -71,8 +61,7 @@ $uicss .header_news_panel .nav > li > a:hover {
   background: transparent;
   border-color: transparent;
 }
-
-$uicss .header_news_panel .nav-tabs li > a.active:before {
+$uicss .header_news_panel .nav-tabs li > a.my-icon.active:before {
   background: $thirdcolor$;
   background: $dec_select_color$;
   -moz-border-radius: 50px;
@@ -85,15 +74,12 @@ $uicss .header_news_panel .nav-tabs li > a.active:before {
   background-size: 147px, 138px;
   background-repeat: no-repeat;
 }
-
-
 $uicss .header_news_panel .nav-tabs > li> a.active {
   color: $thirdcolor$;
   color: $dec_select_color$;
   background-color: transparent;
   border: none;
 }
-
 $uicss .header_news_panel .nav-tabs > li > a {
   color: $secondcolor$;
   color: $dec_color$;
@@ -104,21 +90,15 @@ $uicss .nav-tabs > li > a {
   -webkit-transition-property: color;
   transition-property: color;
 }
-
 $uicss .header_news_panel .nav-tabs {
   border: none;
   border-left: 2px solid #919599;
 }
-
-
 $uicss .tab-pane {
   position: relative;
   overflow: hidden;
   width: 100%;
 }
-
-
-
 $uicss .tab-pane__title {
   font-size: $title_size$px;
   font-family: "Roboto", sans-serif;
@@ -155,19 +135,14 @@ $uicss .tab-pane__img {
 $uicss .tab-pane__img:hover{
   transform: scale(1.2);  
 }
-
 $uicss .header_news_panel {
   padding: 20px 0;
   color: #ffffff;
 }
-
-
 $uicss .btn-more { padding: 5px 15px; border: 1px solid; color: $thirdcolor$; color: $hovercolor$; display: block; width: 110px; text-align: center; margin: 30px auto 0 auto; -webkit-transition: all .6s cubic-bezier(.165, .84, .44, 1) 0ms; transition: all .6s cubic-bezier(.165, .84, .44, 1) 0ms }
 $uicss .btn-more .fa { padding-left: 10px }
 $uicss .btn-more:hover { background: $thirdcolor$; background: $hovercolor$;color: $hover_btn_color$; padding-left: 15px;  border-color: $thirdcolor$; border-color: $hovercolor$; text-decoration: none }
 $uicss .btn-more:hover .fa { color: $hover_btn_color$; }
-
-
 @media screen and (max-width: 1199px) {
   $uicss .news__desc {
     padding-bottom: 4px;
@@ -271,7 +246,7 @@ $uicss .btn-more:hover .fa { color: $hover_btn_color$; }
     font-size: 8px;
   }
 
-  $uicss  .header_news_panel .nav-tabs li a:before {
+  $uicss  .header_news_panel .nav-tabs li a.my-icon:before {
     display: block;
     position: absolute;
     content: "";

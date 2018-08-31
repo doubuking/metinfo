@@ -56,9 +56,9 @@ $uicss .about-video .about-text .svg-title {
   transform: translateZ(0);
   background-repeat: no-repeat;
   opacity: 0;
-  color: #fff;
+  color: $videocolor$;
   transform: translate3d(0px, 40%, 0px);
-  text-shadow: 0 1px 1px #fff;
+  text-shadow: 0 1px 1px $videocolor$;
 }
 $uicss .about-video .about-text .svg-subtitle {
   font-size: 46px;
@@ -71,8 +71,8 @@ $uicss .about-video .about-text .svg-subtitle {
   background-repeat: no-repeat;
   transform: translate3d(0px, 40%, 0px);
   opacity: 0;
-  color: #fff;
-  text-shadow: 0 1px 1px #fff;
+  color: $videocolor$;
+  text-shadow: 0 1px 1px $videocolor$;
 }
 $uicss .about-video .about-text .video-play {
   width: 70px;
@@ -92,6 +92,8 @@ $uicss .about-video .about-text .video-play:hover {
   transition: all 218ms ease-out;
 }
 $uicss .about-video .about-text .video-btn {
+  background-color: $btnbgcolor$;border-color:  $btnbgcolor$;
+  color: $btntxtcolor$;
   opacity: 0;
   border-radius:4px;padding: 7px 18px;font-size:18px;
 }

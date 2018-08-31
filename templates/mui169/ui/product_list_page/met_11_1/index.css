@@ -1,5 +1,17 @@
 /*产品模块*/
-$uicss{padding: 30px 0;background:$bodybgcolor$;background:$bgcolor$;}
+$uicss{padding: 30px 0;background:$bodybgcolor$;background:$bgcolor$;padding: $padding$px 0;}
+@media(max-width: 768px)
+{
+	$uicss{
+		padding: $padding_p$px 0;
+	}
+}
+@media(max-width: 767px)
+{
+	$uicss{
+		padding: $padding_m$px 0;
+	}
+}
 $uicss .less-page-content {  }
 $uicss .card-header a { display: block; position: relative; }
 $uicss .card-header a .mask { position: absolute; width: 100%; height: 100%; -webkit-transition: all .66s cubic-bezier(.17, .84, .44, 1); transition: all .66s cubic-bezier(.17, .84, .44, 1); z-index: 2; }
@@ -29,9 +41,6 @@ $uicss .card-title .btn:hover{
 }
 $uicss .card-title .price {  color: #c30a18; }
 @media (max-width:767px){
-	$uicss{
-		padding:10px 0;
-	}
     $uicss .card-title{padding:10px !important;}
     $uicss .less-page-content ul{margin:0;}
     $uicss .less-page-content li{padding-left: 5px !important;padding-right: 5px !important;margin-bottom:10px;}

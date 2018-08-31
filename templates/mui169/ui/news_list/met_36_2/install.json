@@ -5,12 +5,11 @@
         "ui_page": "|index|",
         "ui_title": "首页新闻区块",
         "ui_description": "首页新闻区块",
-        "ui_issue": "1",
+        "ui_issue": "0",
         "ui_order": "2",
-        "ui_version": "1.0",
+        "ui_version": "1.1",
         "ui_creater": "metinfo",
-        "ui_company": "metinfo",
-        "ui_edittime": "1529056162"
+        "ui_company": "metinfo"
     },
     "config": [
         {
@@ -25,7 +24,8 @@
             "uip_default": "1",
             "uip_title": "区块显示开关",
             "uip_description": "当前UI区块的开启关闭设置，关闭后可以在可视化编辑中开启",
-            "uip_order": "0"
+            "uip_order": "0",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "news_list",
@@ -39,7 +39,8 @@
             "uip_default": "新闻资讯",
             "uip_title": "区块标题",
             "uip_description": "为0的时候默认隐藏",
-            "uip_order": "1"
+            "uip_order": "1",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "news_list",
@@ -53,7 +54,8 @@
             "uip_default": "",
             "uip_title": "区块栏目选择",
             "uip_description": "选择相应的栏目会展示对应的内容",
-            "uip_order": "2"
+            "uip_order": "2",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "news_list",
@@ -67,7 +69,8 @@
             "uip_default": "all",
             "uip_title": "区块内容展示类型",
             "uip_description": "默认展示全部内容",
-            "uip_order": "3"
+            "uip_order": "3",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "news_list",
@@ -81,7 +84,8 @@
             "uip_default": "70",
             "uip_title": "区块电脑端内边距",
             "uip_description": "默认为70px",
-            "uip_order": "4"
+            "uip_order": "4",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "news_list",
@@ -95,7 +99,8 @@
             "uip_default": "50",
             "uip_title": "区块平板端内边距",
             "uip_description": "默认为50px",
-            "uip_order": "5"
+            "uip_order": "5",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "news_list",
@@ -109,7 +114,8 @@
             "uip_default": "20",
             "uip_title": "区块手机端内边距",
             "uip_description": "默认为20px",
-            "uip_order": "6"
+            "uip_order": "6",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "news_list",
@@ -123,7 +129,8 @@
             "uip_default": "",
             "uip_title": "区块背景颜色",
             "uip_description": "默认继承网站背景色",
-            "uip_order": "7"
+            "uip_order": "7",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "news_list",
@@ -137,7 +144,8 @@
             "uip_default": "",
             "uip_title": "区块背景图片",
             "uip_description": "上传区块背景图会将区块背景色覆盖，建议上传宽1920px,高自定义的图片",
-            "uip_order": "8"
+            "uip_order": "8",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "news_list",
@@ -151,7 +159,8 @@
             "uip_default": "790",
             "uip_title": "区块缩略图宽",
             "uip_description": "默认为790px",
-            "uip_order": "9"
+            "uip_order": "9",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "news_list",
@@ -165,7 +174,8 @@
             "uip_default": "465",
             "uip_title": "区块缩略图高",
             "uip_description": "默认为465px",
-            "uip_order": "10"
+            "uip_order": "10",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "news_list",
@@ -179,7 +189,8 @@
             "uip_default": "20",
             "uip_title": "内容标题显示字数",
             "uip_description": "默认为20个",
-            "uip_order": "11"
+            "uip_order": "11",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "news_list",
@@ -193,7 +204,8 @@
             "uip_default": "60",
             "uip_title": "内容描述显示字数",
             "uip_description": "默认为60个",
-            "uip_order": "12"
+            "uip_order": "12",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "news_list",
@@ -207,7 +219,8 @@
             "uip_default": "4",
             "uip_title": "右侧内容展示条数",
             "uip_description": "默认为4条",
-            "uip_order": "13"
+            "uip_order": "13",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "news_list",
@@ -221,7 +234,8 @@
             "uip_default": "更多",
             "uip_title": "底部按钮文本",
             "uip_description": "区块底部按钮文本",
-            "uip_order": "14"
+            "uip_order": "14",
+            "uip_hidden": "0"
         },
         {
             "parent_name": "news_list",
@@ -235,7 +249,8 @@
             "uip_default": "",
             "uip_title": "区块标题字体颜色",
             "uip_description": "默认继承模板主色调",
-            "uip_order": "15"
+            "uip_order": "15",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "news_list",
@@ -249,7 +264,8 @@
             "uip_default": "18",
             "uip_title": "区块标题字体尺寸",
             "uip_description": "默认为18px",
-            "uip_order": "16"
+            "uip_order": "16",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "news_list",
@@ -263,7 +279,8 @@
             "uip_default": "700",
             "uip_title": "区块标题字体粗细",
             "uip_description": "默认为700",
-            "uip_order": "17"
+            "uip_order": "17",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "news_list",
@@ -277,7 +294,8 @@
             "uip_default": "#959595",
             "uip_title": "右侧内容时间字体颜色",
             "uip_description": "默认为#959595",
-            "uip_order": "18"
+            "uip_order": "18",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "news_list",
@@ -291,7 +309,8 @@
             "uip_default": "12",
             "uip_title": "右侧内容时间字体尺寸",
             "uip_description": "默认为12px",
-            "uip_order": "19"
+            "uip_order": "19",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "news_list",
@@ -305,7 +324,8 @@
             "uip_default": "",
             "uip_title": "右侧内容描述字体颜色",
             "uip_description": "默认继承模板副色调",
-            "uip_order": "20"
+            "uip_order": "20",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "news_list",
@@ -319,7 +339,8 @@
             "uip_default": "10",
             "uip_title": "右侧内容描述字体尺寸",
             "uip_description": "默认为10px",
-            "uip_order": "21"
+            "uip_order": "21",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "news_list",
@@ -333,7 +354,8 @@
             "uip_default": "",
             "uip_title": "右侧内容描述悬浮颜色",
             "uip_description": "默认继承模板配色调",
-            "uip_order": "22"
+            "uip_order": "22",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "news_list",
@@ -347,7 +369,8 @@
             "uip_default": "",
             "uip_title": "右侧内容描述选中颜色",
             "uip_description": "默认继承模板配色调",
-            "uip_order": "23"
+            "uip_order": "23",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "news_list",
@@ -361,7 +384,8 @@
             "uip_default": "",
             "uip_title": "底部按钮字体颜色，悬浮背景、边框颜色",
             "uip_description": "默认继承模板配色调",
-            "uip_order": "24"
+            "uip_order": "24",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "news_list",
@@ -375,7 +399,8 @@
             "uip_default": "#ffffff",
             "uip_title": "底部按钮悬浮字体颜色",
             "uip_description": "默认为#ffffff",
-            "uip_order": "25"
+            "uip_order": "25",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "news_list",
@@ -389,7 +414,8 @@
             "uip_default": "",
             "uip_title": "内容标题字体颜色",
             "uip_description": "默认继承模板主色调",
-            "uip_order": "26"
+            "uip_order": "26",
+            "uip_hidden": "1"
         },
         {
             "parent_name": "news_list",
@@ -403,7 +429,23 @@
             "uip_default": "25",
             "uip_title": "内容标题字体尺寸",
             "uip_description": "默认为25px",
-            "uip_order": "27"
+            "uip_order": "27",
+            "uip_hidden": "1"
+        },
+        {
+            "parent_name": "news_list",
+            "ui_name": "met_36_2",
+            "uip_type": "4",
+            "uip_style": "0",
+            "uip_select": "链接跳转$T$0$M$切换图片$T$1",
+            "uip_name": "right_desc",
+            "uip_key": "right_desc",
+            "uip_value": "",
+            "uip_default": "1",
+            "uip_title": "右侧描述选择点击功能",
+            "uip_description": "默认为切换图片",
+            "uip_order": "28",
+            "uip_hidden": "0"
         }
     ]
 }

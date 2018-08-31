@@ -39,3 +39,6 @@ $uicss .type-order ul li{height:40px;line-height:40px;}
 $uicss .type-order .attr-name{height:40px;line-height:40px;white-space: nowrap;position:relative;overflow: hidden;}
 $uicss .type-order .attr-value a{color:$secondcolor$;color:$attr_vtextcolor$;}
 $uicss .type-order .attr-value a:hover,$uicss .type-order ul li.para_select_option a{color:$thirdcolor$;color:$hovercolor$;}
+@media (max-width: 480px){
+$uicss .pricesearch{margin-top: 10px;display:block;}
+}

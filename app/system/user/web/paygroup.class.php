@@ -38,8 +38,6 @@ class paygroup extends web{
                 $data['attach']         = base64_encode(jsonencode($value));
             }
         }
-        var_dump($data);
-        die();
         $payhtml = $payclass->createPayForm($data);
         echo $payhtml;
         die();

@@ -53,6 +53,7 @@ class download_admin extends news_admin {
 		$a = 'doaddsave';
 		$class_option = $this->class_option($this->module);
 		$access_option = $this->access_option('access');
+		$access_option_dowload = $this->access_option('downloadaccess');
 		$_M['url']['help_tutorials_helpid']='98';
 		require $this->template('own/product_add');
 	}
@@ -222,7 +223,9 @@ class download_admin extends news_admin {
 		//$list[description]=str_replace(' ','',$list[description]);
 		$a = 'doeditorsave';
 		$class_option = $this->class_option($this->module);
+
 		$access_option = $this->access_option('access',$list['access']);
+        $access_option_dowload = $this->access_option('downloadaccess',$list['downloadaccess']);
 		$_M['url']['help_tutorials_helpid']='98';
 		require $this->template('own/product_add');
 	}

@@ -82,14 +82,30 @@
                 <h5 style="cursor: pointer" onclick="addform()">{$word.Addattendants}</h5>
             </div>
             <div class="modal-body">
-                <form method="POST" class="met-form met-form-validation" enctype="multipart/form-data" action="{$url.site}activity/savavity.php?action=add&lang={$M['lang']} ">
+                <form method="POST" onsubmit="return check(this)" class="met-form met-form-validation" enctype="multipart/form-data" action="{$url.site}activity/savavity.php?action=add&lang={$M['lang']} ">
                     <input type="hidden" name="lang" value="{$_M['lang']}">
                     <input type="hidden" name="activity_id" value="{$_M['activity_id']}">
                     <div class="form-groups" >
-                        <h5>{$word.Attendantsinfo}</h5>
-                        <div class="form-group"><input name="name[]" class="form-control" type="text" placeholder="{$word.Name} "></div>
-                        <div class="form-group"><input name="phone[]" class="form-control" type="text" placeholder="{$word.Phone} "></div>
-                        <div class="form-group"><input name="email[]" class="form-control" type="text" placeholder="{$word.Email}"></div>
+
+
+                            <div>
+                                <span>{$word.Attendantsinfo}</span>
+                            </div>
+                            <div class="form-group">
+                                <input name="name[]" class="form-control" required type="text" placeholder="{$word.Name} ">
+                                <span class="error"  style="display:none"></span>
+                            </div>
+                            <div class="form-group">
+                                <input name="phone[]" class="form-control" onblur="validatemobile(this)" required type="text" placeholder="{$word.Phone} ">
+                                <span class="error"  style="display:none">有问题</span>
+                            </div>
+                            <div class="form-group">
+                                <input name="email[]" class="form-control" onblur="validateemail(this)" required type="email" placeholder="{$word.Email}">
+                                <span class="error"  style="display:none"></span>
+                            </div>
+
+
+
                     </div>
 
                     <div class="form-group" id="formBefro"><div class="input-group input-group-icon">
@@ -102,7 +118,7 @@
 
                     <div class="form-group m-b-0">
 
-                        <button type="submit" class="btn btn-primary btn-block btn-squared">{$word.Signup}</button>
+                        <button type="submit"  class="btn btn-primary btn-block btn-squared">{$word.Signup}</button>
 
                     </div>
 
@@ -120,16 +136,93 @@
     }
     var num = 2;
     function addform() {
-        var fromStr = '<input type="hidden" name="lang" value="cn">'+
-            '<h5>{$word.Attendants} '+num+'</h5>'+
+        var fromStr = '<div>'+
+            '<div>'+
+            '<span>{$word.Attendantsinfo}</span><span style="float: right;cursor: pointer" title="删除" onclick="deldiv(this)">X</span>'+
+            '</div>'+
             '<div class="form-groups">'+
-            '<div class="form-group"><input name="name[]" class="form-control" type="text" placeholder="{$word.Name} "></div>'+
-            '<div class="form-group"><input name="phone[]" class="form-control" type="text" placeholder="{$word.Phone} "></div>'+
-            '<div class="form-group"><input name="email[]" class="form-control" type="text" placeholder="{$word.Email}"></div>'+
+            '<div class="form-group"><input name="name[]"  required class="form-control" type="text" placeholder="{$word.Name} "><span class="error"  style="display:none"></span></div>'+
+            '<div class="form-group"><input name="phone[]" required class="form-control" onblur="validatemobile(this)" type="text" placeholder="{$word.Phone} "><span class="error"  style="display:none"></span></div>'+
+            '<div class="form-group"><input name="email[]" required  class="form-control" onblur="validateemail(this)" type="email" placeholder="{$word.Email}"><span class="error"  style="display:none"></span></div>'+
             '</div>';
 
         $("#formBefro").before(fromStr);
         num++;
     }
+    //删除元素
+    function deldiv(e) {
+        $(e).parent().parent().remove();
+    }
+
+
+    function check(from) {
+//        var valimobile = false;
+//        var valiphone = false;
+//        $("form :input").blur(function (e) {
+//            console.log($(e).attr('name'))
+//            if($(e).attr('name') == 'phone[]'){
+//                valimobile = validatemobile(e)
+//            }
+//            if($(e).attr('name') == 'email[]'){
+//                valiphone = validateemail(e)
+//            }
+//        });
+//        console.log(valimobile);
+//        console.log(valiphone);
+//
+//        if(valimobile && valiphone){
+//            return true
+//        }
+//        return false;
+
+        var aa= $(form).parents().find('.form-group .form-control').attr('phone[]');
+        return validatemobile(aa)
+
+        var bb= $(form).parents().find('.form-group .form-control').attr('email[]');
+
+        return validateemail(bb);
+
+    }
+
+
+    function validatemobile(e)
+    {
+        var mobile = e.value;
+        if(mobile.length==0)
+        {
+            $(e).next(".error").text('手机号码不能为空！').show();
+            return false;
+        }
+        if(mobile.length!=11)
+        {
+            $(e).next(".error").text('请输入有效的手机号码，需是11位！').show();
+            return false;
+        }
+
+        var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+        if(!myreg.test(mobile))
+        {
+            $(e).next(".error").text('请输入有效的手机号码！').show();
+            return false;
+        }
+
+        $(e).next(".error").hide();
+        return true;
+    }
+
+    function validateemail(e){
+        var obj = e.value;
+        //对电子邮件的验证
+        var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+        if(!myreg.test(obj))
+        {
+            $(e).next(".error").text('请输入有效的邮箱').show();
+            return false;
+        }
+        $(e).next(".error").hide();
+        return true;
+    }
+
+
 
 </script>

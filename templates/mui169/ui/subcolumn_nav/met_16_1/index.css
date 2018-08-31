@@ -17,6 +17,9 @@ $uicss-ul li{display:inline-block;vertical-align:top;}
 $uicss-ul li > a{display:block;padding:5px 10px;font-size:16px;}
 $uicss-ul li a{color:$firstcolor$;}
 $uicss-ul li a{color:$titlecolor$;}
-$uicss-ul li .dropdown-menu{top:40px;}
+$uicss-ul li .dropdown-menu{top:40px;background-color: $downbg$;border-color:$downbg$; }
+$uicss-ul li .dropdown-menu a{color:$firstcolor$;color:$titlecolor$;color: $downtxt$;}
+$uicss-ul li .dropdown-menu a:hover,$uicss-ul li .dropdown-menu a:active{color: $thirdcolor$;color:$hovercolor$;color: $hoverdowntxt$;}
+$uicss .dropdown-item:hover,$uicss .dropdown-item.active{background-color: transparent !important;}
 $uicss .product-search .form-control:focus{border-color: $thirdcolor$;color:$hovercolor$;}
 $uicss .swiper-container{z-index: 990;}

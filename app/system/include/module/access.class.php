@@ -28,6 +28,10 @@ class access extends web{
     $url = urldecode(load::sys_class('auth', 'new')->decode($_M['form']['url']));
     $groupid = urldecode(load::sys_class('auth', 'new')->decode($_M['form']['groupid']));
     $power = load::sys_class('user', 'new')->check_power($groupid);
+    echo "<pre>";
+    dump($url);
+    dump($groupid);
+    dump($power);die();
     if($power > 0){
       header("location:{$url}");
     }else{

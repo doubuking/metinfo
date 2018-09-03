@@ -80,7 +80,6 @@ class download_admin extends news_admin {
 	public function insert_list($list){
 		global $_M;
 		//$list = $this->form_classlist($list);
-		//dump($list);
 		if($list['imgurl'])$list = $this->form_imglist($list,$this->module);
 		//$list['updatetime'] = date("Y-m-d H:i:s");
 		$list['addtime']    = $list['addtime']?$list['addtime']:$list['updatetime'];
@@ -157,7 +156,6 @@ class download_admin extends news_admin {
 		// DB::query($query);
 		// return DB::insert_id();
 		$list['lang'] = $this->lang;
-		//dump($list);
 		return $this->database->insert($list);
 	}
 

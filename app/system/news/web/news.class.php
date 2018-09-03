@@ -80,7 +80,13 @@ class news extends web {
             'price'=>$total,
             'no'=>10
         );
-        $this->dopayactv($resultData);
+        if($total>0){
+            $this->dopayactv($resultData);
+        }else{
+            okinfo(HTTP_REFERER, '报名成功');
+            die();
+        }
+
 
 	}
 

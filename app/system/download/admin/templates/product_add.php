@@ -143,6 +143,14 @@ echo <<<EOT
 			</dd>
 		</dl>
 		<dl>
+			<dt>下载密码</dt>
+			<dd class="ftype_input">
+				<div class="fbox">
+					<input type="text" name="dowload_password" style="width:100px;" value="{$list[dowload_password]}" />
+				</div>
+			</dd>
+		</dl>
+		<dl>
 			<dt>{$_M[word][webaccess]}</dt>
 			<dd class="ftype_select">
 				<div class="fbox">

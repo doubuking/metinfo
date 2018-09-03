@@ -97,7 +97,7 @@
                             </div>
                             <div class="form-group">
                                 <input name="phone[]" class="form-control" onblur="validatemobile(this)" required type="text" placeholder="{$word.Phone} ">
-                                <span class="error"  style="display:none">有问题</span>
+                                <span class="error"  style="display:none"></span>
                             </div>
                             <div class="form-group">
                                 <input name="email[]" class="form-control" onblur="validateemail(this)" required type="email" placeholder="{$word.Email}">

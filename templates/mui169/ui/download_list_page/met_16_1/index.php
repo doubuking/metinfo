@@ -1,5 +1,6 @@
 <?php defined('IN_MET') or exit('No permission'); ?>
-<?php $sidebar=strlen($ui[has][sidebar]);?>
+<?php $sidebar=strlen($ui[has][sidebar]);
+?>
 <main class="$uicss met-download animsition" m-id='{$ui.mid}'>
     <div class="container">
         <div class="row">

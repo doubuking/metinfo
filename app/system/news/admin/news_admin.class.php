@@ -362,9 +362,7 @@ class news_admin extends base_admin {
 //        $list['class2'] = $_M['form']['class2'] ? $_M['form']['class2'] : '' ;
 //        $list['class3'] = $_M['form']['class3'] ? $_M['form']['class3'] : '' ;
 //        $_M['url']['help_tutorials_helpid']='99';
-//		echo "<pre>";
-//		var_dump($_M['form']);
-//		die();
+
         require $this->template('own/article_activity');
 	}
 
@@ -389,20 +387,20 @@ class news_admin extends base_admin {
 		if(!empty($keyword)){
             switch ($class1_select){
                 case 0:
-                    $like .= "WHERE pa.`name` like '%{$keyword}%'";
+                    $like .= " AND pa.`name` like '%{$keyword}%'";
                     break;
                 case 1:
-                    $like .= "WHERE pa.phone like '%{$keyword}%'";
+                    $like .= " AND pa.phone like '%{$keyword}%'";
                     break;
                 case 2:
-                    $like .= "WHERE pa.email like '%{$keyword}%'";
+                    $like .= " AND pa.email like '%{$keyword}%'";
                     break;
             }
 		}
 
 
         $table = load::sys_class('tabledata', 'new'); //加载表格数据获取类
-        $sql = "SELECT pa.id,us.username,pa.`name`,pa.phone,pa.email,pa.description,pa.`status`,pa.addtime FROM met_participants AS pa LEFT JOIN met_user AS us ON pa.user_id = us.id {$like}";
+        $sql = "SELECT pa.id,us.username,pa.`name`,pa.phone,pa.email,pa.description,pa.`status`,pa.addtime FROM met_participants AS pa LEFT JOIN met_user AS us ON pa.user_id = us.id WHERE pa.act_id={$_M['form']['act_id']} {$like} ORDER BY pa.id DESC ";
 
         $where = ""; //查询条件
         $order = ""; //排序方式
@@ -438,9 +436,9 @@ class news_admin extends base_admin {
 	 */
 	function dojson_list(){
 		global $_M;
-		// dump($_M['form']);
-		// exit;
-		if($_M['form']['class1_select']=='null'&&$_M['form']['class2_select']=='null'&&$_M['form']['class3_select']=='null'){
+
+//		if($_M['form']['class1_select']=='null'&&$_M['form']['class2_select']=='null'&&$_M['form']['class3_select']=='null'){
+		if(empty($_M['form']['class1_select'])&&empty($_M['form']['class2_select'])&&empty($_M['form']['class3_select'])){
 			$class1 = $_M['form']['class1'];
 			$class2 = $_M['form']['class2'];
 			$class3 = $_M['form']['class3'];
@@ -452,6 +450,8 @@ class news_admin extends base_admin {
 		$class1 = $class1 == ' ' ? 'null' : $class1;
 		$class2 = $class2 == ' ' ? 'null' : $class2;
 		$class3 = $class3 == ' ' ? 'null' : $class3;
+
+
 		$keyword = $_M['form']['keyword'];
 		$search_type = $_M['form']['search_type'];
 		$orderby_hits = $_M['form']['orderby_hits'];
@@ -461,6 +461,7 @@ class news_admin extends base_admin {
 		$where.= $class2&&$class2!='null'?"and class2 = '{$class2}'":'';
 		$where.= $class3&&$class3!='null'?"and class3 = '{$class3}'":'';
 		$where.= $keyword?"and title like '%{$keyword}%'":'';
+
 		switch($search_type){
 			case 0:break;
 			case 1:

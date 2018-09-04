@@ -26,9 +26,14 @@ $data['page_title']=$_M['word']['memberIndex9'].$data['page_title'];
 								<div class="col-xs-5 col-sm-3">
 									{$_M['word']['memberbasicType']}
 								</div>
-								<div class="col-xs-7 col-sm-9">
+								<div class="col-xs-7 col-sm-4">
 									{$_M['user']['group_name']}
 								</div>
+                            <if value="$_M['user']['endtime'] neq ''">
+                                <div class="col-xs-7 col-sm-5">
+                                    会员有效期到 : {$_M['user']['endtime']}
+                                </div>
+                            </if>
 							</div>
                             <?php if($_M['config']['payment_open']==1 && $data['groupshow']){?>
 							<div class="row"">

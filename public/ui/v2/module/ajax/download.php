@@ -1,5 +1,4 @@
 <?php defined('IN_MET') or exit('No permission');
-dump($result);
 ?>
 <list data="$result" name="$v">
 <li class="list-group-item">
@@ -12,7 +11,7 @@ dump($result);
 		<div class="media-body">
 			<a class="btn btn-outline btn-primary btn-squared pull-xs-right" href="{$v.downloadurl}"  title="{$v.title}" {$g.urlnew}>{$ui.download}</a>
             <if value="$v['dowload_password'] neq ''">
-			<a class="btn btn-outline btn-primary btn-squared pull-xs-right" data-toggle="modal" data-target="#met-job-cv" title="{$v.title}" {$g.urlnew}>密码下载</a>
+			<a class="btn btn-outline btn-primary btn-squared pull-xs-right" data-toggle="modal" data-download-id="{$v.id}" data-target="#met-job-cv" onclick="down(this)" title="{$v.title}" {$g.urlnew}>密码下载</a>
             </if>
 			<h4 class="media-heading font-size-16">
 				<a class="name" href="{$v.url}" title="{$v.title}" target='_self'>{$v.title}</a>
@@ -33,20 +32,14 @@ dump($result);
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
-                <h4 class="modal-title">{$word.Attendants}</h4>
-                <h5 style="cursor: pointer" onclick="addform()">{$word.Addattendants}</h5>
+                <h4 class="modal-title">密码下载</h4>
             </div>
             <div class="modal-body">
-                <form method="POST" onsubmit="return check(this)" class="met-form met-form-validation" enctype="multipart/form-data" action="{$url.site}activity/savavity.php?action=add&lang={$M['lang']} ">
-
+                <form method="POST"  class="met-form met-form-validation" action="{$v.downloadurl}&type=password" enctype="multipart/form-data" >
+                    <input type="hidden" value="" id="download" name="download">
                     <div class="form-groups" >
-
-
-                        <div>
-                            <span>请输入下载密码</span>
-                        </div>
                         <div class="form-group">
-                            <input name="download_password" class="form-control" required type="text" placeholder="下载密码 ">
+                            <input name="download_password" class="form-control" required type="text" placeholder="请输入下载密码 ">
                             <span class="error"  style="display:none"></span>
                         </div>
 
@@ -77,7 +70,15 @@ dump($result);
 
 
 <script>
+
     function down(e) {
-        confirm('请输入密码');
+        var data_value = $(e).attr('data-download-id');
+        $("#download").val(data_value);
+
+    }
+    reImg()
+    function reImg() {
+        var img = document.getElementById("getcode");
+        img.src =img.src + "& rnd=" + Math.random();
     }
 </script>

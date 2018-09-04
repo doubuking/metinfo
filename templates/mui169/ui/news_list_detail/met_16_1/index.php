@@ -1,6 +1,14 @@
 <?php defined('IN_MET') or exit('No permission'); ?>
 <?php $sidebar=strlen($ui[has][sidebar]);
 ?>
+
+<ul class="nav nav-tabs">
+    <li><a href="#home" data-toggle="tab">首页</a></li>
+    <li><a href="#profile" data-toggle="tab">介绍</a></li>
+    <li><a href="#messages" data-toggle="tab">消息</a></li>
+    <li><a href="#settings" data-toggle="tab">设置</a></li>
+</ul>
+
 <main class="$uicss met-shownews animsition">
     <div class="container">
         <div class="row">
@@ -130,6 +138,7 @@
 
 
 <script>
+    reImg();
     function reImg() {
         var img = document.getElementById("getcode");
         img.src =img.src + "& rnd=" + Math.random();

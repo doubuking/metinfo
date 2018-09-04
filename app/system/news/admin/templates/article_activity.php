@@ -34,7 +34,7 @@ echo <<<EOT
 	<input id="class1id" name="class1" data-table-search="1" value="{$list[class1]}" class="ui-input" type="hidden" />
 	<input id="class2id" name="class2" data-table-search="1" value="{$list[class2]}" class="ui-input" type="hidden" />
 	<input id="class3id" name="class3" data-table-search="1" value="{$list[class3]}" class="ui-input" type="hidden" />
-	<table class="display dataTable ui-table" data-table-ajaxurl="{$_M[url][own_form]}a=dojson_activity_list&class1={$list[class1]}&class2={$list[class2]}&class3={$list[class3]}"  data-table-pageLength="20">
+	<table class="display dataTable ui-table" data-table-ajaxurl="{$_M[url][own_form]}a=dojson_activity_list&act_id={$_M[form][id]}&class1={$list[class1]}&class2={$list[class2]}&class3={$list[class3]}"  data-table-pageLength="20">
 		<thead>
 			<tr>
 				<th width="20" data-table-columnclass="met-center">编号</th>

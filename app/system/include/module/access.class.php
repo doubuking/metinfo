@@ -26,22 +26,39 @@ class access extends web{
   public function dodown(){
     global $_M;
     $url = urldecode(load::sys_class('auth', 'new')->decode($_M['form']['url']));
-    $groupid = urldecode(load::sys_class('auth', 'new')->decode($_M['form']['groupid']));
-    $power = load::sys_class('user', 'new')->check_power($groupid);
-    echo "<pre>";
-    dump($url);
-    dump($groupid);
-    dump($power);die();
-    if($power > 0){
-      header("location:{$url}");
+    if($_M['form']['type']=='password'){
+        //验证验证码
+        if(!load::sys_class('pin', 'new')->check_pin($_M['form']['code'])){
+            okinfo(-1, $_M['word']['membercode']);
+        }
+
+        if(intval($_M['form']['download'])<=0){
+            okinfo(-1, '非法标识');
+        }
+
+        $sql= "SELECT dowload_password FROM met_download WHERE id=".$_M['form']['download'];
+        $result = DB::get_one($sql);
+
+        if($result['dowload_password'] != trim($_M['form']['download_password'],' ')){
+            okinfo(-1, '下载密码错误');
+        }
+        header("location:{$url}");
+
     }else{
-      if($power == -2){
-				okinfo($_M['url']['site'].'member/index.php?gourl='.$gourl.$lang, $_M[word][systips1]);
-			}
-			if($power == -1){
-				okinfo($_M['url']['site'].'index.php?gourl='.$gourl.$lang, $_M[word][systips2]);
-			}
+        $groupid = urldecode(load::sys_class('auth', 'new')->decode($_M['form']['groupid']));
+        $power = load::sys_class('user', 'new')->check_power($groupid);
+        if($power > 0){
+            header("location:{$url}");
+        }else{
+            if($power == -2){
+                okinfo($_M['url']['site'].'member/index.php?gourl='.$gourl.$lang, $_M[word][systips1]);
+            }
+            if($power == -1){
+                okinfo($_M['url']['site'].'index.php?gourl='.$gourl.$lang, $_M[word][systips2]);
+            }
+        }
     }
+
 	}
 }
 

@@ -47,3 +47,51 @@ $uicss .met-editor {
     overflow: hidden;}
 
 .error{color: orangered}
+
+@media (min-width: 768px) {
+    .navbar-nav>.nav-item>.nav-link:hover{
+        background-color: #62a8ea;
+        color: #ffffff;
+    }
+    .navbar-nav>.nav-item>.active{
+        background-color: #62a8ea;
+        color: #ffffff;
+    }
+    .btn-outline.btn-primary{
+        width: 20%;
+        margin-left: 3%;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .find_nav_list {
+        margin: 0;
+        min-width: 800px;
+        position: absolute;
+        left: 0;
+
+    }
+    .find_nav_list>.nav-item{
+        float: left;
+    }
+    .find_nav_list>.nav-item>.nav-link:hover{
+        background-color: #62a8ea;
+        color: #ffffff;
+    }
+    .find_nav_list>.nav-item>.active{
+        background-color: #62a8ea;
+        color: #ffffff;
+    }
+    .btn-outline.btn-primary{
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+.tab-box>.met-editor{
+    display: none;
+}
+.tab-box>.active{
+    display: block;
+}

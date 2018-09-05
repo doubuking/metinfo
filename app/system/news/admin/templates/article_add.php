@@ -218,7 +218,7 @@ echo <<<EOT
 		</div>
 		
 		
-		<h3 class="v52fmbx_hr clearfix">付费设置<button type='button' onclick="showorhiden()" class='btn btn-default btn-sm showmoresets-btn' style="float: right;">{$_M[word][click_enter]}</button></h3>
+		<h3 class="v52fmbx_hr clearfix">付费设置<button type='button' onclick="showorhiden(this)" class='btn btn-default btn-sm showmoresets-btn' style="float: right;">{$_M[word][click_enter]}</button></h3>
 		<div class='showmoresets-content' style="display: none">
 		
 		<dl>
@@ -253,6 +253,95 @@ echo <<<EOT
 	
 		</dl>
 		{$quitaList}
+
+		</div>
+		
+		
+		<h3 class="v52fmbx_hr clearfix">活动日程<button type='button' onclick="showorhiden(this)" class='btn btn-default btn-sm showmoresets-btn' style="float: right;">{$_M[word][click_enter]}</button></h3>
+		<div class='showmoresets-content' style="display: none">
+		
+		<dl>
+            <dd class="ftype_ckeditor">
+				<div class="fbox">
+					<textarea name="schedule" data-ckeditor-y="500">{$list[schedule]}</textarea>
+				</div>
+			</dd>
+        </dl>
+
+		</div>
+		
+		
+		<h3 class="v52fmbx_hr clearfix">嘉宾<button type='button' onclick="showorhiden(this)" class='btn btn-default btn-sm showmoresets-btn' style="float: right;">{$_M[word][click_enter]}</button></h3>
+		<div class='showmoresets-content' style="display: none">
+		
+		<dl>
+            <dd class="ftype_ckeditor">
+				<div class="fbox">
+					<textarea name="guest" data-ckeditor-y="500">{$list[guest]}</textarea>
+				</div>
+			</dd>
+        </dl>
+
+		</div>
+		
+		
+		<h3 class="v52fmbx_hr clearfix">赞助商<button type='button' onclick="showorhiden(this)" class='btn btn-default btn-sm showmoresets-btn' style="float: right;">{$_M[word][click_enter]}</button></h3>
+		<div class='showmoresets-content' style="display: none">
+		
+		<dl>
+            <dd class="ftype_ckeditor">
+				<div class="fbox">
+					<textarea name="sponsor" data-ckeditor-y="500">{$list[sponsor]}</textarea>
+				</div>
+			</dd>
+        </dl>
+
+		</div>
+		
+		
+		
+		
+		<h3 class="v52fmbx_hr clearfix">会场交通<button type='button' onclick="showorhiden(this)" class='btn btn-default btn-sm showmoresets-btn' style="float: right;">{$_M[word][click_enter]}</button></h3>
+		<div class='showmoresets-content' style="display: none">
+		
+		<dl>
+            <dd class="ftype_ckeditor">
+				<div class="fbox">
+					<textarea name="conference_traffic" data-ckeditor-y="500">{$list[conference_traffic]}</textarea>
+				</div>
+			</dd>
+        </dl>
+		</div>
+		
+		
+		
+		<h3 class="v52fmbx_hr clearfix">活动纪要<button type='button' onclick="showorhiden(this)" class='btn btn-default btn-sm showmoresets-btn' style="float: right;">{$_M[word][click_enter]}</button></h3>
+		<div class='showmoresets-content' style="display: none">
+		
+		<dl>
+            <dd class="ftype_ckeditor">
+				<div class="fbox">
+					<textarea name="event_summary" data-ckeditor-y="500">{$list[event_summary]}</textarea>
+				</div>
+			</dd>
+        </dl>
+
+		</div>
+		
+		
+		
+		<h3 class="v52fmbx_hr clearfix">活动照片<button type='button' onclick="showorhiden(this)" class='btn btn-default btn-sm showmoresets-btn' style="float: right;">{$_M[word][click_enter]}</button></h3>
+		<div class='showmoresets-content' style="display: none">
+		
+		<dl>
+            <dd class="ftype_ckeditor">
+				<div class="fbox">
+					<textarea name="active_photo" data-ckeditor-y="500">{$list[active_photo]}</textarea>
+				</div>
+			</dd>
+        </dl>
+		
+		
 
 		</div>
 		
@@ -298,12 +387,12 @@ function addQuotas(e) {
 }
 
 
-function showorhiden() {
-  $('.showmoresets-content').toggle();
-  if($('.showmoresets-btn').text() == '展开更多设置'){
-      $('.showmoresets-btn').text('隐藏设置');
+function showorhiden(e) {
+  $(e).parent().next(".showmoresets-content").toggle();
+  if($(e).text() == '展开更多设置'){
+      $(e).text('隐藏设置');
   }else {
-      $('.showmoresets-btn').text('展开更多设置');
+      $(e).text('展开更多设置');
   }
   
 }

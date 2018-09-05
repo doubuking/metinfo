@@ -2,13 +2,6 @@
 <?php $sidebar=strlen($ui[has][sidebar]);
 ?>
 
-<ul class="nav nav-tabs">
-    <li><a href="#home" data-toggle="tab">首页</a></li>
-    <li><a href="#profile" data-toggle="tab">介绍</a></li>
-    <li><a href="#messages" data-toggle="tab">消息</a></li>
-    <li><a href="#settings" data-toggle="tab">设置</a></li>
-</ul>
-
 <main class="$uicss met-shownews animsition">
     <div class="container">
         <div class="row">
@@ -48,10 +41,74 @@
                     </div>
                 </div>
 
+                <div class="find_nav">
+                <div class=" font-weight-1 find_nav_left" style="height: 46px" id="met-nav-collapse">
+                    <ul class="nav navbar-nav navlist find_nav_list" style="">
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" title="活动介绍" class="nav-link active">活动介绍</a>
+                        </li>
+                        <li class="nav-item m-l-30">
+                            <a href="javascript:void(0)" title="活动日程" class="nav-link " >活动日程</a>
+                        </li>
+                        <li class="nav-item dropdown m-l-30">
+                            <a  href="javascript:void(0)" title="嘉  宾" class="nav-link " >嘉  宾</a>
+                        </li>
+                        <li class="nav-item dropdown m-l-30">
+                            <a  href="javascript:void(0)" title="赞助商" class="nav-link " >赞助商</a>
+
+                        </li>
+                        <li class="nav-item dropdown m-l-30">
+                            <a  href="javascript:void(0)" title="会场交通" class="nav-link " >会场交通</a>
+
+                        </li>
+                        <li class="nav-item dropdown m-l-30">
+                            <a  href="javascript:void(0)" title="活动纪要" class="nav-link " >活动纪要</a>
+
+                        </li>
+                        <li class="nav-item dropdown m-l-30">
+                            <a  href="javascript:void(0)" title="活动照片" class="nav-link " >活动照片</a>
+
+                        </li>
+                    </ul>
+                </div>
+                </div>
+
+
             </section>
-            <section class="met-editor clearfix">
-                {$data.content}
-            </section>
+
+            <div class="tab-box">
+                <section class="met-editor clearfix active">
+                    {$data.content}
+                </section>
+                <section class="met-editor clearfix">
+                    {$data.schedule}
+                </section>
+
+
+                <section class="met-editor clearfix">
+                    {$data.guest}
+                </section>
+
+                <section class="met-editor clearfix">
+                    {$data.sponsor}
+                </section>
+
+                <section class="met-editor clearfix">
+                    {$data.conference_traffic}
+                </section>
+
+                <section class="met-editor clearfix">
+                    {$data.event_summary}
+                </section>
+
+                <section class="met-editor clearfix">
+                    {$data.active_photo}
+                </section>
+
+
+            </div>
+
+
 
             <pagination/>
 
@@ -75,7 +132,7 @@
 </if>
 </if>
 <if value="$data['is_activity'] eq 1">
-<div class="card-body-footer m-t-0">
+<div class=" button-news">
     <a class="btn btn-outline btn-squared btn-primary met-job-cvbtn" href="javascript:;" data-toggle="modal" data-target="#met-job-cv" data-jobid="{$data.id}" data-cvurl="cv.php?lang=cn&selected">立即报名</a>
 </div>
 </if>
@@ -223,6 +280,10 @@
         valiphone = true;
         return true;
     }
+
+
+
+
 
 
 

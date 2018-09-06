@@ -18,6 +18,7 @@ class admin_set extends admin {
 		nav::set_nav(4, $_M[word][memberfunc], $_M['url']['own_name'].'c=admin_set&a=doindex');
 		nav::set_nav(5, $_M[word][thirdlogin], $_M['url']['own_name'].'c=admin_set&a=doopen');
 		nav::set_nav(6, $_M[word][mailcontentsetting], $_M['url']['own_name'].'c=admin_set&a=doemailset');
+        nav::set_nav(7, $_M[word][enterpriselmember], $_M['url']['own_name'].'c=admin_user&a=doenterprisel');
         // nav::set_nav(7, $_M[word][paygroup], $_M['url']['own_name'].'c=admin_group&a=do_pay_group');
 		$this->paraclass = load::mod_class('system/class/sys_para', 'new');
 		

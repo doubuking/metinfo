@@ -1215,9 +1215,9 @@ if($data['title']){
 ?>
 
                 </div>
-                <div class="carousel-item     <?php if($v[_index]==0){ ?>active<?php } ?>">
+                <div class="carousel-item ">
                   <div class="col-xs-12 col-sm-3">
-                    <div class="team-member text-center">
+                    <div class="team-member text-center own-team-member">
                       <a href="<?php echo $v['url'];?>" title="<?php echo $v['title'];?>" target="_blank">
                         <img class="img-responsive" src="<?php echo thumb($v['imgurl'],$ui[img_x],$ui[img_y]);?>" alt="<?php echo $v['imgurl'];?>" />
                         <h3><?php echo met_substr($v['title'],0,$ui['desc_num']);?>...</h3>

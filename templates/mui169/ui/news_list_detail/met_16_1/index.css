@@ -57,7 +57,7 @@ $uicss .met-editor {
         background-color: #62a8ea;
         color: #ffffff;
     }
-    .btn-outline.btn-primary{
+    .pushjoin.btn-primary{
         width: 20%;
         margin-left: 3%;
     }
@@ -83,7 +83,7 @@ $uicss .met-editor {
         background-color: #62a8ea;
         color: #ffffff;
     }
-    .btn-outline.btn-primary{
+    .pushjoin.btn-primary{
         width: 80%;
         margin-left: 10%;
     }

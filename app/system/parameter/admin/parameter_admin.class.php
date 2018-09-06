@@ -65,6 +65,7 @@ class parameter_admin extends base_admin {
 				nav::set_nav(4, $_M['word']['memberfunc'], $_M['url']['adminurl'].'anyid=73&n=user&c=admin_set&a=doindex');
 				nav::set_nav(5, $_M['word']['thirdlogin'], $_M['url']['adminurl'].'anyid=73&n=user&c=admin_set&a=doopen');
 				nav::set_nav(6, $_M['word']['mailcontentsetting'], $_M['url']['adminurl'].'anyid=73&n=user&c=admin_set&a=doemailset');
+                nav::set_nav(7, $_M[word][enterpriselmember], $_M['url']['own_name'].'c=admin_user&a=doenterprisel');
 				nav::select_nav(3);
 				$_M['url']['help_tutorials_helpid']='118#会员注册';
 				break;

@@ -1,4 +1,4 @@
-$(".navbar-nav .nav-item").click(function(){
+$(".find_nav_list .nav-item").click(function(){
 
     //通过 .index()方法获取元素下标，从0开始，赋值给某个变量
     var _index = $(this).index();

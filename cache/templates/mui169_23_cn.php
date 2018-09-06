@@ -1,1 +1,0 @@
-<?php defined('IN_MET') or exit('No permission'); ?>{"mid":"23","ui_show":"1","sidebar_search_placeholder":"search","sidebar_column_ok":"1","sidebar_column3_ok":"1","all":"\u5168\u90e8","sidebar_newslist_ok":"1","sidebar_newslist_title":"\u4e3a\u4f60\u63a8\u8350","sidebar_newslist_num":"8","ccolor":"","hover_color":""}

@@ -40,7 +40,7 @@
                         </list>
                     </div>
                 </div>
-
+                <if value="$data['is_activity'] eq 1">
                 <div class="find_nav">
                 <div class=" font-weight-1 find_nav_left" style="height: 46px" id="met-nav-collapse">
                     <ul class="nav navbar-nav navlist find_nav_list" style="">
@@ -72,7 +72,7 @@
                     </ul>
                 </div>
                 </div>
-
+                </if>
 
             </section>
 
@@ -132,8 +132,8 @@
 </if>
 </if>
 <if value="$data['is_activity'] eq 1">
-<div class=" button-news">
-    <a class="btn btn-outline btn-squared btn-primary met-job-cvbtn" href="javascript:;" data-toggle="modal" data-target="#met-job-cv" data-jobid="{$data.id}" data-cvurl="cv.php?lang=cn&selected">立即报名</a>
+<div class=" button-news ">
+    <a class="btn btn-outline btn-squared btn-primary met-job-cvbtn pushjoin" href="javascript:;" data-toggle="modal" data-target="#met-job-cv" data-jobid="{$data.id}" data-cvurl="cv.php?lang=cn&selected">立即报名</a>
 </div>
 </if>
 <div class="modal fade modal-primary" id="met-job-cv" aria-hidden="true" role="dialog" tabindex="-1">

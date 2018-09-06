@@ -324,5 +324,11 @@ $uicss .btn-more:hover .fa { color: $hover_btn_color$; }
   }
 }
 
+@media (min-width: 768px) {
+$uicss .own-team-member img{
+        height: 80px;
+    }
+}
+
 
 

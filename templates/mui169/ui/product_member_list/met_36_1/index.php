@@ -17,9 +17,9 @@
                 <tag action="list" cid="$ui['picturecolumn']" num="$ui['picturenum']" type="$ui['picturecom']" >
 
                 </div>
-                <div class="carousel-item <if value='$v[_index] eq 0'>active</if>">
+                <div class="carousel-item ">
                   <div class="col-xs-12 col-sm-3">
-                    <div class="team-member text-center">
+                    <div class="team-member text-center own-team-member">
                       <a href="{$v.url}" title="{$v.title}" target="_blank">
                         <img class="img-responsive" src="{$v.imgurl|thumb:$ui[img_x],$ui[img_y]}" alt="{$v.imgurl}" />
                         <h3>{$v.title|met_substr:0,$ui['desc_num']}...</h3>

@@ -165,7 +165,7 @@ class user {
         # $userpass = ture      说明修改成功
         if($userpass || $userpass === NULL ){
             $password = md5($password);
-            $query = "UPDATE {$_M['table']['user']} SET password = '{$password}' WHERE id = '{$userid}' ";
+            $query = "UPDATE {$_M['table']['user']} SET password = '{$password}',salt = '' WHERE id = '{$userid}' ";
             DB::query($query);
         }
         return true;
@@ -292,9 +292,32 @@ class user {
             load::plugin('douserlogin', 1, array($type,$username,$password));
             # 插件登录
             $user = $this->get_user_by_username($username);
+
+            //老用户登录
+            if($user && !empty($user['salt']) && $user['password'] == md5($password.$user['salt'])){
+                if (!$user['valid']) {
+                    return $user;
+                }
+                //将帐号和密码的加密字符串以及加密密钥写入cookie
+                $this->setauth($user['username'], $user['password']);
+                //完善会员信息的头像地址
+                if (file_exists(PATH_WEB . str_replace('../', $user['head'])) && $user['head']) {
+                    $user['head'] = $_M['url']['site'] . str_replace('../', '', $user['head']);
+                } else {
+                    $user['head'] = $_M['url']['static'] . 'img/user.jpg';
+                }
+                //将会员信息传递给$_M['user']参数
+                $this->set_m($user);
+                return $user;
+            }
+
+
             $password = md5($password);
+            
+
             if ($user && ($user['password'] == $password || (md5(md5($user['password'])) == $password && $type = 'md5'))) {
                 # 系统登录接口
+
                 if (!$user['valid']) {
                     return $user;
                 }

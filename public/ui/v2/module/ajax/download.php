@@ -11,7 +11,7 @@
 		<div class="media-body">
 			<a class="btn btn-outline btn-primary btn-squared pull-xs-right" href="{$v.downloadurl}"  title="{$v.title}" {$g.urlnew}>{$ui.download}</a>
             <if value="$v['dowload_password'] neq ''">
-			<a class="btn btn-outline btn-primary btn-squared pull-xs-right" data-toggle="modal" data-download-id="{$v.id}" data-target="#met-job-cv" onclick="down(this)" title="{$v.title}" {$g.urlnew}>密码下载</a>
+			<a class="btn btn-outline btn-primary btn-squared pull-xs-right" data-toggle="modal" data-download="{$v.downloadurl}&type=password" data-download-id="{$v.id}" data-target="#met-job-cv" onclick="down(this)" title="{$v.title}" {$g.urlnew}>密码下载</a>
             </if>
 			<h4 class="media-heading font-size-16">
 				<a class="name" href="{$v.url}" title="{$v.title}" target='_self'>{$v.title}</a>
@@ -35,7 +35,7 @@
                 <h4 class="modal-title">密码下载</h4>
             </div>
             <div class="modal-body">
-                <form method="POST"  class="met-form met-form-validation" action="{$v.downloadurl}&type=password" enctype="multipart/form-data" >
+                <form method="POST"  class="met-form met-form-validation" action="" enctype="multipart/form-data" >
                     <input type="hidden" value="" id="download" name="download">
                     <div class="form-groups" >
                         <div class="form-group">
@@ -58,7 +58,7 @@
 
                     <div class="form-group m-b-0">
 
-                        <button type="submit"  class="btn btn-primary btn-block btn-squared">{$word.Signup}</button>
+                        <button type="submit"  class="btn btn-primary btn-block btn-squared">{$ui.download}</button>
 
                     </div>
 
@@ -73,6 +73,8 @@
 
     function down(e) {
         var data_value = $(e).attr('data-download-id');
+        var data_download_url = $(e).attr('data-download');
+        $(".met-form").attr('action',data_download_url);
         $("#download").val(data_value);
 
     }

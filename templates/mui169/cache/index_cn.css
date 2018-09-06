@@ -1761,6 +1761,12 @@ overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
   }
 }
 
+@media (min-width: 768px) {
+.product_member_list_met_36_1 .own-team-member img{
+        height: 80px;
+    }
+}
+
 
 
 

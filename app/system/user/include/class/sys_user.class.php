@@ -91,7 +91,7 @@ class sys_user extends user {
             if(!$val['login_time'])$val['login_time'] = $val['register_time'];
 
             $endtemptime = $val['endtime'];
-            if(strtotime($val['endtime'])<time()){
+            if(strtotime($val['endtime'])>time()){
                 $val['endtime'] = $val['endtime'].'<br><span class="label label-success">会员中</span>';
             }else{
                 $val['endtime'] = $val['endtime'].'<br><span class="label label-danger">过期</span>';

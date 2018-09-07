@@ -300,7 +300,7 @@ class profile extends userweb {
             $_M['paralist'] = $this->paralist;
             $_M['paraclass'] = $this->paraclass;
 
-            $tempsql = "SELECT act_id,user_id FROM met_participants GROUP BY act_id HAVING user_id={$_M['user']['id']}";
+            $tempsql = "SELECT act_id,user_id FROM met_participants WHERE user_id={$_M['user']['id']} GROUP BY act_id ";
             $tempresult = DB::get_all($tempsql);
             $temstr = '';
             foreach ($tempresult as $value){

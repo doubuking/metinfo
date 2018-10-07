@@ -100,6 +100,19 @@ defined('IN_MET') or exit('No permission');
     </div>
 
 
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-star"></i></span>
+            <select name="groupid" class="form-control" >
+                <?php
+                foreach ($_M['grouplist'] as $vals){
+                    ?>
+                    <option value="{$vals['id']}"> {$vals['name']}</option>
+                <?php } ?>
+
+            </select>
+        </div>
+    </div>
 
 
 

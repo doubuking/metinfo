@@ -37,12 +37,21 @@
                  </tag>
                </div>
             </div>
+
+
         </div>
         <a class="carousel-control-prev member-carousel-control hidden-xs" href="javascript:void(0);" role="button" data-slide="prev">
           <i class="fa fa-angle-left"></i>
         </a>
         <a class="carousel-control-next member-carousel-control hidden-xs" href="javascript:void(0);" role="button" data-slide="next">
           <i class="fa fa-angle-right"></i>
-        </a>      
+        </a>
+    <tag action="category" type="current" cid="$ui['picturecolumn']" >
+        <a href="{$m.url}" title="{$m.name}" {$m.urlnew} class="btn-more">
+            {$word.fliptext1}
+            <i class="fa fa-angle-right"></i>
+        </a>
+    </tag>
+
     </div> 
 </section>

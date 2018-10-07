@@ -8,17 +8,17 @@ $cache = array (
     'access' => '1',
     'lang' => 'cn',
   ),
+  21 => 
+  array (
+    'id' => '21',
+    'name' => '发起会员',
+    'access' => '2',
+    'lang' => 'cn',
+  ),
   17 => 
   array (
     'id' => '17',
     'name' => '高级会员',
-    'access' => '2',
-    'lang' => 'cn',
-  ),
-  2 => 
-  array (
-    'id' => '2',
-    'name' => '代理商',
     'access' => '3',
     'lang' => 'cn',
   ),
@@ -29,10 +29,10 @@ $cache = array (
     'access' => '4',
     'lang' => 'cn',
   ),
-  10 => 
+  20 => 
   array (
-    'id' => '10',
-    'name' => '年费会员',
+    'id' => '20',
+    'name' => '绿星会员',
     'access' => '5',
     'lang' => 'cn',
   ),

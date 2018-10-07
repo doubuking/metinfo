@@ -19,6 +19,7 @@ class register extends userweb {
 			okinfo($_M['url']['login'], $_M['word']['regclose']);
 		}
 		$this->paraclass = load::sys_class('para', 'new');
+        $this->sys_group  = load::mod_class('user/sys_group', 'new');
 		$paralist  = $this->paraclass->get_para_list(10);
 		foreach($paralist as $val){
 			if($val['wr_oks'])$paralists[] = $val;
@@ -42,6 +43,8 @@ class register extends userweb {
         if($_M['form']['type']==1){
             $_M['enterprisel'] = true;
         }
+        $_M['grouplist'] = $this->sys_group->get_group_list();
+
 		require_once $this->view('app/register',$this->input);
 	}
 
@@ -66,6 +69,7 @@ class register extends userweb {
                         contacts_phone = '{$_M['form']['contacts_phone']}', 
                         contacts_post = '{$_M['form']['contacts_post']}', 
                         email = '{$_M['form']['email']}', 
+                        groupid = '{$_M['form']['groupid']}', 
                         source = 'ent' 
                         WHERE id = {$id}
                 ";

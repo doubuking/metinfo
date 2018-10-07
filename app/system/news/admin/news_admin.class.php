@@ -400,7 +400,7 @@ class news_admin extends base_admin {
 
 
         $table = load::sys_class('tabledata', 'new'); //加载表格数据获取类
-        $sql = "SELECT pa.id,us.username,pa.`name`,pa.phone,pa.email,pa.description,pa.`status`,pa.addtime FROM met_participants AS pa LEFT JOIN met_user AS us ON pa.user_id = us.id WHERE pa.act_id={$_M['form']['act_id']} {$like} ORDER BY pa.id DESC ";
+        $sql = "SELECT pa.id,us.username,pa.`name`,pa.phone,pa.email,pa.description,pa.`status`,pa.addtime,pa.companyname FROM met_participants AS pa LEFT JOIN met_user AS us ON pa.user_id = us.id WHERE pa.act_id={$_M['form']['act_id']} {$like} ORDER BY pa.id DESC ";
 
         $where = ""; //查询条件
         $order = ""; //排序方式
@@ -413,6 +413,7 @@ class news_admin extends base_admin {
             $list[] = "<div class=\"ui-table-a\">{$val['name']}</div>";
             $list[] = $val['phone'];
             $list[] = $val['email'];
+            $list[] = $val['companyname'];
             $list[] = $val['status']=='0'?'未付款':'已付款';
             $list[] = $val['addtime'];
             $list[] = "<button type=\"button\" data-id='{$val['id']}' class=\"btn btn-primary\" onclick='changstatus(this)' data-plugin=\"alertify\" data-type=\"log\" data-delay=\"2000\" data-log-message=\"提示\">更改状态</button>";

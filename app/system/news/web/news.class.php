@@ -41,10 +41,10 @@ class news extends web {
         $form = '';
         $datetime = date('Y-m-d H:i:s',time());
 		foreach ($info['name'] as $key=>$val){
-            $form .= "('{$_M['user']['id']}','{$val}','{$info['phone'][$key]}','{$info['email'][$key]}','{$info['activity_id']}','{$datetime}'),";
+            $form .= "('{$_M['user']['id']}','{$val}','{$info['phone'][$key]}','{$info['email'][$key]}','{$info['activity_id']}','{$datetime}','{$info['companyname']}'),";
 
 		}
-		$sql = "INSERT INTO met_participants (`user_id`,`name`,`phone`,`email`,`act_id`,`addtime`) VALUES ".rtrim($form,',');
+		$sql = "INSERT INTO met_participants (`user_id`,`name`,`phone`,`email`,`act_id`,`addtime`,`companyname`) VALUES ".rtrim($form,',');
 
         $row = DB::query($sql);
         $instid = DB::insert_id();

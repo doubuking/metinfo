@@ -169,7 +169,10 @@
                                 <span class="error"  style="display:none"></span>
                             </div>
 
-
+                            <div class="form-group">
+                                <input name="companyname" class="form-control" required type="text" placeholder="{$word.memberbasicCompanyName} ">
+                                <span class="error"  style="display:none"></span>
+                            </div>
 
                     </div>
 

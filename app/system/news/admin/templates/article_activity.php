@@ -26,6 +26,7 @@ echo <<<EOT
 					<option value="0"  >姓名</option>
 					<option value="1" >电话</option>
 					<option value="2">邮箱</option>
+					<option value="3">公司名称</option>
                     </select>
 				
 			</div>
@@ -46,6 +47,9 @@ echo <<<EOT
 				</th>
 				<th data-table-columnclass="met-center" width="180">
 				邮箱
+				</th>
+				<th data-table-columnclass="met-center" width="180">
+				公司名称
 				</th>
 				<th width="120">
 					{$_M[word][state]}

@@ -1775,21 +1775,6 @@ METUI_FUN['back_top_met_16_1'] = {
 };
 var banner=metui(METUI_FUN['back_top_met_16_1']);
 
-METUI_FUN['service_list_met_16_1'] = {
-    name:'service_list_met_16_1',
-    appear:function (){
-        // 首页首屏内动画预加载
-        var indexappear=$('.met-index-body:eq(0) [data-plugin=appear]');
-        if(indexappear.length){
-            indexappear.scrollFun(function(val){
-                val.appearDiy();
-            });
-        }
-    }
-};
-var x = new metui(METUI_FUN['service_list_met_16_1']);
-
-
 METUI_FUN['product_list_met_36_1']={
 	name:'product_list_met_36_1',
 	init:function(){
@@ -1808,6 +1793,21 @@ METUI_FUN['product_list_met_36_1']={
 };
 var x=new metui(METUI_FUN['product_list_met_36_1']);
 
+
+
+METUI_FUN['service_list_met_16_1'] = {
+    name:'service_list_met_16_1',
+    appear:function (){
+        // 首页首屏内动画预加载
+        var indexappear=$('.met-index-body:eq(0) [data-plugin=appear]');
+        if(indexappear.length){
+            indexappear.scrollFun(function(val){
+                val.appearDiy();
+            });
+        }
+    }
+};
+var x = new metui(METUI_FUN['service_list_met_16_1']);
 
 
 
